@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Software Development</title>
+  <!-- Fonts and Styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+    .navbar {
+      background: linear-gradient(45deg, #007bff, #6610f2);
+    }
+    .navbar-brand, .nav-link {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    .nav-link {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #f8f9fa;
+    }
+    .jumbotron {
+      background: url("/pexels-mikhail-nilov-8108473.jpg") no-repeat center center/cover;
+      color: white;
+      position: relative;
+      text-align: center;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .jumbotron::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .jumbotron .container {
+      z-index: 1;
+    }
+    .display-4 {
+      font-weight: 600;
+      font-size: 3rem;
+    }
+    .content-section {
+      padding: 60px 0;
+    }
+    .card-title {
+      font-weight: 600;
+    }
+    .list-group-item.active {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .list-group-item {
+      border: 0;
+      background-color: #f8f9fa;
+      color: #007bff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .list-group-item:hover {
+      background-color: #e9ecef;
+    }
+    .collapse-content {
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-top: 1px solid #ddd;
+    }
+    .footer {
+      background-color: #343a40;
+      color: #adb5bd;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+    .footer .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .footer .footer-section {
+      flex: 1;
+      min-width: 200px;
+      margin: 0 20px;
+    }
+    .footer p {
+      margin: 0.2rem 0;
+    }
+    .footer hr {
+      border-top: 1px solid #495057;
+    }
+    hr.custom-separator {
+      border-top: 2px solid #007bff;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Software Development</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Articles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="terms.html">Terms and Policy</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">👾Articles👽</h1>
+      <p class="lead">Extra extra - read all about it!</p>
+    </div>
+  </div>
+
+  <div class="container content-section">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">We are ready to receive contact 👽</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" data-toggle="collapse" data-target="#collapseStory" aria-expanded="false" aria-controls="collapseStory">
+            📖Why a website is a must have.
+          </li>
+          <div id="collapseStory" class="collapse collapse-content">
+            In today's digital world, having a website is not just an option; it’s a necessity for small businesses. With more customers going online to search for products, services, and recommendations, a website is your business’s first chance to make an impression.
+
+Visibility in a Competitive Market
+A website allows small businesses to be visible online, where most potential customers are searching. When people look for products or services, they use search engines like Google. If your business doesn’t have an online presence, you are missing out on a huge number of potential customers.
+
+Around-the-Clock Access to Your Business
+A website makes your business available 24/7. Whether it's early in the morning or late at night, potential clients can browse your offerings, read testimonials, and even place orders or make inquiries—without needing your physical presence. This kind of convenience builds trust with customers.
+
+Building Credibility and Trust
+A well-designed website builds credibility. It shows that you are serious about your business and are willing to invest in professional representation. When a customer sees a polished, functional website, they are more likely to trust your brand, products, or services. Without it, you risk looking outdated and unprofessional.
+
+Takeaway: A website makes your business accessible, builds trust, and helps you stay competitive. Don’t let your competitors get ahead—create a website and ensure your small business thrives.
+          </div>
+          <li class="list-group-item" data-toggle="collapse" data-target="#collapseMission" aria-expanded="false" aria-controls="collapseMission">
+            🚀More clients less cost!
+          </li>
+          <div id="collapseMission" class="collapse collapse-content">
+            Every small business owner knows that sales are the lifeblood of their company. One of the best ways to increase sales, without needing a huge marketing budget, is by having a website.
+
+Expanding Your Reach to New Customers
+Unlike a physical store or office, which has limited hours and a local customer base, a website can reach potential customers across the world. Even if your business serves only local clients, having a website makes it easier for nearby people to discover you when searching online.
+
+Showcase Products and Services
+With a website, you can display your entire catalog, offer special promotions, and give detailed descriptions of your services. Customers are more likely to make purchases when they have access to all the information they need at their fingertips. A website allows you to keep your products updated and promote new arrivals or seasonal offers.
+
+Modern websites come equipped with tools that can help turn visitors into paying customers. Call-to-action buttons, forms for lead generation, live chat, and integrated shopping carts are just a few features that can be added to your website to encourage immediate customer engagement and sales.
+
+Takeaway: A website not only makes it easier for potential customers to find you, but it can also drive up your sales with smart tools and easy access to your products.
+          </div>
+          <li class="list-group-item" data-toggle="collapse" data-target="#collapseVision" aria-expanded="false" aria-controls="collapseVision">
+            👁️High Impact marketing!
+          </li>
+          <div id="collapseVision" class="collapse collapse-content">
+            For small businesses, marketing budgets are often tight. The good news is that a website offers one of the most cost-effective marketing solutions available.
+
+Low-Cost, High-Impact Marketing
+Compared to traditional advertising—like print ads, advertising boards or radio websites offer a cheaper and often more effective way to market your business. With SEO (Search Engine Optimization) strategies in place, your website can appear higher in search results, bringing in traffic without the ongoing cost of paid advertising.
+
+Marketing Integration
+A website serves as the foundation for your digital marketing efforts. You can easily integrate social media, email marketing, and other campaigns into your site, creating a cohesive strategy that amplifies your reach. This helps you make the most out of every pound spent on marketing.
+
+Takeaway: Investing in a website provides your business with an affordable, scalable way to attract customers, gain insights, and market effectively.
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-section">
+        <h5>About Us</h5>
+        <p>Our mission is to deliver high-quality, innovative software solutions that drive growth and success for our clients.</p>
+      </div>
+      <div class="footer-section">
+        <h5>Contact Us</h5>
+        <p>Email: info@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Software St, Tech City, 45678</p>
+      </div>
+    </div>
+    <div class="container">
+      <hr>
+      <p class="text-muted mb-0">© 2024 Software Developer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
