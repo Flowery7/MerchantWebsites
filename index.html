@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8SVB5TF8W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8SVB5TF8W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-Z8SVB5TF8W');
-</script>
+    gtag('config', 'G-Z8SVB5TF8W');
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,7 @@
       color: white;
       position: relative;
       text-align: center;
-      height: 50vh; /* Reduced height */
+      height: 50vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -123,14 +123,14 @@
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
     }
-    .cookie-banner{
-      background-color:#333;
+    .cookie-banner {
+      background-color: #333;
       color: white;
       padding: 20px;
       position: fixed;
       bottom: 0;
       width: 100%;
-      display: flex;
+      display: none; /* Initially hidden */
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
@@ -144,7 +144,7 @@
       cursor: pointer;
       border-radius: 5px;
     }
-    .cookie-button:hover{
+    .cookie-button:hover {
       background-color: #45a049;
     }
     .cookie-banner a {
@@ -152,7 +152,7 @@
       text-decoration: underline;
     }
     .cookie-banner a:hover {
-      color:#d1d1d1
+      color: #d1d1d1;
     }
   </style>
 </head>
@@ -168,7 +168,7 @@
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a> <!-- Updated link -->
+          <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Articles</a>
@@ -253,32 +253,37 @@
         <p>Address: 123 Software St, Tech City, 45678</p>
       </div>
       <div id="cookie-banner" class="cookie-banner">
-    <p>We use cookies to improve your experience on our site. By continuing you agree to our use of cookies.
-    <a href="/privacy-policy.html">Learn more</a>.
-    <p>
-      <button id="accept-cookies"
-        class="cookie-button">Accept</button>
-    </div>
-    <div class="container">
-      <hr>
-      <p class="text-muted mb-0">© 2024 Software Developer. All rights reserved.</p> 
+        <p>We use cookies to improve your experience on our site. By continuing you agree to our use of cookies.
+        <a href="/privacy-policy.html">Learn more</a>.</p>
+        <button id="accept-cookies" class="cookie-button">Accept</button>
+      </div>
+      <div class="container">
+        <hr>
+        <p class="text-muted mb-0">© 2024 Software Developer. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script>
-  // Show the cookie banner if cookies haven't been accepted yet
-  if (!localStorage.getItem('cookiesAccepted')) {
-    document.getElementById('cookie-banner').style.display = 'flex';
-  }
 
-  // Set cookiesAccepted to true and hide the banner when the button is clicked
-  document.getElementById('accept-cookies').addEventListener('click', function() {
-    localStorage.setItem('cookiesAccepted', 'true');
-    document.getElementById('cookie-banner').style.display = 'none';
-  });
-</script>
+  <!-- Cookie Banner JS -->
+  <script>
+    window.onload = function() {
+      // Show the cookie banner if cookies haven't been accepted yet
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      }
+
+      // Set cookiesAccepted to true and hide the banner when the button is clicked
+      document.getElementById('accept-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+      });
+    };
+  </script>
 </body>
 </html>
+
