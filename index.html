@@ -123,6 +123,37 @@
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
     }
+    .cookie-banner{
+      background-color:#333;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      font-size: 14px;
+    }
+    .cookie-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .cookie-button:hover{
+      background-color: #45a049;
+    }
+    .cookie-banner a {
+      color: #f1f1f1;
+      text-decoration: underline;
+    }
+    .cookie-banner a:hover {
+      color:#d1d1d1
+    }
   </style>
 </head>
 <body>
@@ -221,6 +252,12 @@
         <p>Phone: (123) 456-7890</p>
         <p>Address: 123 Software St, Tech City, 45678</p>
       </div>
+      <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience on our site. By continuing you agree to our use of cookies.
+    <a href="/privacy-policy.html">Learn more</a>.
+    <p>
+      <button id="accept-cookies"
+        class="cookie-button">Accept</button>
     </div>
     <div class="container">
       <hr>
@@ -231,5 +268,17 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+  // Show the cookie banner if cookies haven't been accepted yet
+  if (!localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
+
+  // Set cookiesAccepted to true and hide the banner when the button is clicked
+  document.getElementById('accept-cookies').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  });
+</script>
 </body>
 </html>
