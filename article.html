@@ -1,235 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8SVB5TF8W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z8SVB5TF8W');
-</script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Website Development</title>
-  <!-- Fonts and Styles -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-    }
-    .navbar {
-      background: linear-gradient(45deg, #007bff, #6610f2);
-    }
-    .navbar-brand, .nav-link {
-      font-weight: 500;
-      font-size: 1.1rem;
-    }
-    .nav-link {
-      color: #fff;
-      transition: color 0.3s ease;
-    }
-    .nav-link:hover {
-      color: #f8f9fa;
-    }
-    .jumbotron {
-      background: url("pexels-mikhail-nilov-8108473.jpg") no-repeat center center/cover;
-      color: white;
-      position: relative;
-      text-align: center;
-      height: 50vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .jumbotron::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-    .jumbotron .container {
-      z-index: 1;
-    }
-    .display-4 {
-      font-weight: 600;
-      font-size: 3rem;
-    }
-    .content-section {
-      padding: 60px 0;
-    }
-    .card-title {
-      font-weight: 600;
-    }
-    .list-group-item.active {
-      background-color: #007bff;
-      border-color: #007bff;
-    }
-    .list-group-item {
-      border: 0;
-      background-color: #f8f9fa;
-      color: #007bff;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .list-group-item:hover {
-      background-color: #e9ecef;
-    }
-    .collapse-content {
-      padding: 10px;
-      background-color: #f1f1f1;
-      border-top: 1px solid #ddd;
-    }
-    .footer {
-      background-color: #343a40;
-      color: #adb5bd;
-      text-align: center;
-      padding: 1.5rem 0;
-    }
-    .footer .container {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .footer .footer-section {
-      flex: 1;
-      min-width: 200px;
-      margin: 0 20px;
-    }
-    .footer p {
-      margin: 0.2rem 0;
-    }
-    .footer hr {
-      border-top: 1px solid #495057;
-    }
-    hr.custom-separator {
-      border-top: 2px solid #007bff;
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="description" content="Find answers to common questions about Merchant Services, your trusted web design and development company. Learn about our services, pricing, and support.">
+    <meta name="keywords" content="web design FAQ, website development questions, how much does web design cost, IT services Halifax, web support, Merchant Services">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FAQ | Your Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar {
+            background-color: #f8f9fa;
+        }
+        .navbar a {
+            color: #89eabh;
+            font-size: 1.1rem;
+            margin-right: 15px;
+            font-weight: bold;
+            color: #5E82DA;
+        }
+        .hero {
+            background: linear-gradient(135deg, rgba(29, 40, 99, 0.8), rgba(114, 124, 243, 0.8)), url('https://source.unsplash.com/1600x900/?question');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .content {
+            padding: 50px 0;
+        }
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #bbb;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+        }
+        .accordion-button:focus {
+            border-color: #111;
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Website Development</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Merchant Services</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Articles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="terms.html">Terms and Policy</a>
-        </li>
+      <ul class="navbar-nav ms-auto">
+        <!-- Link to Packages section on index.html -->
+        <li class="nav-item"><a href="index.html#packages" class="nav-link">Packages</a></li>
+        <!-- Link to Portfolio/Our Work section on index.html -->
+        <li class="nav-item"><a href="index.html#portfolio" class="nav-link">Our Work</a></li>
+        <!-- Link to About page -->
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <!-- Link to FAQ page -->
+        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+        <!-- Link to Contact section on index.html -->
+        <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
-  </nav>
-
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">👾Articles👽</h1>
-      <p class="lead">Extra extra - read all about it!</p>
-    </div>
   </div>
+</nav>
 
-  <div class="container content-section">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">We are ready to receive contact 👽</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item" data-toggle="collapse" data-target="#collapseStory" aria-expanded="false" aria-controls="collapseStory">
-            📖 Why a website is a must have.
-          </li>
-          <div id="collapseStory" class="collapse collapse-content">
-            In today's digital world, having a website is not just an option; it’s a necessity for small businesses. With more customers going online to search for products, services, and recommendations, a website is your business’s first chance to make an impression.
-
-Visibility in a Competitive Market
-A website allows small businesses to be visible online, where most potential customers are searching. When people look for products or services, they use search engines like Google. If your business doesn’t have an online presence, you are missing out on a huge number of potential customers.
-
-Around-the-Clock Access to Your Business
-A website makes your business available 24/7. Whether it's early in the morning or late at night, potential clients can browse your offerings, read testimonials, and even place orders or make inquiries—without needing your physical presence. This kind of convenience builds trust with customers.
-
-Building Credibility and Trust
-A well-designed website builds credibility. It shows that you are serious about your business and are willing to invest in professional representation. When a customer sees a polished, functional website, they are more likely to trust your brand, products, or services. Without it, you risk looking outdated and unprofessional.
-
-Takeaway: A website makes your business accessible, builds trust, and helps you stay competitive. Don’t let your competitors get ahead—create a website and ensure your small business thrives.
-          </div>
-          <li class="list-group-item" data-toggle="collapse" data-target="#collapseMission" aria-expanded="false" aria-controls="collapseMission">
-            🚀 More clients less cost!
-          </li>
-          <div id="collapseMission" class="collapse collapse-content">
-            Every small business owner knows that sales are the lifeblood of their company. One of the best ways to increase sales, without needing a huge marketing budget, is by having a website.
-
-Expanding Your Reach to New Customers
-Unlike a physical store or office, which has limited hours and a local customer base, a website can reach potential customers across the world. Even if your business serves only local clients, having a website makes it easier for nearby people to discover you when searching online.
-
-Showcase Products and Services
-With a website, you can display your entire catalog, offer special promotions, and give detailed descriptions of your services. Customers are more likely to make purchases when they have access to all the information they need at their fingertips. A website allows you to keep your products updated and promote new arrivals or seasonal offers.
-
-Modern websites come equipped with tools that can help turn visitors into paying customers. Call-to-action buttons, forms for lead generation, live chat, and integrated shopping carts are just a few features that can be added to your website to encourage immediate customer engagement and sales.
-
-Takeaway: A website not only makes it easier for potential customers to find you, but it can also drive up your sales with smart tools and easy access to your products.
-          </div>
-          <li class="list-group-item" data-toggle="collapse" data-target="#collapseVision" aria-expanded="false" aria-controls="collapseVision">
-            👁️ High Impact marketing!
-          </li>
-          <div id="collapseVision" class="collapse collapse-content">
-            For small businesses, marketing budgets are often tight. The good news is that a website offers one of the most cost-effective marketing solutions available.
-
-Low-Cost, High-Impact Marketing
-Compared to traditional advertising—like print ads, advertising boards or radio websites offer a cheaper and often more effective way to market your business. With SEO (Search Engine Optimization) strategies in place, your website can appear higher in search results, bringing in traffic without the ongoing cost of paid advertising.
-
-Marketing Integration
-A website serves as the foundation for your digital marketing efforts. You can easily integrate social media, email marketing, and other campaigns into your site, creating a cohesive strategy that amplifies your reach. This helps you make the most out of every pound spent on marketing.
-
-Takeaway: Investing in a website provides your business with an affordable, scalable way to attract customers, gain insights, and market effectively.
-          </div>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <footer class="footer">
+<!-- Hero Section -->
+<header class="hero text-center">
     <div class="container">
-      <div class="footer-section">
-        <h5>About Us</h5>
-        <p>Our mission is to deliver high-quality, innovative software solutions that drive growth and success for our clients.</p>
-      </div>
-      <div class="footer-section">
-        <h5>Contact Us</h5>
-        <p>Email: merchantservices.stevenson@gmail.com</p>
-        <p>Phone: 44 7394542901</p>
-        <p>Address: Office 6, West Yorkshire, Halifax HX6 2LY</p>
-      </div>
+        <h1>FAQ's</h1>
+        <p>Explore below to learn more about our services, processes, and offerings.</p>
     </div>
-    <div class="container">
-      <hr>
-      <p class="text-muted mb-0">© 2024 Merchant Services. All rights reserved.</p>
-    </div>
-  </footer>
+</header>
 
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- FAQ Section -->
+<section class="content">
+    <div class="container">
+        <h2 class="text-center mb-4">How Can We Help You?</h2>
+
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What services do you offer?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We offer a range of services, including website design, SEO optimisation, and social media optimisation to help your business grow online.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How long does it take to build a website?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Typically, it takes between 1-2 weeks depending on the complexity of the project and your requirements.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What is SEO and why is it important?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        SEO (Search Engine Optimisation) is the process of optimising your website to rank higher on search engines, helping you gain more visibility and traffic.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Can I update my website once it's live?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes! We provide content management systems (CMS) that allow you to update your site with ease after it's live, if you want to add new content or text.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Do you offer ongoing support?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absolutely! We offer ongoing support and maintenance to ensure your website continues to perform well for your business.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+  <div class="container text-center">
+    <p>&copy; 2024 MerchantServices. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/ns.mrchconsult.uk"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/ns.mrchconsult.uk"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.x.com/MerchServ555"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <div class="quick-links mt-2">
+      <a href="privacy.html" class="text-decoration-none">Privacy Policy</a> |
+      <a href="privacy.html" class="text-decoration-none">Terms of Service</a>
+    </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
