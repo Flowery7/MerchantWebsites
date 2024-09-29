@@ -229,7 +229,7 @@
 <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio text-center">
   <div class="container">
-    <h2><span style= "color: #5E82DA; "> Examples of Our Work</span></h2>
+    <h2><span style="color: #5E82DA;"> Examples of Our Work</span></h2>
     <p class="mb-5">See what we've created.</p>
     <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
       <div class="carousel-inner">
@@ -247,7 +247,7 @@
         <!-- Example 2 -->
         <div class="carousel-item">
           <div class="card portfolio-card p-3">
-            <img src="/website-developer-example-bradford.png" class="card-img-top" alt="A eccomerce website design showcasing a user-friendly interface and products.">
+            <img src="/website-developer-example-bradford.png" class="card-img-top" alt="A e-commerce website design showcasing a user-friendly interface and products.">
             <div class="card-body">
               <h4>Ecommerce Craft</h4>
               <p>An elegant website showcasing modern design.</p>
@@ -258,7 +258,7 @@
         <!-- Example 3 -->
         <div class="carousel-item">
           <div class="card portfolio-card p-3">
-            <img src="/cleaning-website-business.png" class="card-img-top" alt="A business website design showcasing a simple interface .">
+            <img src="/cleaning-website-business.png" class="card-img-top" alt="A business website design showcasing a simple interface.">
             <div class="card-body">
               <h4>Cleaning Services</h4>
               <p>A business website built for growing clientele.</p>
@@ -293,7 +293,29 @@
   .portfolio-card:hover {
     transform: scale(1.05);
   }
+
+  /* Ensure the images fit nicely on desktop */
+  .carousel-item img {
+    max-width: 100%; /* Make sure the image fits within the card */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  @media (min-width: 768px) {
+    .carousel-item img {
+      max-width: 600px; /* Set a max width for the image on larger screens */
+      width: 100%; /* Make sure the image expands to fill the card */
+    }
+
+    .portfolio-card {
+      display: flex; /* Center the card content */
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto; /* Center the card horizontally */
+      max-width: 600px; /* Set a max width for the card */
+    }
+  }
 </style>
+
     <section id="contact" class="contact-us text-center py-5">
   <div class="container">
     <h2>Contact Us</h2>
