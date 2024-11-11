@@ -41,22 +41,26 @@
   <link rel="stylesheet" href="styles.css"> <!-- Optional for external CSS -->
   <style>
 
-  /* Default style */
+ 
+/* Default style, centered for larger screens */
 .popup-container {
     display: none;
     position: fixed;
-    top: 0; /* Default position for larger screens */
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
-/* Adjust position on mobile devices */
+/* Adjust position for mobile devices */
 @media (max-width: 768px) {
     .popup-container {
-        top: 50px; /* Lowered position for mobile, adjust as needed */
+        top: 70px; /* Offset from the top on mobile */
+        left: 0;
+        transform: none; /* Remove centering transform */
     }
 }
 
