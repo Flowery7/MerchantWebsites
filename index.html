@@ -118,7 +118,7 @@
     // Show the popup after 5 seconds
     setTimeout(function() {
       document.getElementById('popupForm').style.display = 'block';
-    }, 30000);
+    }, 60000);
 
     // Close the popup when clicking on 'x'
     document.getElementById('closePopup').onclick = function() {
@@ -277,6 +277,208 @@
         <a href="#packages" class="btn btn-primary mt-4">View Packages</a>
     </div>
 </header>
+
+
+    <!-- Chatbot Widget -->
+<div id="chatbot-icon" onclick="toggleChatbot()">💬</div>
+<div id="chatbot">
+    <div id="chatbot-header">
+        Customer Support 
+        <button id="chatbot-close" onclick="toggleChatbot()">✖</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input">
+        <input type="text" id="user-input" placeholder="Ask a question...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<style>
+    /* Styles for the chatbot widget */
+    #chatbot {
+        width: 330px;
+        height: 400px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    #chatbot-header {
+        background-color: #88A4E3;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #chatbot-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .message {
+        margin: 8px 0;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .user-message {
+        text-align: right;
+        background-color: #e0f7fa;
+    }
+
+    .bot-message {
+        text-align: left;
+        background-color: #f0f0f0;
+    }
+
+    #chatbot-input {
+        display: flex;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    #chatbot-input input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-top: 1px solid #ccc;
+    }
+
+    #chatbot-input button {
+        padding: 10px;
+        background-color: #88A4E3;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Chatbot icon */
+    #chatbot-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #88A4E3;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+</style>
+
+<script>
+    // Chatbot functionality
+    const chatbotMessages = document.getElementById("chatbot-messages");
+    const userInput = document.getElementById("user-input");
+    const chatbot = document.getElementById("chatbot");
+
+    // Intents and responses
+  const chatbotIntents = {
+      "greetings": {
+        "patterns": ["hello", "hi", "hey", "good morning", "good afternoon", "good evening"],
+        "responses": ["Hello! How can I assist you today?", "Hi there! What can I do for you?"]
+      },
+      "services": {
+        "patterns": ["services", "offerings", "website", "websites", "web design", "do you provide", "offers", "plans","what do you offer","offer"],
+        "responses": ["We offer website design and SEO. Need more info? Ask about our packages."]
+      },
+      "packages": {
+        "patterns": ["packages", "plans", "pricing", "cost", "package", "price", "how much"],
+        "responses": ["Our packages: Standard websites from only £69, Professional sites from £178, Full Business Packages from £299. Which one interests you?"]
+      },
+      "option": {
+        "patterns": ["standard", "£69", "first", "cheap", "cheapest"],
+        "responses": ["Bish Bash Bosh - Our Standard package gets you up and online. It includes website design, a domain name, and 12 months of hosting. A great option if you want a basic website to add to your social media pages.  Fill out a query form to find out more. Let us know about your project. "]
+      },
+      "option1": {
+        "patterns": ["professional", "£178", "Middle", "second"],
+        "responses": ["Bish Bash Bosh - Our Professional package includes website design, a domain name, 12 months of hosting, and quality SEO. Perfect for service businesses. Fill out a query form to find out more. Let us know about your project."]
+      },
+      "option2": {
+        "patterns": ["full package", "Full business package", "£299", "Business", "third", "full"],
+        "responses": ["Bish Bash Bosh - Our Full package includes website design, a domain name, 12 months of hosting, quality SEO, and social media optimisation for growth. Proven strategies for growth are included as well. It's a great option for a new business. Fill out a query form to find out more. Let us know about your project."]
+
+
+      },
+      "questions": {
+        "patterns": ["how long does it take", "how quick", "time", "how soon"],
+        "responses": ["Your website will generally take 1 week to ten days depending on the complexity of the build. You may be required to provide images and other text specific to what your site needs. After consultation you can be up and online a around 10 days."]
+        
+      },
+"questions": {
+  "patterns": ["Thanks", "great", "cheers", "ta", "bye", "goodbye", "Okay" ],
+  "responses": ["If you have any questions or would like more info, don't hesitate to get in touch. Have a great day :)"]
+},
+        
+      
+      "unknown": {
+        "responses": ["Sorry, I didn't understand that. Could you rephrase or ask something else?"]
+      }
+    };
+
+    function sendMessage() {
+        const message = userInput.value.trim();
+        if (!message) return;
+
+        displayMessage(message, 'user');
+        userInput.value = "";
+
+        const botResponse = getBotResponse(message.toLowerCase());
+        setTimeout(() => displayMessage(botResponse, 'bot'), 400);
+    }
+
+    function displayMessage(message, sender) {
+        const msgElement = document.createElement("div");
+        msgElement.classList.add("message", sender + "-message");
+        msgElement.innerHTML = message;
+        chatbotMessages.appendChild(msgElement);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function getBotResponse(userMessage) {
+        for (let intent in chatbotIntents) {
+            const patterns = chatbotIntents[intent].patterns;
+            if (patterns.some(pattern => userMessage.includes(pattern))) {
+                return chatbotIntents[intent].responses[0];
+            }
+        }
+        return chatbotIntents["unknown"].responses[0];
+    }
+
+    function toggleChatbot() {
+        chatbot.style.display = chatbot.style.display === "none" ? "flex" : "none";
+        if (chatbotMessages.children.length === 0 && chatbot.style.display === "flex") {
+            displayMessage("Lets build you an awesome site! How can I help you?", 'bot');
+        }
+    }
+
+    // Add event listener for Enter key
+    userInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+    });
+</script>
 
 
 <!-- Portfolio Section -->
