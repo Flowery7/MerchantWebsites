@@ -130,24 +130,30 @@ button:hover {
   </div>
 
   <!-- JavaScript to control the popup -->
-  <script>
-    // Show the popup after 60 seconds
-    setTimeout(function() {
-      document.getElementById('popupForm').style.display = 'flex';
-    }, 60000);
+ <script>
+  // Function to display the popup after a delay
+  function showPopup() {
+    document.getElementById('popupForm').style.display = 'flex';
+  }
 
-    // Close the popup when clicking on 'x'
-    document.getElementById('closePopup').onclick = function() {
+  // Set a timeout of 60 seconds (60000 ms) to trigger the popup
+  window.onload = function() {
+    setTimeout(showPopup, 60000); // 60 seconds
+  };
+
+  // Close the popup when clicking on 'x'
+  document.getElementById('closePopup').onclick = function() {
+    document.getElementById('popupForm').style.display = 'none';
+  };
+
+  // Close the popup if clicking outside the form
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('popupForm')) {
       document.getElementById('popupForm').style.display = 'none';
-    };
+    }
+  };
+</script>
 
-    // Close the popup if clicking outside the form
-    window.onclick = function(event) {
-      if (event.target == document.getElementById('popupForm')) {
-        document.getElementById('popupForm').style.display = 'none';
-      }
-    };
-  </script>
      
 
 </body>
