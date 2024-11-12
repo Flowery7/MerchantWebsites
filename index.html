@@ -41,8 +41,7 @@
   <link rel="stylesheet" href="styles.css"> <!-- Optional for external CSS -->
   <style>
 
- 
-/* Centered style for desktop screens */
+/* Centered style for desktop and larger screens */
 .popup-container {
     display: none;
     position: fixed;
@@ -79,6 +78,32 @@
     border-radius: 10px 10px 0 0; /* Rounded corners for the top of the image */
 }
 
+/* Close button */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Button styling */
+button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 /* Adjustments for mobile devices */
 @media (max-width: 768px) {
     .popup-container {
@@ -89,60 +114,9 @@
         width: 90%; /* More responsive on smaller screens */
     }
 }
-
-
-
-
-
-    /* Popup content styling */
-    .popup-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
-      position: relative;
-    }
-
-    /* Image styling */
-    .popup-image {
-      width: 100%;
-      max-height: 150px;
-      object-fit: cover;
-      border-radius: 10px 10px 0 0;
-    }
-
-    /* Close button */
-    .close-popup {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    /* Button styling */
-    button {
-      padding: 10px;
-      font-size: 16px;
-      color: #fff;
-      background-color: #007bff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
+</style>
 
 <body>
-  <!-- Existing body content -->
-
   <!-- Popup form container -->
   <div class="popup-container" id="popupForm">
     <div class="popup-content">
@@ -157,9 +131,9 @@
 
   <!-- JavaScript to control the popup -->
   <script>
-    // Show the popup after 5 seconds
+    // Show the popup after 60 seconds
     setTimeout(function() {
-      document.getElementById('popupForm').style.display = 'block';
+      document.getElementById('popupForm').style.display = 'flex';
     }, 60000);
 
     // Close the popup when clicking on 'x'
@@ -174,6 +148,7 @@
       }
     };
   </script>
+     
 
 </body>
 
