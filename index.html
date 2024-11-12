@@ -40,85 +40,75 @@
   <!-- Existing head content -->
   <link rel="stylesheet" href="styles.css"> <!-- Optional for external CSS -->
   <style>
-
-/* Centered style for desktop and larger screens */
-.popup-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-
-    /* Flexbox properties for centering */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Popup content centered and sized appropriately */
-.popup-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    max-width: 90%; /* Responsive width on smaller screens */
-    text-align: center;
-    position: relative;
-    overflow: hidden; /* Prevents image overflow */
-}
-
-/* Image styling */
-.popup-image {
-    width: 100%; /* Ensures the image fills the width of the container */
-    max-height: 150px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the image */
-}
-
-/* Close button */
-.close-popup {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #000;
-}
-
-/* Button styling */
-button {
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Adjustments for mobile devices */
-@media (max-width: 768px) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Form</title>
+  <style>
+    /* Popup container - hidden by default */
     .popup-container {
-        align-items: flex-start; /* Aligns to the top */
-        padding-top: 130px; /* Offset from the top */
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      /* Center the popup vertically and horizontally */
+      display: flex;
     }
-    .popup-content {
-        width: 90%; /* More responsive on smaller screens */
-    }
-}
-</style>
 
+    /* Popup content */
+    .popup-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%; /* Default width for mobile responsiveness */
+      max-width: 400px; /* Maximum width on larger screens */
+      text-align: center;
+      position: relative;
+    }
+
+    /* Image styling */
+    .popup-image {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    /* Close button */
+    .close-popup {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Button styling */
+    button {
+      padding: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
 <body>
- 
-<!-- Your page content -->
 
 <!-- Popup form container -->
 <div class="popup-container" id="popupForm">
@@ -128,32 +118,30 @@ button:hover {
     <img src="Bish_bash_bosh_pop_up.png" alt="Special Offer" class="popup-image">
     <h3>Interested in a website?</h3>
     <p>Simply fill out a query form and tell us about your requirements.</p>
-    <button onclick="window.location.href='https://www.merchant-web.co.uk/form.html';">Fill out the form</button>
+    <button onclick="window.location.href='https://wwww.merchant-web.co.uk';">Fill out the form</button>
   </div>
 </div>
 
-<!-- Place JavaScript just before the closing </body> tag -->
 <script>
-  // Wait until the entire page is fully loaded
-  window.addEventListener('load', function() {
-    // Set a strict timeout of 60 seconds (60000 milliseconds) before showing the popup
-    setTimeout(function() {
-      document.getElementById('popupForm').style.display = 'flex';
-    }, 60000); // 60 seconds
-  });
+  // Show the popup after 60 seconds
+  setTimeout(function() {
+    document.getElementById('popupForm').style.display = 'flex'; // Changed to 'flex' to use flexbox centering
+  }, 60000); // 60,000 milliseconds = 60 seconds
 
-  // Close the popup when clicking on 'x'
+  // Close the popup when the user clicks on 'x'
   document.getElementById('closePopup').onclick = function() {
     document.getElementById('popupForm').style.display = 'none';
   };
 
-  // Close the popup if clicking outside the form
+  // Close the popup if the user clicks anywhere outside the form
   window.onclick = function(event) {
     if (event.target == document.getElementById('popupForm')) {
       document.getElementById('popupForm').style.display = 'none';
     }
   };
 </script>
+
+
 </body>
 
 
