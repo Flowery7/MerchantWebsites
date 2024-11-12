@@ -68,6 +68,15 @@
     max-width: 90%; /* Responsive width on smaller screens */
     text-align: center;
     position: relative;
+    overflow: hidden; /* Prevents image overflow */
+}
+
+/* Image styling */
+.popup-image {
+    width: 100%; /* Ensures the image fills the width of the container */
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the image */
 }
 
 /* Adjustments for mobile devices */
@@ -79,6 +88,8 @@
     .popup-content {
         width: 90%; /* More responsive on smaller screens */
     }
+}
+
 
 
 
