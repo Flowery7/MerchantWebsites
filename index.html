@@ -42,27 +42,50 @@
   <style>
 
  
-/* Default style, centered for larger screens */
+/* Centered style for desktop screens */
 .popup-container {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Adjust position for mobile devices */
+/* Popup content centered and sized appropriately */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 90%; /* Responsive width on small screens */
+    text-align: center;
+    position: relative;
+}
+
+/* Adjustments for mobile devices */
 @media (max-width: 768px) {
     .popup-container {
-        top: 130px; /* Offset from the top on mobile */
+        top: 0;
         left: 0;
-        transform: none; /* Remove centering transform */
-         background-color: rgba(0, 0, 0, 0);
+        transform: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Maintain overlay */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    .popup-content {
+        width: 90%; /* More responsive on smaller screens */
+        margin-top: 130px; /* Offset from the top */
+    }
+
 
     /* Popup content styling */
     .popup-content {
