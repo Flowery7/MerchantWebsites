@@ -117,21 +117,46 @@
         .social-icons i:hover {
             color: #88A4E3;
         }
-        /* Cookie banner styles */
-        .cookie-banner {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            display: block; /* Ensure the banner appears */
-        }
-        .cookie-banner a {
-            color: #f8d210;
-            text-decoration: underline;
-        }
+       /* Cookie banner styles */
+.cookie-banner {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: block; /* Ensure the banner appears */
+}
+
+.cookie-banner a {
+    color: #f8d210;
+    text-decoration: underline;
+}
+
+.cookie-banner button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cookie-banner #acceptCookies {
+    background-color: #4CAF50; /* Green for Accept */
+}
+
+.cookie-banner #rejectCookies {
+    background-color: #f44336; /* Red for Reject */
+}
+
+/* Hover effect for buttons */
+.cookie-banner button:hover {
+    opacity: 0.8;
+}
+
         /* Flicker animation */
         @keyframes flicker {
             0%, 100% { opacity: 1; }
@@ -611,20 +636,82 @@ This is a perfect opportunity to have your business website built and delivered 
 </footer>
 
 <!-- Cookie Banner -->
+<!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
     We use cookies to enhance your experience. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.
     <button id="acceptCookies" class="btn btn-sm btn-primary">Accept</button>
+    <button id="rejectCookies" class="btn btn-sm btn-danger">Reject</button>
 </div>
+
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Cookie consent logic
-    document.getElementById('acceptCookies').onclick = function() {
-        document.getElementById('cookieBanner').style.display = 'none';
-    };
+
+<<script>
+// Cookie consent logic
+document.getElementById('acceptCookies').onclick = function() {
+  // Set a cookie to remember that the user accepted
+  document.cookie = "cookies_accepted=true; path=/; max-age=" + 60 * 60 * 24 * 365; // Expires in 1 year
+
+  // Hide the banner
+  document.getElementById('cookieBanner').style.display = 'none';
+
+  // Load Google Analytics or other cookie-related scripts
+  loadCookies();
+};
+
+document.getElementById('rejectCookies').onclick = function() {
+  // Set a cookie to remember that the user rejected
+  document.cookie = "cookies_accepted=false; path=/; max-age=" + 60 * 60 * 24 * 365; // Expires in 1 year
+
+  // Hide the banner
+  document.getElementById('cookieBanner').style.display = 'none';
+
+  // Block or prevent cookie-dependent scripts if needed
+  blockCookies();
+};
+
+// Check if the user has already accepted/rejected cookies
+window.onload = function() {
+  if (document.cookie.indexOf("cookies_accepted=true") !== -1) {
+    // Cookies are accepted, load cookies
+    loadCookies();
+    document.getElementById('cookieBanner').style.display = 'none';
+  } else if (document.cookie.indexOf("cookies_accepted=false") !== -1) {
+    // Cookies are rejected, block cookies
+    blockCookies();
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+};
+
+// Function to load cookies (e.g., Google Analytics)
+function loadCookies() {
+  // Load the Google Analytics script
+  var script = document.createElement('script');
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z8SVB5TF8W'; // Replace with your Google Analytics ID
+  script.async = true;
+  document.head.appendChild(script);
+
+  // Initialize gtag() once the script is loaded
+  script.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-Z8SVB5TF8W"); // Replace with your Google Analytics ID
+  };
+}
+
+// Function to block cookies (optional if you want to block certain functionality)
+function blockCookies() {
+  console.log("Cookies are blocked.");
+}
+
 </script>
+
 </body>
 </html>
