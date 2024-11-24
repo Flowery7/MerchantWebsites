@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8SVB5TF8W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z8SVB5TF8W');
+</script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -109,112 +117,21 @@
         .social-icons i:hover {
             color: #88A4E3;
         }
-        
-        /* Cookie Banner Styling */
-/* Cookie Banner Styling */
-#cookie-banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent grey */
-    border-top: 3px solid #4b0082; /* Dark purple accent border */
-    padding: 12px 20px; /* Adjusted padding for compactness */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for emphasis */
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 14px;
-    color: #ffffff; /* White text for contrast */
-    flex-wrap: wrap; /* Allow wrapping for small screens */
-    gap: 10px; /* Gap between elements */
-}
-
-#cookie-banner p {
-    margin: 0;
-    line-height: 1.5;
-    flex-basis: 100%; /* Allow the text to take full width on mobile */
-    margin-bottom: 10px; /* Add some spacing below the text */
-}
-
-#cookie-banner div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; /* Ensure buttons take full width on mobile */
-}
-
-#cookie-banner a {
-    color: #ffeb3b; /* Yellow Learn More link */
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 12px; /* Smaller link font size */
-    margin-top: 10px;
-}
-
-#cookie-banner button {
-    background-color: #6a0dad; /* Soft deep purple for accept button */
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 16px; /* Reduced padding for compactness */
-    font-size: 14px; /* Adjusted button font size */
-    cursor: pointer;
-    transition: none; /* No hover effect needed */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin: 0 5px; /* Space between buttons */
-    flex-grow: 0; /* Make buttons fill available space */
-    min-width: 1%; /* Reduced width to 50% */
-}
-
-#cookie-banner button#reject-cookies {
-    background-color: #fbc02d; /* Deep yellow for reject button */
-}
-
-#cookie-banner button#learn-more-link {
-    color: #fbc02d; /* Yellow for Learn More link */
-    font-size: 12px;
-}
-
-/* Responsive Design for mobile */
-@media (max-width: 768px) {
-    #cookie-banner {
-        flex-direction: column;
-        padding: 10px; /* Adjust padding for mobile */
-        gap: 10px; /* Space between elements */
-    }
-
-    #cookie-banner p {
-        flex-basis: 100%; /* Ensure text takes full width */
-        margin-bottom: 8px;
-    }
-
-    #cookie-banner div {
-        justify-content: space-evenly; /* Equal space between buttons */
-        width: 100%; /* Full width buttons */
-    }
-
-    #cookie-banner button {
-        width: 50%; /* Buttons now take up 50% of the width */
-        margin-bottom: 10px; /* Margin between buttons */
-    }
-
-    #cookie-banner button:last-child {
-        margin-bottom: 0; /* Remove margin from the last button */
-    }
-
-    #cookie-banner #learn-more-link {
-        margin-top: 10px;
-    }
-}
-
-
-
-
-        
-        
-        
+        /* Cookie banner styles */
+        .cookie-banner {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            display: block; /* Ensure the banner appears */
+        }
+        .cookie-banner a {
+            color: #f8d210;
+            text-decoration: underline;
+        }
         /* Flicker animation */
         @keyframes flicker {
             0%, 100% { opacity: 1; }
@@ -691,70 +608,23 @@ This is a perfect opportunity to have your business website built and delivered 
     </details>
 </footer>
 
-<div id="cookie-banner">
-    <p>We use cookies to improve your experience. Visit our cookie policy for more info.</p>
-    <div>
-        <button id="accept-cookies">Accept</button>
-        <button id="reject-cookies">Reject</button>
-        <a href="policy.html" id="learn-more-link">Learn More</a>
-    </div>
+</footer>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+    We use cookies to enhance your experience. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.
+    <button id="acceptCookies" class="btn btn-sm btn-primary">Accept</button>
 </div>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const cookieBanner = document.getElementById("cookie-banner");
-    const acceptButton = document.getElementById("accept-cookies");
-    const rejectButton = document.getElementById("reject-cookies");
-
-    // Check if user already made a choice
-    const userConsent = localStorage.getItem("cookieConsent");
-    if (userConsent) {
-      cookieBanner.style.display = "none";
-      if (userConsent === "accepted") {
-        loadGoogleAnalytics();
-      }
-    }
-
-    // Handle Accept Button
-    acceptButton.addEventListener("click", () => {
-      localStorage.setItem("cookieConsent", "accepted");
-      loadGoogleAnalytics();
-      cookieBanner.style.display = "none";
-    });
-
-    // Handle Reject Button
-    rejectButton.addEventListener("click", () => {
-      localStorage.setItem("cookieConsent", "rejected");
-      cookieBanner.style.display = "none";
-    });
-
-    // Function to load Google Analytics script
-    function loadGoogleAnalytics() {
-      const script = document.createElement("script");
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-Z8SVB5TF8W";
-      script.async = true;
-      document.head.appendChild(script);
-
-      script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-Z8SVB5TF8W");
-      };
-    }
-  });
-</script>
-
-
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+    // Cookie consent logic
+    document.getElementById('acceptCookies').onclick = function() {
+        document.getElementById('cookieBanner').style.display = 'none';
+    };
+</script>
 </body>
 </html>
