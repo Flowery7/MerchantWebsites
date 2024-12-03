@@ -18,4 +18,4 @@ Allow: /assets/js/
 Allow: /images/
 
 # Sitemap location for better crawling and indexing
-Sitemap: https://merchant-web.co.uk/sitemap.xml
+Sitemap: https://www.merchant-web.co.uk/sitemap.xml
