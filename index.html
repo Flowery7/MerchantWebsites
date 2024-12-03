@@ -160,6 +160,38 @@
         .package-card:hover, .portfolio-card:hover {
             transform: scale(1.05);
         }
+
+
+.social-share {
+      display: center;
+      gap: 10px;
+    }
+    .social-share a {
+      text-decoration: none;
+      color: white;
+      background-color: #3b5998; /* Facebook color */
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .social-share a:hover {
+      background-color: #4c70a0;
+    }
+    .social-share .fa {
+      margin-right: 5px;
+    }
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      .social-share {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+
+       
         .btn {
             background-color: #722cf3; /* Soft purple */
             color: white; /* Text color */
@@ -672,6 +704,27 @@ This is a perfect opportunity to have your business website built and delivered 
       <p><i class="fas fa-phone-alt"></i> <a href="tel:+441234567890">07394542901</a></p>
       <p><i class="fas fa-envelope"></i> <a href="mailto:info@yourbusiness.com">merchantservices.stevenson@gmail.com</a></p>
     </div>
+
+      <div class="social-share">
+   <!-- Facebook -->
+   <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.merchant-web.co.uk" target="_blank">
+     <i class="fab fa-facebook-f"></i> Share
+   </a>
+   <!-- Twitter -->
+   <a href="https://twitter.com/intent/tweet?url=https://www.merchant-web.co.uk&text=Check%20this%20out!" target="_blank">
+     <i class="fab fa-twitter"></i> Share
+   </a>
+   <!-- LinkedIn -->
+   <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.merchant-web.co.uk" target="_blank">
+     <i class="fab fa-linkedin"></i> Share
+   </a>
+   <!-- WhatsApp -->
+   <a href="https://api.whatsapp.com/send?text=https://www.merchant-web.co.uk" target="_blank">
+     <i class="fab fa-whatsapp"></i> Share
+   </a>
+ </div>
+
+     
           <div class="row justify-content-center text-center">
   <div class="col-md-8">
     <a href="form.html" class="btn btn-primary mt-3">Query form</a>
