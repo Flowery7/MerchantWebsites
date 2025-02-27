@@ -944,5 +944,93 @@ function blockCookies() {
 
 </script>
 
+<script>
+  (function() {
+    // Create the pop-up container
+    const popup = document.createElement('div');
+    popup.id = 'custom-popup';
+    Object.assign(popup.style, {
+        display: 'none',
+        position: 'fixed',
+        left: '50%',
+        top: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '320px',
+        padding: '20px',
+        backgroundColor: '#fff',
+        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
+        zIndex: '1000',
+        borderRadius: '8px',
+        textAlign: 'center' // Center all text in the pop-up
+    });
+
+    // Create the close button
+    const closeButton = document.createElement('span');
+    closeButton.textContent = '×';
+    Object.assign(closeButton.style, {
+        position: 'absolute',
+        top: '10px',
+        right: '15px',
+        fontSize: '24px',
+        cursor: 'pointer'
+    });
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    // Create title and message
+    const title = document.createElement('h2');
+    title.textContent = 'Looking For A Great Value Website?';
+    title.style.fontSize = '22px';
+    title.style.fontWeight = 'bold';
+
+    const message = document.createElement('p');
+    message.textContent = 'You\'re in the right place! Get started with an excellent package offer! Choose us to get your business online and the attention it deserves. Let\'s grow together!';
+    message.style.marginBottom = '20px';
+
+   // Create the call button
+const callButton = document.createElement('button');
+callButton.textContent = 'Call Us Now';
+Object.assign(callButton.style, {
+    padding: '10px 20px',
+    backgroundColor: '#28a745',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '6px', // Slightly rounded edges
+    cursor: 'pointer',
+    fontSize: '14px',
+    fontWeight: 'bold',
+    width: '60%', // A good balance, not too big or small
+    transition: 'background 0.3s ease, transform 0.2s ease' // Smooth hover effect
+});
+
+// Hover effect
+callButton.addEventListener('mouseover', () => {
+    callButton.style.backgroundColor = '#218838'; // Slightly darker green
+    callButton.style.transform = 'scale(1.05)'; // Small pop-out effect
+});
+callButton.addEventListener('mouseout', () => {
+    callButton.style.backgroundColor = '#28a745';
+    callButton.style.transform = 'scale(1)';
+});
+
+   
+   
+    // Append elements
+    popup.appendChild(closeButton);
+    popup.appendChild(title);
+    popup.appendChild(message);
+    popup.appendChild(callButton);
+    document.body.appendChild(popup);
+
+    // Show the pop-up after 15 seconds
+    setTimeout(() => {
+        popup.style.display = 'block';
+    }, 15000);
+})();
+</script>
+
+
+   
 </body>
 </html>
