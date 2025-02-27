@@ -961,7 +961,7 @@ function blockCookies() {
         boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
         zIndex: '1000',
         borderRadius: '8px',
-        textAlign: 'center' // Center all text in the pop-up
+        textAlign: 'center'
     });
 
     // Create the close button
@@ -978,44 +978,41 @@ function blockCookies() {
         popup.style.display = 'none';
     });
 
-    // Create title and message
+    // Create title
     const title = document.createElement('h2');
-    title.textContent = 'Looking For A Great Value Website?';
-    title.style.fontSize = '22px';
-    title.style.fontWeight = 'bold';
+    title.textContent = 'Looking for a great value Website?';
+    Object.assign(title.style, {
+        fontSize: '22px',
+        fontWeight: 'bold',
+        color: '#007BFF' // Title color
+    });
 
+    // Create message
     const message = document.createElement('p');
     message.textContent = 'You\'re in the right place! Get started with an excellent package offer! Choose us to get your business online and the attention it deserves. Let\'s grow together!';
-    message.style.marginBottom = '20px';
+    Object.assign(message.style, {
+        color: '#333', // Dark grey text
+        marginBottom: '20px'
+    });
 
-   // Create the call button
-const callButton = document.createElement('button');
-callButton.textContent = 'Call Us Now';
-Object.assign(callButton.style, {
-    padding: '10px 20px',
-    backgroundColor: '#28a745',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '6px', // Slightly rounded edges
-    cursor: 'pointer',
-    fontSize: '14px',
-    fontWeight: 'bold',
-    width: '60%', // A good balance, not too big or small
-    transition: 'background 0.3s ease, transform 0.2s ease' // Smooth hover effect
-});
+    // Create the call button
+    const callButton = document.createElement('button');
+    callButton.textContent = 'Call Us Now';
+    Object.assign(callButton.style, {
+        padding: '12px 20px',
+        backgroundColor: '#722cf3', // Purple button
+        color: '#fff',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        fontSize: '14px',
+        fontWeight: 'bold',
+        width: '50%'
+    });
+    callButton.addEventListener('click', () => {
+        window.location.href = 'tel:+447394542901'; // Replace with your phone number
+    });
 
-// Hover effect
-callButton.addEventListener('mouseover', () => {
-    callButton.style.backgroundColor = '#218838'; // Slightly darker green
-    callButton.style.transform = 'scale(1.05)'; // Small pop-out effect
-});
-callButton.addEventListener('mouseout', () => {
-    callButton.style.backgroundColor = '#28a745';
-    callButton.style.transform = 'scale(1)';
-});
-
-   
-   
     // Append elements
     popup.appendChild(closeButton);
     popup.appendChild(title);
@@ -1023,12 +1020,13 @@ callButton.addEventListener('mouseout', () => {
     popup.appendChild(callButton);
     document.body.appendChild(popup);
 
-    // Show the pop-up after 15 seconds
+    // Show the pop-up after 40 seconds
     setTimeout(() => {
         popup.style.display = 'block';
-    }, 20000);
+    }, 40000);
 })();
 </script>
+
 
 
    
