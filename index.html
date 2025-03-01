@@ -989,11 +989,23 @@ function blockCookies() {
 
     // Create message
     const message = document.createElement('p');
-    message.textContent = 'You\'re in the right place! Get started with an excellent package offer! Choose us to get your business online and the attention it deserves. Enter your email for more info on our exciting deals!';
+    message.innerHTML = 'You\'re in the right place! Get started with an excellent package offer! Choose us to get your business online and the attention it deserves. <br><br>'
+                      + 'Enter your email to receive info about our packages, exclusive offers, and our monthly newsletter. You can unsubscribe at any time. By clicking "Send", you agree to our '
+                      + '<a href="privacy.html" target="_blank" style="color: #849BFB; text-decoration: none;">Privacy Policy</a>.';
     Object.assign(message.style, {
         color: '#333', // Dark grey text
         marginBottom: '20px'
     });
+
+    // Append elements to pop-up
+    popup.appendChild(closeButton);
+    popup.appendChild(title);
+    popup.appendChild(message);
+
+    // Append pop-up to body
+    document.body.appendChild(popup);
+})();
+
 
     // Create email capture form
     const form = document.createElement('form');
