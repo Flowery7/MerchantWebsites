@@ -268,6 +268,7 @@ footer a:hover {
     color: #88A4E3;
 }
 
+
 /* Cookie banner styles */
 .cookie-banner {
     background-color: rgba(0, 0, 0, 0.8);
@@ -275,9 +276,16 @@ footer a:hover {
     padding: 15px;
     position: fixed;
     bottom: 0;
+    left: 0; /* Ensure it's stretched to the left edge */
     width: 100%;
     text-align: center;
     display: block; /* Ensure the banner appears */
+    z-index: 9999; /* Ensure it stays on top of other elements */
+}
+
+/* Ensure no image or content overlaps */
+body {
+    padding-bottom: 50px; /* Adjust to match the height of the banner */
 }
 
 .cookie-banner a {
@@ -308,6 +316,9 @@ footer a:hover {
     opacity: 0.8;
 }
 
+
+        
+        
 /* Flicker animation */
 @keyframes flicker {
     0%, 100% { opacity: 1; }
