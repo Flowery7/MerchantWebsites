@@ -15,82 +15,133 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .navbar {
-            background-color: #f8f9fa;
-        }
-        .navbar a {
-            color: #89eabh;
-            font-size: 1.1rem;
-            margin-right: 15px;
-            font-weight: bold;
-            color: #5E82DA;
-        }
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: #f8f9fa; /* Soft true blue */
+}
+
+.navbar a {
+  color: #5E82DA;
+  font-size: 1.1rem;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* Hero Section */
 .hero {
-    background: 
-        linear-gradient(to bottom, #88A4E3, #4863A0), 
-        url('https://source.unsplash.com/1600x900/?web,technology');
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    position: relative;
+  background: linear-gradient(135deg, rgba(29, 40, 99, 0.8), rgba(114, 124, 243, 0.8)), url('https://source.unsplash.com/1600x900/?web,technology');
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
-
-.hero {
-    position: relative;
-    background: 
-        repeating-conic-gradient(
-            #4863A0 0deg 60deg, 
-            #5E82DA 60deg 120deg, 
-            #88A4E3 120deg 180deg
-        );
-    background-size: 150px 150px; /* Control cube size */
-    background-position: center;
-    color: white;
-    padding: 100px 0;
-    overflow: hidden; /* Prevent scrolling caused by oversized rotating layer */
+/* Typing Animation */
+#animated-text {
+  display: inline-block;
+  overflow: hidden; /* Ensures text is hidden until animated */
+  white-space: nowrap; /* Prevents text from wrapping */
+  border-right: 2px solid white; /* Simulate a typing cursor */
+  width: 0; /* Start with no width */
+  animation: typing 3s steps(10, end) forwards, blink-cursor 0.5s step-end infinite;
 }
 
-/* Add dynamic layers with a pseudo-element */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1000%; /* Ensure it covers the entire viewport */
-    height: 1000%; /* Ensure it covers the entire viewport */
-    background: repeating-conic-gradient(
-        rgba(72, 99, 160, 0.5) 0deg 60deg, /* Transparent shade of #4863A0 */
-        rgba(94, 130, 218, 0.5) 60deg 120deg, /* Transparent shade of #5E82DA */
-        rgba(136, 164, 227, 0.5) 120deg 180deg /* Transparent shade of #88A4E3 */
-    );
-    background-size: 150px 150px; /* Match the base layer pattern size */
-    opacity: 0.8; /* Overall transparency of the layer */
-    mix-blend-mode: multiply; /* Create interaction with the base layer */
-    z-index: 1;
-    pointer-events: none;
-    transform: translate(-50%, -50%) rotate(0deg); /* Center and start rotation */
-    animation: rotatePattern 360s linear infinite; /* Smooth rotation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-/* Adding animation for interest */
-@keyframes rotatePattern {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+@keyframes blink-cursor {
+  50% {
+    border-color: transparent;
+  }
 }
 
-/* Hero content above the pattern */
-.hero > * {
-    position: relative;
-    z-index: 2;
+/* Hero Title Animation */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  animation: fadeInDown 3s ease;
+  position: relative;
+  z-index: 2;
 }
 
+/* Fade-in effect for text */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shake animation for "Websites from £149" */
+.shake {
+  display: inline-block;
+  animation: shake 1.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Flying saucer animation */
+.flying-saucer {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: 20%;
+  right: -5%;
+  animation: flyAcross 5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(0) translateY(0) scale(0.5);
+  }
+  25% {
+    transform: translateX(-25vw) translateY(-10%) scale(0.75);
+  }
+  50% {
+    transform: translateX(-50vw) translateY(0) scale(1);
+  }
+  75% {
+    transform: translateX(-75vw) translateY(-10%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-150vw) translateY(0) scale(1.5);
+  }
+}
+
+.mascot {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  position: absolute;
+  bottom: -8%; /* Adjust to position below the button */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it properly */
+  z-index: 2; /* Ensure it's above the background but below text */
+}
             
         .hero h1 {
             font-size: 2.5rem;
@@ -99,6 +150,54 @@
         .content {
             padding: 50px 0;
         }
+        
+        
+        .social-share {
+    display: center;
+    gap: 10px;
+}
+
+.social-share a {
+    text-decoration: none;
+    color: white;
+    background-color: #3b5998; /* Facebook color */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-share a:hover {
+    background-color: #4c70a0;
+}
+
+.social-share .fa {
+    margin-right: 5px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .social-share {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.btn {
+    background-color: #722cf3; /* Soft purple */
+    color: white; /* Text color */
+    padding: 7px 15px;
+    border-radius: 10px; /* More rounded corners */
+    border: none; /* Remove border */
+}
+
+.btn:hover {
+    background-color: #722cf3; /* Keep the same color on hover */
+}
+        
+        
+        
         footer {
             background-color: #111;
             color: white;
@@ -147,25 +246,30 @@
 <header class="hero text-center">
     <div class="container">
         <h1>FAQ's</h1>
-        <p>Explore below to learn more about our services, processes, and offerings.</p>
+        <p>Explore below to learn more about our services, processes, and offerings.<br>Here are some questions we are often asked.</p>
     </div>
+    <a href="tel:+447394542901" class="btn btn-primary mt-4">Call Now</a><br><br>
+     <!-- Flying saucer image -->
+  <img src="space_craft_website_add.png" alt="Flying Saucer image for alien Web design and development promotion" class="flying-saucer">
+  <!-- Mascot image -->
+  <img src="web_dev_mascot.png" alt="Mascot image for websites in Calderdale Merchant Services , Bish , Bash , Bosh" class="mascot"><br><br><br>
 </header>
 
 <!-- FAQ Section -->
 <section class="content">
     <div class="container">
-        <h2 class="text-center mb-4">How Can We Help You?</h2>
+        <h2 class="text-center mb-4">Your questions answered!</h2>
 
         <div class="accordion" id="faqAccordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        What services do you offer?
+                        Are there any hidden costs?
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        We offer a range of services, including website design, SEO optimisation, and social media optimisation to help your business grow online.
+                        We offer a range of services included in the price for our packages, such as - website design, SEO optimisation, hosting and a domain name. There are no hidden fee's. For more information about our pricing please get in touch.
                     </div>
                 </div>
             </div>
@@ -178,7 +282,7 @@
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        Typically, it takes between 1-2 weeks depending on the complexity of the project and your requirements.
+                        Typically, it takes between 5 days - 2 weeks depending on the complexity of the project and your requirements.
                     </div>
                 </div>
             </div>
@@ -191,7 +295,7 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        SEO (Search Engine Optimisation) is the process of optimising your website to rank higher on search engines, helping you gain more visibility and traffic.
+                        SEO (Search Engine Optimisation) is the process of optimising your website to rank higher on search engines, helping you gain more visibility and traffic. It boosts growth and can help generate new custom to your business.
                     </div>
                 </div>
             </div>
@@ -204,7 +308,7 @@
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        Yes! We provide content management systems (CMS) that allow you to update your site with ease after it's live, if you want to add new content or text.
+                        Yes! During the hosting period if you need to make quartly updates to images, text or files, that's generally included. Other upodates that may require complex coding would be invoiced generally at £24ph. Or for a specific price. Most updates are generally free.
                     </div>
                 </div>
             </div>
@@ -224,6 +328,88 @@
         </div>
     </div>
 </section>
+
+
+
+ <section id="contact" class="contact-us text-center py-5">
+  <div class="container">
+    <h2>
+      <span class="wave-text">
+        <span style="color: #5E82DA; font-weight: bold;">C</span>
+        <span style="color: #5E82DA; font-weight: bold;">o</span>
+        <span style="color: #5E82DA; font-weight: bold;">n</span>
+        <span style="color: #5E82DA; font-weight: bold;">t</span>
+        <span style="color: #5E82DA; font-weight: bold;">a</span>
+        <span style="color: #5E82DA; font-weight: bold;">c</span>
+        <span style="color: #5E82DA; font-weight: bold;">t</span>
+        &nbsp;
+        <span style="color: #5E82DA; font-weight: bold;">U</span>
+        <span style="color: #5E82DA; font-weight: bold;">s</span>
+      </span>
+    </h2>
+    <p class="mb-4">Please contact us before making a purchase to discuss your brief in detail so we can build the best possible site for your business.</p>
+    <div class="contact-details">
+      <p><i class="fas fa-phone-alt"></i> <a href="tel:+447394542901">07394542901</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:merchantservices.stevenson@gmail.com">merchantservices.stevenson@gmail.com</a></p>
+    </div>
+
+     <div class="social-share-container">
+   <h3 style="text-align: center; font-size: 1.5rem; color: #849BFB;">Please share this website with your followers</h3>
+
+   <div class="social-share">
+     <!-- Facebook -->
+     <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.merchant-web.co.uk" target="_blank" class="social-icon">
+       <i class="fab fa-facebook-f"></i>
+     </a>
+     <!-- Twitter -->
+     <a href="https://twitter.com/intent/tweet?url=https://www.merchant-web.co.uk&text=Check%20this%20out!" target="_blank" class="social-icon">
+       <i class="fab fa-twitter"></i>
+     </a>
+     <!-- LinkedIn -->
+     <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.merchant-web.co.uk" target="_blank" class="social-icon">
+       <i class="fab fa-linkedin"></i>
+     </a>
+     <!-- WhatsApp -->
+     <a href="https://api.whatsapp.com/send?text=https://www.merchant-web.co.uk" target="_blank" class="social-icon">
+       <i class="fab fa-whatsapp"></i>
+     </a>
+   </div>
+</div>
+
+
+     
+          <div class="row justify-content-center text-center">
+  <div class="col-md-8">
+    <a href="form.html" class="btn btn-primary mt-3">Query form</a>
+  </div>
+</div>
+    </section>
+    
+    <style>
+  .wave-text span {
+    display: inline-block;
+    animation: wave 1.5s infinite ease-in-out;
+  }
+
+  @keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Add delays to each letter */
+  .wave-text span:nth-child(1) { animation-delay: 0s; }
+  .wave-text span:nth-child(2) { animation-delay: 0.1s; }
+  .wave-text span:nth-child(3) { animation-delay: 0.2s; }
+  .wave-text span:nth-child(4) { animation-delay: 0.3s; }
+  .wave-text span:nth-child(5) { animation-delay: 0.4s; }
+  .wave-text span:nth-child(6) { animation-delay: 0.5s; }
+  .wave-text span:nth-child(7) { animation-delay: 0.6s; }
+  .wave-text span:nth-child(8) { animation-delay: 0.7s; }
+  .wave-text span:nth-child(9) { animation-delay: 0.8s; }
+  .wave-text span:nth-child(10) { animation-delay: 0.9s; }
+</style>
+
+
 
 <!-- Footer Section -->
 <footer>
