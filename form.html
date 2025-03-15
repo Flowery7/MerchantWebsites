@@ -27,56 +27,134 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .navbar {
-            background-color: #f8f9fa;
-        }
-        .navbar a {
-            color: #89eabh;
-            font-size: 1.1rem;
-            margin-right: 15px;
-            font-weight: bold;
-            color: #5E82DA;
-        }
-        .hero {
-            background: linear-gradient(135deg, rgba(29, 40, 99, 0.8), rgba(114, 124, 243, 0.8)), url('https://source.unsplash.com/1600x900/?business,teamwork');
-            background-size: cover;
-            color: white;
-            padding: 100px 0;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-        }
-        .content {
-            padding: 50px 0;
-            
-        }
-        .package-card {
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            padding: 20px;
-            background-color: white;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .package-card:hover {
-            transform: scale(1.05);
-        }
-        .package-card h4 {
-            font-weight: bold;
-        }
-        .package-card .btn {
-            background-color: #722cf3;
-            color: white;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-        .package-card .btn:hover {
-            background-color: #5a23c3;
-        }
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: #f8f9fa; /* Soft true blue */
+}
+
+.navbar a {
+  color: #5E82DA;
+  font-size: 1.1rem;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, rgba(29, 40, 99, 0.8), rgba(114, 124, 243, 0.8)), url('https://source.unsplash.com/1600x900/?web,technology');
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Typing Animation */
+#animated-text {
+  display: inline-block;
+  overflow: hidden; /* Ensures text is hidden until animated */
+  white-space: nowrap; /* Prevents text from wrapping */
+  border-right: 2px solid white; /* Simulate a typing cursor */
+  width: 0; /* Start with no width */
+  animation: typing 3s steps(10, end) forwards, blink-cursor 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Hero Title Animation */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  animation: fadeInDown 3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Fade-in effect for text */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shake animation for "Websites from £149" */
+.shake {
+  display: inline-block;
+  animation: shake 1.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Flying saucer animation */
+.flying-saucer {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: 20%;
+  right: -5%;
+  animation: flyAcross 5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(0) translateY(0) scale(0.5);
+  }
+  25% {
+    transform: translateX(-25vw) translateY(-10%) scale(0.75);
+  }
+  50% {
+    transform: translateX(-50vw) translateY(0) scale(1);
+  }
+  75% {
+    transform: translateX(-75vw) translateY(-10%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-150vw) translateY(0) scale(1.5);
+  }
+}
+
+.mascot {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  position: absolute;
+  bottom: -8%; /* Adjust to position below the button */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it properly */
+  z-index: 2; /* Ensure it's above the background but below text */
+}
+
         footer {
             background-color: #111;
             color: white;
@@ -123,6 +201,12 @@
         <h1>Send your query below.</h1>
         <p>Let us know more about your website project. We're excited to hear what you'd like us to build.</p>
     </div>
+      <a href="tel:+447394542901" class="btn btn-primary mt-4">Call Now</a><br><br>
+  <!-- Flying saucer image -->
+  <img src="space_craft_website_add.png" alt="Flying Saucer image for alien Web design and development promotion" class="flying-saucer">
+  <!-- Mascot image -->
+  <img src="web_dev_mascot.png" alt="Mascot image for websites in Calderdale Merchant Services , Bish , Bash , Bosh" class="mascot"><br><br><br>
+  </header>
 </header>
 
 <!-- Contact Section -->
