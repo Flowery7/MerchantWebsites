@@ -1,9 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-
-   
 
     <meta charset="UTF-8">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -50,192 +49,226 @@
 
 
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .navbar {
-            background-color: #f8f9fa; /* Soft true blue */
-        }
-        .navbar a {
-            color: #89eabh;
-            font-size: 1.1rem;
-            margin-right: 15px;
-            font-weight: bold;
-            color: #5E82DA;
-        }
-        
-        .hero {
-    background: 
-        linear-gradient(to bottom, #88A4E3, #4863A0), 
-        url('https://source.unsplash.com/1600x900/?web,technology');
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    position: relative;
+    
+    
+    body {
+  font-family: 'Poppins', sans-serif;
 }
 
+.navbar {
+  background-color: #f8f9fa; /* Soft true blue */
+}
 
+.navbar a {
+  color: #5E82DA;
+  font-size: 1.1rem;
+  margin-right: 15px;
+  font-weight: bold;
+}
 
+/* Hero Section */
 .hero {
-    background: 
-        linear-gradient(to bottom, #88A4E3, #4863A0), 
-        url('https://source.unsplash.com/1600x900/?web,technology');
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    position: relative;
+  background: linear-gradient(135deg, rgba(29, 40, 99, 0.8), rgba(114, 124, 243, 0.8)), url('https://source.unsplash.com/1600x900/?web,technology');
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Typing Animation */
+#animated-text {
+  display: inline-block;
+  overflow: hidden; /* Ensures text is hidden until animated */
+  white-space: nowrap; /* Prevents text from wrapping */
+  border-right: 2px solid white; /* Simulate a typing cursor */
+  width: 0; /* Start with no width */
+  animation: typing 3s steps(10, end) forwards, blink-cursor 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Hero Title Animation */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  animation: fadeInDown 3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Fade-in effect for text */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shake animation for "Websites from £149" */
+.shake {
+  display: inline-block;
+  animation: shake 1.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Flying saucer animation */
+.flying-saucer {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: 20%;
+  right: -5%;
+  animation: flyAcross 5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(0) translateY(0) scale(0.5);
+  }
+  25% {
+    transform: translateX(-25vw) translateY(-10%) scale(0.75);
+  }
+  50% {
+    transform: translateX(-50vw) translateY(0) scale(1);
+  }
+  75% {
+    transform: translateX(-75vw) translateY(-10%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-150vw) translateY(0) scale(1.5);
+  }
+}
+
+.mascot {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  position: absolute;
+  bottom: -8%; /* Adjust to position below the button */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it properly */
+  z-index: 2; /* Ensure it's above the background but below text */
 }
 
 
-.hero {
-    position: relative;
-    background: 
-        repeating-conic-gradient(
-            #4863A0 0deg 60deg, 
-            #5E82DA 60deg 120deg, 
-            #88A4E3 120deg 180deg
-        );
-    background-size: 150px 150px; /* Control cube size */
-    background-position: center;
-    color: white;
-    padding: 100px 0;
-    overflow: hidden; /* Prevent scrolling caused by oversized rotating layer */
-}
-
-/* Add dynamic layers with a pseudo-element */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1000%; /* Ensure it covers the entire viewport */
-    height: 1000%; /* Ensure it covers the entire viewport */
-    background: repeating-conic-gradient(
-        rgba(72, 99, 160, 0.5) 0deg 60deg, /* Transparent shade of #4863A0 */
-        rgba(94, 130, 218, 0.5) 60deg 120deg, /* Transparent shade of #5E82DA */
-        rgba(136, 164, 227, 0.5) 120deg 180deg /* Transparent shade of #88A4E3 */
-    );
-    background-size: 150px 150px; /* Match the base layer pattern size */
-    opacity: 0.8; /* Overall transparency of the layer */
-    mix-blend-mode: multiply; /* Create interaction with the base layer */
-    z-index: 1;
-    pointer-events: none;
-    transform: translate(-50%, -50%) rotate(0deg); /* Center and start rotation */
-    animation: rotatePattern 360s linear infinite; /* Smooth rotation */
-}
-
-/* Adding animation for interest */
-@keyframes rotatePattern {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-/* Hero content above the pattern */
-.hero > * {
-    position: relative;
-    z-index: 2;
+/* Packages Section */
+#packages {
+  background-color: #849BFB;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  min-height: 400px;
 }
 
 
-        
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            animation: fadeInDown 1s ease;
-        }
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            
-        }
-        .packages, .portfolio {
-            padding: 50px 0;
-            background-color: #f8f9fa;
-            
-        }
-        .package-card, .portfolio-card {
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .package-card:hover, .portfolio-card:hover {
-            transform: scale(1.05);
-        }
+
+
+
+
 
 
 .social-share {
-      display: center;
-      gap: 10px;
-    }
-    .social-share a {
-      text-decoration: none;
-      color: white;
-      background-color: #3b5998; /* Facebook color */
-      padding: 10px;
-      border-radius: 5px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .social-share a:hover {
-      background-color: #4c70a0;
-    }
-    .social-share .fa {
-      margin-right: 5px;
-    }
-    /* Responsive layout */
-    @media (max-width: 768px) {
-      .social-share {
+    display: center;
+    gap: 10px;
+}
+
+.social-share a {
+    text-decoration: none;
+    color: white;
+    background-color: #3b5998; /* Facebook color */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-share a:hover {
+    background-color: #4c70a0;
+}
+
+.social-share .fa {
+    margin-right: 5px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .social-share {
         flex-direction: column;
         align-items: center;
-      }
     }
+}
 
+.btn {
+    background-color: #722cf3; /* Soft purple */
+    color: white; /* Text color */
+    padding: 7px 15px;
+    border-radius: 10px; /* More rounded corners */
+    border: none; /* Remove border */
+}
 
-       
-        .btn {
-            background-color: #722cf3; /* Soft purple */
-            color: white; /* Text color */
-            padding: 7px 15px;
-            border-radius: 10px; /* More rounded corners */
-            border: none; /* Remove border */
-        }
-        .btn:hover {
-            background-color: #722cf3; /* Keep the same color on hover */
-        }
-        footer {
-            background-color: #111;
-            color: white;
-            padding: 6
-            1000px 0;
-        }
-        footer a {
-            color: #bbb;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: white;
-        }
-        .social-icons i {
-            font-size: 1.5rem;
-            margin: 0 10px;
-            color: white;
-            transition: color 0.3s ease;
-        }
-        .social-icons i:hover {
-            color: #88A4E3;
-        }
-       /* Cookie banner styles */
+.btn:hover {
+    background-color: #722cf3; /* Keep the same color on hover */
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    padding: 6 1000px 0;
+}
+
+footer a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #88A4E3;
+}
+
+/* Cookie banner styles */
 .cookie-banner {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
@@ -275,14 +308,16 @@
     opacity: 0.8;
 }
 
-        /* Flicker animation */
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .flicker {
-            animation: flicker 1s infinite;
-        }
+/* Flicker animation */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.flicker {
+    animation: flicker 1s infinite;
+}
+
     </style>
 
 <script type="application/ld+json">
@@ -376,14 +411,61 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
+
+
 <header class="hero text-center">
-    <div class="container">
-        <h1>Bish<br>Bash<br>Bosh<br><span style="font-size: 1.8rem;">Websites from <span style="color: #FFC107;">£69</span></span></h1>
-        <p>Building responsive, professional <br> websites for small businesses.</p>
-        <a href="#packages" class="btn btn-primary mt-4">View Packages</a>
-    </div>
+  <div class="container">
+    <h1>
+      Bish<br>Bash<br>Bosh
+      <br>
+      <span class="shake" style="font-size: 1.6rem;">
+         Packages From <span  style="color: #FFC107;">£249</span>
+      </span>
+    </h1>
+    <p>Building responsive, professional <br> websites for small businesses.</p>
+    <a href="tel:+447394542901" class="btn btn-primary mt-4">Call Now</a>
+<br>
+  </div>
+  <!-- Flying saucer image -->
+  <img src="space_craft_website_add.png" alt="Flying Saucer image for alien Web design and development promotion" class="flying-saucer">
+  <!-- Mascot image -->
+  <img src="web_dev_mascot.png" alt="Mascot image for websites in Calderdale Merchant Services , Bish , Bash , Bosh" class="mascot"><br><br><br>
+  
 </header>
+
+
+<!-- Add this script to handle the letter-by-letter animation -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const textLines = [
+            "Bish", 
+            "Bash", 
+            "Bosh"
+        ];  // The text to animate, split by lines
+        const container = document.getElementById("animated-text");
+
+        // Loop through each line of text
+        textLines.forEach((line, lineIndex) => {
+            // Add a line break after each line except the last one
+            const lineContainer = document.createElement("span");
+            container.appendChild(lineContainer);
+
+            // Wrap each letter in a span and apply the animation
+            line.split('').forEach((letter, index) => {
+                const span = document.createElement("span");
+                span.classList.add("letter");
+                span.textContent = letter;
+                span.style.animationDelay = `${(lineIndex * 5 + index) * 0.1}s`; // Staggered delay for each line and letter
+                lineContainer.appendChild(span);
+            });
+
+            // Add a line break after each line except the last one
+            if (lineIndex < textLines.length - 1) {
+                container.appendChild(document.createElement("br"));
+            }
+        });
+    });
+</script>
 
 
     <!-- Chatbot Widget -->
@@ -511,18 +593,18 @@
       },
       "packages": {
         "patterns": ["packages", "plans", "pricing", "cost", "package", "price", "how much"],
-        "responses": ["Our packages: Standard websites from only £69, Professional sites from £178, Full Business Packages from £299. Which one interests you?"]
+        "responses": ["Our packages: Standard websites from only £99, Professional sites from £249, Full Business Packages from £399. Which one interests you?"]
       },
       "option": {
-        "patterns": ["standard", "£69", "first", "cheap", "cheapest"],
+        "patterns": ["standard", "£99", "first", "cheap", "cheapest"],
         "responses": ["Bish Bash Bosh - Our Standard package gets you up and online. It includes website design, a domain name, and 12 months of hosting. A great option if you want a basic website to add to your social media pages.  Fill out a query form to find out more. Let us know about your project. "]
       },
       "option1": {
-        "patterns": ["professional", "£178", "Middle", "second"],
+        "patterns": ["professional", "£249", "Middle", "second"],
         "responses": ["Bish Bash Bosh - Our Professional package includes website design, a domain name, 12 months of hosting, and quality SEO. Perfect for service businesses. Fill out a query form to find out more. Let us know about your project."]
       },
       "option2": {
-        "patterns": ["full package", "Full business package", "£299", "Business", "third", "full"],
+        "patterns": ["full package", "Full business package", "£399", "Business", "third", "full"],
         "responses": ["Bish Bash Bosh - Our Full package includes website design, a domain name, 12 months of hosting, quality SEO, and social media optimisation for growth. Proven strategies for growth are included as well. It's a great option for a new business. Fill out a query form to find out more. Let us know about your project."]
 
 
@@ -590,16 +672,18 @@
 
 <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio text-center">
-  <div class="container">
-    <h2><span style="color: #5E82DA; font-weight: bold;">Quality Websites from only £69!</span></h2>
+  <div class="container"><br><br>
+    <h2><span style="color: #5E82DA; font-weight: bold;">Deals that are "Out of this World!"</span></h2>
 
-<p class="mb-5"><br>If you're interested in a professional website from only <strong>£69?</strong> We offer a quality fully <strong>functional website</strong> that will impress your customers and help grow your brand. Whether you need a simple landing page, a sleek portfolio, or a <strong>quality</strong> small business website, we've got you covered with a <strong>bespoke design!</strong> Once you have chosen a package, contact us to discuss your project and we will build the site to your specification. <br> <br> We specialise in creating high-quality, affordable websites that showcase your business simply and effectively. Designed with cost efficiency in mind, our websites give small businesses the online advantage of presence without the enormous costs typically involved.
-Our Websites are individually crafted, designed with SEO in mind,  help drive traffic to your products or service and provide all the essential links to your social media.
-The websites are built to help you attract and engage customers, all while keeping things simple, sleek, and hassle-free. <br> <br> With our service, you’ll get a strong landing page, a reliable website that suits your business needs with zero hidden fees, no unnecessary extras, just great value.
+<p class="mb-5"><br>Discover a website package with everthing you'll need to get your business online, recieving organic traffic and generating potential custom. With hosting, domains and even SEO allpackaged up from only <strong>£249</strong> We offer a quality, <strong>fully optimised websites</strong> that will impress your customers and help grow your brand. Whether you need a simple landing page, a sleek portfolio, or a <strong>quality</strong> small business website, we've got you covered with a <strong>bespoke design!</strong> Once you have chosen a package, contact us to discuss your project and we will build the site to your specification. <br> <br> We specialise in creating high-quality, affordable websites that showcase your business simply and effectively. Designed with cost efficiency in mind, our websites give small businesses the online advantage of presence without the enormous costs typically involved.
+Our Websites are individually crafted, designed with SEO in mind, help drive traffic to your products or service and provide all the essential links to your social media.
+The websites are built to help you attract and engage customers, all whilst keeping things simple, sleek, and hassle-free. <br> <br> With our service, you’ll get a strong landing page, a reliable website that suits your business needs with zero hidden fees, no unnecessary extras, just great value.
 We always go the extra mile for our customers giving essential tips and advice on strategies to develop business websites by building solid backlinks, building exposure online which can help  generate new custom.
 This is a perfect opportunity to have your business website built and delivered online for minimal cost without sacrificing on quality or functionality. 
 </p>
-<p class="mb-5" style="color: #5E82DA; font-size: 1.5rem;"><strong>Jam-packed with value!</strong></p>
+
+<img src="mobile_website.png" alt="Mascot for website design in Halifax, Leeds , Bradford. Merchant Services" class="mascot-above-text">
+<p class="mb-5" style="color: #5E82DA; font-size: 1.5rem;"><strong>Jam-Packed with Value!</strong></p>
 <!-- Use spans instead of p tags to reduce space between lines -->
 <span><strong>Custom Design</strong> - Tailored to your business</span><br>
 <span><strong>Mobile Optimised</strong> - For a seamless experience</span><br>
@@ -609,9 +693,9 @@ This is a perfect opportunity to have your business website built and delivered 
 
 <p class="mb-5" style="color: #5E82DA; font-size: 1.5rem;"><strong><br>A limited time offer!</strong></p>
 
-<p class="mb-5">Get started today and have a website built that works for you – starting from just <strong>£69!</strong> <br><br>See what we've created! At Merchant Services we offer a range of web development and website design services which are built to meet the needs of our clients. Our sites<strong> build trust</strong> with customers, <strong>grow online presence</strong> in search engines and <strong>attract new customers</strong> to your business organically.</p>
+<p class="mb-5">Call us today and get a website design that works for you – starting from just <strong>£99!</strong> <br> Or ask us about the exclusive packages from <strong>£249!</strong> <br><br>See what we've created! At Merchant Services we offer a range of web development and website design services which are built to meet the needs of our clients. Our sites<strong> build trust</strong> with customers, <strong>grow online presence</strong> in search engines and <strong>attract new customers</strong> to your business organically.</p>
 
-<p class="mb-5" style="color: #5E82DA; font-size: 2rem;"><strong><br>Check out our projects!</strong></p>
+<p class="mb-5" style="color: #5E82DA; font-size: 2rem;"><strong><br>Check Out Our Projects!</strong></p>
 
     <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
       <div class="carousel-inner">
@@ -668,7 +752,7 @@ This is a perfect opportunity to have your business website built and delivered 
             <img src="website_image4.png" class="card-img-top" alt="A business website design showcasing a simple interface.">
             <div class="card-body">
               <h4>Sole Trader Sites</h4>
-              <p>A business website built for growing clients. From only £69 including domain and hosting.</p>
+              <p>A business website built for growing clients. Standard designs from only £99 </p>
             </div>
           </div>
         </div>
@@ -733,12 +817,14 @@ This is a perfect opportunity to have your business website built and delivered 
   }
 </style>
 
-    <section id="packages" class="packages text-center hero" style="position: relative; overflow: hidden;">
+    <section id="packages" class="packages text-center" style="position: relative; overflow: hidden;">
   <div class="container" style="z-index: 2; padding: 20px;">
     <!-- New text addition starts here -->
     <div class="container">
         <!-- New text addition starts here -->
-       <h2 class="mb-4" style="color: #FFC107; font-size: 3rem;"><strong>Bish Bash Bosh</strong></h2>
+      <h2 class="mb-4 text-center" style="color: #FFFFFF; font-size: 3rem;"><strong>Bish Bash Bosh</strong></h2>
+<img src="business_van_image.png" alt="Alien business, website for van logo wrap, marketing logo, design." class="d-block mx-auto img-fluid" style="max-width: 300px; height: auto;">
+
         <p>Our sites are <strong>user-friendly</strong> and offer customisable website designs with both <strong>visual appeal</strong> and <strong>UX design</strong> in mind, ensuring your site looks great and functions seamlessly on all devices. We don’t just stop at creating beautiful <strong>web pages</strong> —our service can also provide <strong>SEO tools</strong> to help your site rank higher in search engines. Whether you want to sell products or promote services, we give you all the functions you need.</p>
         <p>All our websites come with reliable<strong> web hosting</strong>, so you can focus on growing your business. Plus, you’ll get access to a free website audit every 12 months. From <strong>visual design</strong> to the technical side, we're here to support you every step of the way.</p>
         <!-- New text addition ends here -->
@@ -754,7 +840,7 @@ This is a perfect opportunity to have your business website built and delivered 
         </div>
 
        <p class="mb-5">If your chosen website design is with Merchant Services. You can relax and <strong>feel confident</strong> on the delivery. Let our expert build a site that matches the <strong>passion</strong> you put into your business. With our services you can have a website that not only looks great but also deliver's for your customers and ultimatley your business. You can grow with us. <strong>Our sites</strong> are tailored to your business needs and always have the <strong>user experience</strong> in mind.<br><br><strong>Impress</strong>  your clients, <strong>build trust</strong> and grow your business. Select the package that best suits your business needs and give us a call. Now, we want to understand your aims so we can create the best site possible for your budget. <strong>You're not just a customer</strong>, we want to really get behind your project. <br><br> 
-<strong style="font-size: 1.8rem;">Your success is our success!</strong>
+<strong style="font-size: 1.8rem;">Choose us to build your Website!</strong>
 <br><br>*Our packages have set prices, if you require more complex projects prices may vary.*</p>
 <div class="row">
             <!-- Package 1 -->
@@ -762,9 +848,9 @@ This is a perfect opportunity to have your business website built and delivered 
                 <div class="card package-card p-3">
                     <div class="card-body">
                         <i class="fas fa-globe fa-3x mb-3"></i>
-                        <h3>Basic Website Package</h3>
-                        <p>A simple, quality mobile optimised website to get your business online quickly.</p>
-                        <p class="price h5">£69</p>
+                        <h3>Standard Website Design</h3>
+                        <p>A quality mobile optimised website to get your business online quickly.</p>
+                        <p class="price h5">£99</p>
                         <a href="https://merchant-services.sumupstore.com/product/basic-website-package" class="btn btn-primary mt-3">Get Started</a>
                     </div>
                 </div>
@@ -777,7 +863,7 @@ This is a perfect opportunity to have your business website built and delivered 
                         <i class="fas fa-code fa-3x mb-3"></i>
                         <h3>Professional Website Package</h3>
                         <p>A website with advanced features and good SEO optimization.</p>
-                        <p class="price h5">£178</p>
+                        <p class="price h5">£249</p>
                         <a href="https://merchant-services.sumupstore.com/product/professional-website-package" class="btn btn-primary mt-3">Get Started</a>
                     </div>
                 </div>
@@ -790,7 +876,7 @@ This is a perfect opportunity to have your business website built and delivered 
                         <i class="fas fa-business-time fa-3x mb-3"></i>
                         <h3>Full Business Package</h3>
                         <p>The full business solution: website, SEO, and social media optimisation.</p>
-                        <p class="price h5">£299</p>
+                        <p class="price h5">£399</p>
                         <a href="https://merchant-services.sumupstore.com/product/full-business-package" class="btn btn-primary mt-3">Get Started</a>
                     </div>
                 </div>
@@ -799,33 +885,51 @@ This is a perfect opportunity to have your business website built and delivered 
     </div>
 </section>
 
-    <section id="contact" class="contact-us text-center py-5">
+   <section id="contact" class="contact-us text-center py-5">
   <div class="container">
-    <h2><span style="color: #5E82DA; font-weight: bold;">Contact Us</span></h2>
+    <h2>
+      <span class="wave-text">
+        <span style="color: #5E82DA; font-weight: bold;">C</span>
+        <span style="color: #5E82DA; font-weight: bold;">o</span>
+        <span style="color: #5E82DA; font-weight: bold;">n</span>
+        <span style="color: #5E82DA; font-weight: bold;">t</span>
+        <span style="color: #5E82DA; font-weight: bold;">a</span>
+        <span style="color: #5E82DA; font-weight: bold;">c</span>
+        <span style="color: #5E82DA; font-weight: bold;">t</span>
+        &nbsp;
+        <span style="color: #5E82DA; font-weight: bold;">U</span>
+        <span style="color: #5E82DA; font-weight: bold;">s</span>
+      </span>
+    </h2>
     <p class="mb-4">Please contact us before making a purchase to discuss your brief in detail so we can build the best possible site for your business.</p>
     <div class="contact-details">
-      <p><i class="fas fa-phone-alt"></i> <a href="tel:+441234567890">07394542901</a></p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:info@yourbusiness.com">merchantservices.stevenson@gmail.com</a></p>
+      <p><i class="fas fa-phone-alt"></i> <a href="tel:+447394542901">07394542901</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:merchantservices.stevenson@gmail.com">merchantservices.stevenson@gmail.com</a></p>
     </div>
 
-      <div class="social-share">
-   <!-- Facebook -->
-   <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.merchant-web.co.uk" target="_blank">
-     <i class="fab fa-facebook-f"></i> Share
-   </a>
-   <!-- Twitter -->
-   <a href="https://twitter.com/intent/tweet?url=https://www.merchant-web.co.uk&text=Check%20this%20out!" target="_blank">
-     <i class="fab fa-twitter"></i> Share
-   </a>
-   <!-- LinkedIn -->
-   <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.merchant-web.co.uk" target="_blank">
-     <i class="fab fa-linkedin"></i> Share
-   </a>
-   <!-- WhatsApp -->
-   <a href="https://api.whatsapp.com/send?text=https://www.merchant-web.co.uk" target="_blank">
-     <i class="fab fa-whatsapp"></i> Share
-   </a>
- </div>
+     <div class="social-share-container">
+   <h3 style="text-align: center; font-size: 1.5rem; color: #849BFB;">Please share this website with your followers</h3>
+
+   <div class="social-share">
+     <!-- Facebook -->
+     <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.merchant-web.co.uk" target="_blank" class="social-icon">
+       <i class="fab fa-facebook-f"></i>
+     </a>
+     <!-- Twitter -->
+     <a href="https://twitter.com/intent/tweet?url=https://www.merchant-web.co.uk&text=Check%20this%20out!" target="_blank" class="social-icon">
+       <i class="fab fa-twitter"></i>
+     </a>
+     <!-- LinkedIn -->
+     <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.merchant-web.co.uk" target="_blank" class="social-icon">
+       <i class="fab fa-linkedin"></i>
+     </a>
+     <!-- WhatsApp -->
+     <a href="https://api.whatsapp.com/send?text=https://www.merchant-web.co.uk" target="_blank" class="social-icon">
+       <i class="fab fa-whatsapp"></i>
+     </a>
+   </div>
+</div>
+
 
      
           <div class="row justify-content-center text-center">
@@ -834,6 +938,30 @@ This is a perfect opportunity to have your business website built and delivered 
   </div>
 </div>
     </section>
+    
+    <style>
+  .wave-text span {
+    display: inline-block;
+    animation: wave 1.5s infinite ease-in-out;
+  }
+
+  @keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Add delays to each letter */
+  .wave-text span:nth-child(1) { animation-delay: 0s; }
+  .wave-text span:nth-child(2) { animation-delay: 0.1s; }
+  .wave-text span:nth-child(3) { animation-delay: 0.2s; }
+  .wave-text span:nth-child(4) { animation-delay: 0.3s; }
+  .wave-text span:nth-child(5) { animation-delay: 0.4s; }
+  .wave-text span:nth-child(6) { animation-delay: 0.5s; }
+  .wave-text span:nth-child(7) { animation-delay: 0.6s; }
+  .wave-text span:nth-child(8) { animation-delay: 0.7s; }
+  .wave-text span:nth-child(9) { animation-delay: 0.8s; }
+  .wave-text span:nth-child(10) { animation-delay: 0.9s; }
+</style>
 
 <!-- Footer Section -->
 <footer>
@@ -864,9 +992,8 @@ This is a perfect opportunity to have your business website built and delivered 
     </details>
 </footer>
 
-</footer>
 
-<!-- Cookie Banner -->
+
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
     We use cookies to enhance your experience. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.
@@ -944,6 +1071,9 @@ function blockCookies() {
 
 </script>
 
+
+
+
 <script>
  (function() {
     // Create the pop-up container
@@ -980,7 +1110,7 @@ function blockCookies() {
 
     // Create title
     const title = document.createElement('h2');
-    title.textContent = 'Looking For A Great Value Website?';
+    title.textContent = 'Get in touch!';
     Object.assign(title.style, {
         fontSize: '22px',
         fontWeight: 'bold',
@@ -988,14 +1118,19 @@ function blockCookies() {
     });
 
     // Create message
-    const message = document.createElement('p');
-    message.innerHTML = 'Enter your email to receive info about our packages, exclusive offers, and our monthly newsletter. <br><br>'
-                      + ' You can unsubscribe at any time. By clicking "Subscribe", you agree to our'
-                      + '<a href="privacy.html" target="_blank" style="color: #849BFB; text-decoration: none;">Privacy Policy</a>.';
-    Object.assign(message.style, {
-        color: '#333', // Dark grey text
-        marginBottom: '20px'
-    });
+  const message = document.createElement('p');
+message.innerHTML = '<img src="laptop_IT_mascot_dev.png" alt="SEO website design alien logo" style="width: 80px; height: auto; display: block; margin: 0 auto 10px;">' +
+  'Enter your email to receive info about our exclusive packages. <br><br>' +
+  '<span style="font-size: 0.8em;">By clicking "Subscribe", you agree to our </span>' +
+  '<a href="privacy.html" target="_blank" style="color: #849BFB; text-decoration: none;">Privacy Policy</a>. ' +
+  '<span style="font-size: 0.8em;">You can unsubscribe at any time.</span>'; // Adjusted text size here
+
+// Style for the message
+Object.assign(message.style, {
+    color: '#333', // Dark grey text
+    marginBottom: '20px'
+});
+
 
 
     // Create email capture form
@@ -1084,7 +1219,7 @@ function blockCookies() {
     // Show the pop-up after 40 seconds
     setTimeout(() => {
         popup.style.display = 'block';
-    }, 50000);
+    }, 45000);
 
     // Email validation
     function validateInput(value) {
@@ -1141,3 +1276,4 @@ function blockCookies() {
    
 </body>
 </html>
+
