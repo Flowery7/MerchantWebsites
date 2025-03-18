@@ -389,7 +389,7 @@ p {
         <h1>🏆 Wheel Spinner 🎉</h1>
         <p>Add the entry names and spin the wheel. <br>The spin is completely random. Good Luck! </p>
         <button class="start-btn" onclick="startApp()">Start the Show!</button>
-        <img src="1742295184915.png" alt="Mascot image" class="mascot" style="width: 375px; height: auto;">
+        <img src="alien_mascot.png" alt="Mascot image for free wheel spin" class="mascot" style="width: 375px; height: auto;">
 
     </div>
     <div class="container">
@@ -399,9 +399,9 @@ p {
             <span class="word" style="--index: 3;">Spinner 🎉</span>
         </h1>
       <div class="wheel-container">
-  <img src="1742226697861.png" alt="Decorative Image" class="overlap-image">
-  <img src="1742217756568.png" alt="Decorative Image" class="overlap-image-2">
-  <img src="1742295184915.png" alt="Decorative Image" class="overlap-image-3">
+  <img src="alien_host.png" alt="Decorative Image" class="overlap-image">
+  <img src="arrow.png" alt="Decorative Image" class="overlap-image-2">
+  <img src="alien_mascot.png" alt="Decorative Image" class="overlap-image-3">
   <div class="triangle"></div>
   <svg class="wheel" viewBox="-150 -150 300 300" xmlns="http://www.w3.org/2000/svg">
     <circle cx="0" cy="0" r="140" fill="#fff" stroke="#000" stroke-width="2" />
@@ -520,7 +520,7 @@ p {
             // Display the winner after the spin ends
            setTimeout(() => {
   const winnerName = names[winnerIndex].name;
-  banner.innerHTML = `<img src="1742219560600.png" alt="Celebration" class="celebration-image"> ${winnerName} !!! <img src="1742219560600.png" alt="Celebration" class="celebration-image">`;
+  banner.innerHTML = `<img src="winners_sign.png" alt="Celebration" class="celebration-image"> ${winnerName} !!! <img src="winners_sign.png" alt="Celebration , winner , win" class="celebration-image">`;
   banner.style.display = 'block';
   setTimeout(() => {
     banner.style.display = 'none';
