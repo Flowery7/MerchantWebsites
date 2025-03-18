@@ -376,6 +376,25 @@ p {
         transform: scale3d(1, 1, 1);
     }
 }
+
+.share-widget {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-widget img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.share-widget img:hover {
+    transform: scale(1.1);
+}
+
+      
     </style>
 </head>
 <body>
@@ -416,7 +435,40 @@ p {
         <div class="input-container">
             <input type="text" id="nameInput" placeholder="Enter name" onkeypress="handleKeyPress(event)">
             <div class="row">
-                
+
+
+<div class="share-widget">
+  <span>Share this:</span>
+  <a href="#" id="share-facebook" target="_blank">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="#" id="share-twitter" target="_blank">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="#" id="share-linkedin" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="#" id="share-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const pageUrl = encodeURIComponent(window.location.href);
+    const pageTitle = encodeURIComponent(document.title);
+
+    document.getElementById("share-facebook").href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+    document.getElementById("share-twitter").href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+    document.getElementById("share-linkedin").href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+    document.getElementById("share-whatsapp").href = `https://wa.me/?text=${pageTitle} - ${pageUrl}`;
+});
+</script>
+
+            
+
+              
             </div>
             <div class="footer">&copy; 2025 Merchant Services | All rights reserved</div>
         </div>
