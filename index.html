@@ -1226,24 +1226,7 @@ Object.assign(message.style, {
         display: 'none'
     });
 
-    // Create call button
-    const callButton = document.createElement('button');
-    callButton.textContent = 'Call Us Now';
-    Object.assign(callButton.style, {
-        padding: '12px 20px',
-        backgroundColor: '#722cf3', // Purple button
-        color: '#fff',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        fontSize: '14px',
-        fontWeight: 'bold',
-        width: '50%',
-        marginTop: '10px'
-    });
-    callButton.addEventListener('click', () => {
-        window.location.href = 'tel:+447394542901'; // Replace with your phone number
-    });
+   
 
     // Append elements
     form.appendChild(inputField);
