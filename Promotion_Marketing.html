@@ -434,13 +434,14 @@ h2 {
       // Only send to Lambda if marketing consent is true
       if (data.marketingConsent) {
         try {
-          const response = await fetch('https://pag7s7ofmjccsvtwnzhal5s2pq0ndzva.lambda-url.eu-west-2.on.aws/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          });
+         const response = await fetch('https://pag7s7ofmjccsvtwnzhal5s2pq0ndzva.lambda-url.eu-west-2.on.aws/', {
+  method: 'POST',
+  mode: 'cors', // 👈 this is essential for CORS to work properly in browser
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+})
 
           if (response.ok) {
             alert('Thank you! Your response has been submitted and we’ll be in touch soon. Good luck in the prize draw!');
