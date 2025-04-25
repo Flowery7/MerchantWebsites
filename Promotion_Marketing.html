@@ -430,29 +430,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get form elements
     const formElements = e.target.elements;
     
-    // Collect all form data
+    // Collect all form data with validation
     const data = {
-      businessName: formElements.businessName.value,
-      businessType: formElements.businessType.value,
-      years: formElements.years.value,
-      location: formElements.location.value,
-      hasWebsite: formElements.hasWebsite.value,
-      websiteUrl: formElements.websiteUrl.value,
-      satisfaction: formElements.satisfaction.value,
-      reasonNoWebsite: formElements.reasonNoWebsite.value,
-      websiteHelpful: formElements.websiteHelpful.value,
-      websitePurpose: formElements.websitePurpose.value,
-      quotedBefore: formElements.quotedBefore.value,
-      priceRange: formElements.priceRange.value,
-      contactInterest: formElements.contactInterest.value,
-      name: formElements.name.value,
-      email: formElements.email.value,
-      phone: formElements.phone.value,
-      contactMethod: formElements.contactMethod.value,
-      notes: formElements.notes.value,
+      businessName: formElements.businessName.value.trim(),
+      businessType: formElements.businessType.value.trim(),
+      years: formElements.years.value.trim(),
+      location: formElements.location.value.trim(),
+      hasWebsite: formElements.hasWebsite.value.trim(),
+      websiteUrl: formElements.hasWebsite.value === 'Yes' ? formElements.websiteUrl.value.trim() : '',
+      satisfaction: formElements.satisfaction.value.trim(),
+      reasonNoWebsite: formElements.hasWebsite.value === 'No' ? formElements.reasonNoWebsite.value.trim() : '',
+      websiteHelpful: formElements.websiteHelpful.value.trim(),
+      websitePurpose: formElements.websitePurpose.value.trim(),
+      quotedBefore: formElements.quotedBefore.value.trim(),
+      priceRange: formElements.priceRange.value.trim(),
+      contactInterest: formElements.contactInterest.value.trim(),
+      name: formElements.name.value.trim(),
+      email: formElements.email.value.trim(),
+      phone: formElements.phone.value.trim(),
+      contactMethod: formElements.contactMethod.value.trim(),
+      notes: formElements.notes.value.trim(),
       enterDraw: formElements.enterDraw.checked,
       marketingConsent: formElements.marketingConsent.checked
     };
+
+    // Basic validation
+    if (!data.name || !data.email || !data.contactMethod) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    // Validate email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(data.email)) {
+      alert('Invalid email address.');
+      return;
+    }
 
     try {
       // Only submit if they want to enter the draw
@@ -489,10 +502,11 @@ document.addEventListener('DOMContentLoaded', function() {
       
     } catch (error) {
       console.error('Submission error:', error);
-      alert('There was an error submitting the form. Please try again.');
+      alert(`There was an error submitting the form: ${error.message}. Please try again.`);
     }
   });
 });
+
 </script>
 
     
