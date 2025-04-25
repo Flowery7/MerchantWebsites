@@ -416,49 +416,86 @@ h2 {
     </form>
   </div>
 
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('questionnaireForm');
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('questionnaireForm');
+  
+  // Disable autocomplete on the entire form
+  form.setAttribute('autocomplete', 'off');
 
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // Get form elements
+    const formElements = e.target.elements;
+    
+    // Collect all form data
+    const data = {
+      businessName: formElements.businessName.value,
+      businessType: formElements.businessType.value,
+      years: formElements.years.value,
+      location: formElements.location.value,
+      hasWebsite: formElements.hasWebsite.value,
+      websiteUrl: formElements.websiteUrl.value,
+      satisfaction: formElements.satisfaction.value,
+      reasonNoWebsite: formElements.reasonNoWebsite.value,
+      websiteHelpful: formElements.websiteHelpful.value,
+      websitePurpose: formElements.websitePurpose.value,
+      quotedBefore: formElements.quotedBefore.value,
+      priceRange: formElements.priceRange.value,
+      contactInterest: formElements.contactInterest.value,
+      name: formElements.name.value,
+      email: formElements.email.value,
+      phone: formElements.phone.value,
+      contactMethod: formElements.contactMethod.value,
+      notes: formElements.notes.value,
+      enterDraw: formElements.enterDraw.checked,
+      marketingConsent: formElements.marketingConsent.checked
+    };
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-
-      // Handle checkboxes as booleans
-      data.enterDraw = formData.has('enterDraw');
-      data.marketingConsent = formData.has('marketingConsent');
-
-      // Only send to Lambda if marketing consent is true
-      if (data.marketingConsent) {
-        try {
-         const response = await fetch('https://s3tsujkqp27igrtc6mxwsgnxgu0gsydm.lambda-url.eu-west-2.on.aws/', {
-  method: 'POST',
-  mode: 'cors', // 👈 this is essential for CORS to work properly in browser
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(data)
-})
-
-          if (response.ok) {
-            alert('Thank you! Your response has been submitted and we’ll be in touch soon. Good luck in the prize draw!');
-            form.reset();
-          } else {
-            alert('Something went wrong. Please try again later.');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-          alert('There was an error submitting the form.');
-        }
-      } else {
-        alert('Thank you! Your response has been recorded, but we won’t contact you as no consent was given.');
-        form.reset();
+    try {
+      // Only submit if they want to enter the draw
+      if (!data.enterDraw) {
+        alert('Please agree to the terms to enter the prize draw.');
+        return;
       }
-    });
+
+      const response = await fetch('https://s3tsujkqp27igrtc6mxwsgnxgu0gsydm.lambda-url.eu-west-2.on.aws/', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data),
+        credentials: 'omit'
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      
+      // Show appropriate message based on marketing consent
+      if (data.marketingConsent) {
+        alert('Thank you! Your response has been submitted and we\'ll be in touch soon. Good luck in the prize draw!');
+      } else {
+        alert('Thank you! Your response has been recorded, but we won\'t contact you as no consent was given.');
+      }
+      
+      form.reset();
+      
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('There was an error submitting the form. Please try again.');
+    }
   });
+});
 </script>
+
+    
 
     
 <!-- Footer Section -->
