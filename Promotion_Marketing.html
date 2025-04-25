@@ -416,52 +416,54 @@ h2 {
     </form>
   </div>
 
-  
- <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('questionnaireForm');
+  <script>
+ document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('questionnaireForm');
 
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
+    const formData = new FormData(form);
+    const data = {
+      ...Object.fromEntries(formData.entries()),
+      enterDraw: formData.has('enterDraw'),
+      marketingConsent: formData.has('marketingConsent')
+    };
 
-      // Handle checkboxes as booleans
-      data.enterDraw = formData.has('enterDraw');
-      data.marketingConsent = formData.has('marketingConsent');
+    if (data.marketingConsent) {
+      try {
+        const response = await fetch('https://pag7s7ofmjccsvtwnzhal5s2pq0ndzva.lambda-url.eu-west-2.on.aws/', {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'  // Explicitly expect JSON response
+          },
+          body: JSON.stringify(data),
+          credentials: 'omit'  // Important for CORS with Lambda URLs
+        });
 
-      // Only send to Lambda if marketing consent is true
-      if (data.marketingConsent) {
-        try {
-         const response = await fetch('https://pag7s7ofmjccsvtwnzhal5s2pq0ndzva.lambda-url.eu-west-2.on.aws/', {
-  method: 'POST',
-  mode: 'cors', // 👈 this is essential for CORS to work properly in browser
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(data)
-})
-
-          if (response.ok) {
-            alert('Thank you! Your response has been submitted and we’ll be in touch soon. Good luck in the prize draw!');
-            form.reset();
-          } else {
-            alert('Something went wrong. Please try again later.');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-          alert('There was an error submitting the form.');
+        // Enhanced response handling
+        const responseData = await response.json().catch(() => null);
+        
+        if (response.ok) {
+          alert('Thank you! Your response has been submitted and we'll be in touch soon. Good luck in the prize draw!');
+          form.reset();
+        } else {
+          console.error('Server error:', responseData);
+          alert(`Error: ${responseData?.message || 'Please try again later.'}`);
         }
-      } else {
-        alert('Thank you! Your response has been recorded, but we won’t contact you as no consent was given.');
-        form.reset();
+      } catch (error) {
+        console.error('Network error:', error);
+        alert('Network error occurred. Please check your connection and try again.');
+      }
+    } else {
+      alert('Thank you! Your response has been recorded, but we won't contact you as no consent was given.');
       }
     });
   });
+});
 </script>
-
-
 <!-- Footer Section -->
 <footer>
   <div class="container text-center">
