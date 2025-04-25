@@ -416,54 +416,86 @@ h2 {
     </form>
   </div>
 
-  <script>
- document.addEventListener('DOMContentLoaded', function () {
+<script> 
+
+document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('questionnaireForm');
+  
+  // Disable autocomplete on the entire form
+  form.setAttribute('autocomplete', 'off');
 
-  form.addEventListener('submit', async function (e) {
+  form.addEventListener('submit', async function(e) {
     e.preventDefault();
-
-    const formData = new FormData(form);
+    
+    // Collect all form data
+    const formElements = e.target.elements;
     const data = {
-      ...Object.fromEntries(formData.entries()),
-      enterDraw: formData.has('enterDraw'),
-      marketingConsent: formData.has('marketingConsent')
+      businessName: formElements.businessName.value,
+      businessType: formElements.businessType.value,
+      years: formElements.years.value,
+      location: formElements.location.value,
+      hasWebsite: formElements.hasWebsite.value,
+      websiteUrl: formElements.websiteUrl.value,
+      satisfaction: formElements.satisfaction.value,
+      reasonNoWebsite: formElements.reasonNoWebsite.value,
+      websiteHelpful: formElements.websiteHelpful.value,
+      websitePurpose: formElements.websitePurpose.value,
+      quotedBefore: formElements.quotedBefore.value,
+      priceRange: formElements.priceRange.value,
+      contactInterest: formElements.contactInterest.value,
+      name: formElements.name.value,
+      email: formElements.email.value,
+      phone: formElements.phone.value,
+      contactMethod: formElements.contactMethod.value,
+      notes: formElements.notes.value,
+      enterDraw: formElements.enterDraw.checked,
+      marketingConsent: formElements.marketingConsent.checked
     };
 
-    if (data.marketingConsent) {
-      try {
+    try {
+      // Only submit if they want to enter the draw
+      if (data.enterDraw) {
         const response = await fetch('https://pag7s7ofmjccsvtwnzhal5s2pq0ndzva.lambda-url.eu-west-2.on.aws/', {
           method: 'POST',
           mode: 'cors',
           headers: {
             'Content-Type': 'application/json',
-            'Accept': 'application/json'  // Explicitly expect JSON response
+            'Accept': 'application/json'
           },
           body: JSON.stringify(data),
-          credentials: 'omit'  // Important for CORS with Lambda URLs
+          credentials: 'omit'
         });
 
-        // Enhanced response handling
-        const responseData = await response.json().catch(() => null);
-        
-        if (response.ok) {
-          alert('Thank you! Your response has been submitted and we'll be in touch soon. Good luck in the prize draw!');
-          form.reset();
-        } else {
-          console.error('Server error:', responseData);
-          alert(`Error: ${responseData?.message || 'Please try again later.'}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
-      } catch (error) {
-        console.error('Network error:', error);
-        alert('Network error occurred. Please check your connection and try again.');
+
+        const result = await response.json();
+        alert('Thank you! Your response has been submitted and we\'ll be in touch soon. Good luck in the prize draw!');
+      } else {
+        alert('Please agree to the terms to enter the prize draw.');
+        return;
       }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('There was an error submitting your form. Please try again.');
+      return;
+    }
+
+    // Show appropriate message based on marketing consent
+    if (data.marketingConsent) {
+      alert('Thank you! We\'ll be in touch soon.');
     } else {
-      alert('Thank you! Your response has been recorded, but we won't contact you as no consent was given.');
-      }
-    });
+      alert('Thank you! Your response has been recorded.');
+    }
+    
+    form.reset();
   });
 });
+    
 </script>
+
+    
 <!-- Footer Section -->
 <footer>
   <div class="container text-center">
