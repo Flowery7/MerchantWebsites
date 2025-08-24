@@ -1,506 +1,1163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8SVB5TF8W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z8SVB5TF8W');
-</script>
-    
-    
-    
-    
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="description" content="Merchant-Web Blog - Latest insights on web design, development, and digital marketing strategies.">
+    <meta name="keywords" content="web design blog, web development tips, SEO strategies, digital marketing, website maintenance, e-commerce trends">
+    <meta name="trustpilot-one-time-domain-verification-id" content="3d56d3e7-687e-410b-b6ad-e87e8b2ab346"/>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog | Website Design & Development Insights | Merchant Web" />
+    <meta property="og:description" content="Latest insights on web design, development, and digital marketing strategies from the Merchant-Web team." />
+    <meta property="og:image" content="Social_image_merchant_services_website.png" />
+    <meta property="og:url" content="https://www.merchant-web.co.uk/blog" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog | Website Design &Development Insights | Merchant Web" />
+    <meta name="twitter:description" content="Latest insights on web design, development, and digital marketing strategies from the Merchant-Web team." />
+    <meta name="twitter:image" content="Social_image_merchant_services_website.png" />
+    
+    <!-- Robots and Indexing -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <link rel="canonical" href="https://www.merchant-web.co.uk/blog">
+    <link rel="apple-touch-icon" sizes="180x180" href="merchant-services-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="merchant-services-favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="merchant-services-favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="merchant-services-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="merchant-services-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#89ABE5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-   <meta name="description" content="A website isn't optional for sole traders—it's essential. Discover how it builds confidence, attracts clients, and grows your business even when you're busy.">
-<meta name="keywords" content="sole trader website, tradesman website UK, small business web design, local SEO for trades, affordable website for self-employed">
-<meta name="author" content="Merchant Services">
-
-<meta property="og:title" content="3 Reasons Sole Traders Must Have a Website" />
-<meta property="og:description" content="Why a website is the best investment for sole traders—even if you're already booked solid." />
-<meta property="og:type" content="article" />
-<meta property="og:image" content="https://www.merchant-web.co.uk/Bish_bash_bosh_pop_up.png" />
-<meta property="og:url" content="https://www.merchant-web.co.uk/blog.html" />
-
-<title>3 Reasons Sole Traders Must Have a Website | Merchant Services</title>
-<link rel="canonical" href="https://www.merchant-web.co.uk/blog.html">
-
-  
-    
-    <!-- Bootstrap & Font Awesome -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Custom Styles -->
-    <style>
-        :root {
-            --primary-color: #5E82DA;
-            --secondary-color: #5E82DA;
-            --dark-color: #111;
-            --light-color: #f8f9fa;
-            --border-radius: 8px;
+    <title>Blog | Web Design & Development Insights | Merchant Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#849bfb',
+                        cosmic: {
+                            100: '#d0d9ff',
+                            200: '#b1c0ff',
+                            300: '#93a7ff',
+                            400: '#849bfb',
+                            500: '#6b82e8',
+                            600: '#5469d1',
+                            700: '#3f52b5',
+                            800: '#2d3c99',
+                            900: '#1e287d',
+                        },
+                        space: {
+                            dark: '#0a0e2a',
+                            mid: '#131c3d',
+                            light: '#1d2a52'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
         }
-        
+    </script>
+    <style>
         body {
             font-family: 'Poppins', sans-serif;
-            color: #333;
-            background-color: #fff;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(135deg, #0a0e2a 0%, #1d2a52 100%);
+            color: #fff;
+            overflow-x: hidden;
         }
         
-        /* Navigation */
-        .navbar {
-            background-color: var(--light-color);
-        }
-        .navbar a {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin-right: 15px;
-            font-weight: bold;
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
         }
         
-        /* Hero Section */
-       
-       
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, rgba(29, 40, 99, 0.8), rgba(114, 124, 243, 0.8)), url('https://source.unsplash.com/1600x900/?web,technology');
-  background-size: cover;
-  color: white;
-  padding: 100px 0;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-/* Typing Animation */
-#animated-text {
-  display: inline-block;
-  overflow: hidden; /* Ensures text is hidden until animated */
-  white-space: nowrap; /* Prevents text from wrapping */
-  border-right: 2px solid white; /* Simulate a typing cursor */
-  width: 0; /* Start with no width */
-  animation: typing 3s steps(10, end) forwards, blink-cursor 0.5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-
-/* Hero Title Animation */
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  animation: fadeInDown 3s ease;
-  position: relative;
-  z-index: 2;
-}
-
-/* Fade-in effect for text */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Shake animation for "Websites from £149" */
-.shake {
-  display: inline-block;
-  animation: shake 1.5s ease-in-out infinite;
-}
-
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-5px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(5px);
-  }
-}
-
-/* Flying saucer animation */
-.flying-saucer {
-  position: absolute;
-  width: 200px;
-  height: auto;
-  top: 20%;
-  right: -5%;
-  animation: flyAcross 5s linear infinite;
-  z-index: 1;
-}
-
-@keyframes flyAcross {
-  0% {
-    transform: translateX(0) translateY(0) scale(0.5);
-  }
-  25% {
-    transform: translateX(-25vw) translateY(-10%) scale(0.75);
-  }
-  50% {
-    transform: translateX(-50vw) translateY(0) scale(1);
-  }
-  75% {
-    transform: translateX(-75vw) translateY(-10%) scale(1.25);
-  }
-  100% {
-    transform: translateX(-150vw) translateY(0) scale(1.5);
-  }
-}
-
-.mascot {
-  width: 100px; /* Adjust size as needed */
-  height: auto;
-  position: absolute;
-  bottom: -8%; /* Adjust to position below the button */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center it properly */
-  z-index: 2; /* Ensure it's above the background but below text */
-}
-
-
-/* Packages Section */
-#packages {
-  background-color: #849BFB;
-  color: white;
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-  min-height: 400px;
-}
-
-
-
-
-        }
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            animation: fadeInDown 3s ease;
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
         }
         
-        /* Blog Container */
-        .blog-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-            border-radius: var(--border-radius);
+        .space-card {
+            background: rgba(26, 35, 79, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid #0a0e2a;
+            border-radius: 16px;
+            transition: all 0.3s ease;
             position: relative;
-            z-index: 1;
+            overflow: hidden;
         }
         
-        /* Typography */
-        h1 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: var(--primary-color);
-            margin-top: 40px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
-        }
-        h3 {
-            color: var(--secondary-color);
+        .space-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(132, 155, 251, 0.1) 0%, transparent 70%);
+            opacity: 0.5;
+            z-index: -1;
+            transform: rotate(15deg);
         }
         
-        /* Social Sharing */
-        .social-sharing {
-            margin: 40px 0;
-            padding: 20px 0;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-            text-align: center;
-        }
-        .social-sharing a {
-            display: inline-block;
-            margin: 0 8px;
-            padding: 10px 20px;
-            border-radius: var(--border-radius);
-            color: white;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-        .social-sharing a:hover {
-            transform: translateY(-3px);
-        }
-        .facebook { background: #3b5998; }
-        .twitter { background: #1da1f2; }
-        .linkedin { background: #0077b5; }
-        .whatsapp { background: #25d366; }
-        
-        /* Buttons */
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            padding: 12px 25px;
-            border-radius: var(--border-radius);
-            font-weight: bold;
-            display: inline-block;
-            transition: all 0.3s;
-        }
-        .btn-primary:hover {
-            background: var(--secondary-color);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .space-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(132, 155, 251, 0.2);
         }
         
-        /* Footer */
-        footer {
-  background-color: #111;
-  color: white;
-  padding: 20px 0;
-  width: 100%;
- 
-}
-        footer a {
-            color: #bbb;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: white;
+        .space-card:hover::before {
+            opacity: 0.8;
         }
         
-.social-icons i {
-    font-size: 1.5rem;
-    margin: 0 10px;
-    color: white;
-    transition: color 0.3s ease;
+        .alien-shape {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        
+        .ufo {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .package-card {
+            transition: all 0.3s ease;
+        }
+        
+        .package-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .feature-bullet {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .feature-bullet::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .nav-white {
+            background-color: white;
+            color: #849bfb;
+        }
+        
+        .nav-white a {
+            color: #849bfb;
+        }
+        
+        .nav-white a:hover {
+            color: #6b82e8;
+        }
+        
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 350px;
+        }
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        
+        .swiper-pagination-bullet {
+            background-color: #849bfb;
+        }
+        
+        .swiper-button-next, .swiper-button-prev {
+            color: #849bfb;
+        }
+        
+       .cosmic-glow {
+            position: relative;
+        }
+        
+        .cosmic-glow::before {
+  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(175, 51, 242, 0.25) 0%, transparent 50%),   /* aqua */
+    radial-gradient(circle at 70% 30%, rgba(242, 123, 244, 0.18) 0%, transparent 50%),   /* blue */
+    radial-gradient(circle at 40% 40%, rgba(151, 131, 169, 0.18) 0%, transparent 50%);   /* greeny tint */
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0.7; /* toned down */
+  transition: opacity 0.3s ease;
 }
 
-.social-icons i:hover {
-    color: #88A4E3;
+
+        
+        .cosmic-glow:hover::before {
+            opacity: 0.9;
+        }
+        
+        .hero-glow {
+            position: relative;
+        }
+        
+        .hero-glow::after {
+  content: '';
+  position: absolute;
+  top: -60px;     /* extend further above */
+  bottom: -0px;  /* extend further below */
+  left: 40%;
+  transform: translateX(-50%); /* center beam */
+  width: 180px;   /* wider beam */
+  
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 63, 223, 0.45) 0%,    /* brighter aqua */
+    rgba(0, 200, 255, 0.35) 25%,   /* strong blue tint */
+    rgba(0, 255, 180, 0.25) 50%,   /* vivid greeny fade */
+    rgba(0, 200, 220, 0.15) 75%,   /* softer fade */
+    transparent 100%               /* vanish */
+  );
+
+  filter: blur(20px);   /* stronger glow spread */
+  border-radius: 60%;   /* smoother round edges */
+  z-index: -1;
+  opacity: 1;           /* fully bright */
 }
+
+
         
-        
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(132, 155, 251, 0.5);
+            transition: all 0.3s ease;
         }
         
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .blog-container { margin: 20px; padding: 20px; }
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(132, 155, 251, 0.8);
+        }
+        
+        .blog-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(132, 155, 251, 0.9);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+        
+        .pagination-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: rgba(26, 35, 79, 0.6);
+            color: #849bfb;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination-btn:hover, .pagination-btn.active {
+            background: #849bfb;
+            color: white;
+        }
+        
+        .sidebar-widget {
+            margin-bottom: 2rem;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(26, 35, 79, 0.6);
+            color: #849bfb;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin: 0 0.5rem 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            background: #849bfb;
+            color: white;
         }
     </style>
 </head>
-<body>
-
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Merchant Services</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a href="index.html#packages" class="nav-link">Packages</a></li>
-        <li class="nav-item"><a href="index.html#portfolio" class="nav-link">Our Work</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link">Blogs</a></li>
-        <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<header class="hero text-center">
-    <div class="container">
-        
-        <h1 style="color: white;">Blogs</h1>
-        <p>Explore below to learn more about our services, processes, and offerings.<br>Here are some questions we are often asked.</p>
-    </div>
-    <a href="tel:+447394542901" class="btn btn-primary mt-4">Call Now</a><br><br>
-    <!-- Flying saucer image -->
-    <img src="space_craft_website_add.png" alt="Flying Saucer image for alien Web design and development promotion" class="flying-saucer">
-    <!-- Mascot image -->
-    <img src="web_dev_mascot.png" alt="Mascot image for websites in Calderdale Merchant Services , Bish , Bash , Bosh" class="mascot"><br><br><br>
-</header>
-
-<!-- Main Content -->
-<main class="container">
-    <div class="blog-container">
-        <article itemscope itemtype="https://schema.org/BlogPosting">
-            <header>
-                <h2 itemprop="headline">3 Reasons You <strong>Must</strong> Have a Website</h2>
-                <p class="text-muted"><small>Published on <time itemprop="datePublished" datetime="2025-05-23">23 May 2025</time></small></p>
-                <hr>
-            </header>
-            
-            
-            
-            
-            
-            
-
-
-<elevenlabs-convai agent-id="5G6nV8f26bHerWOBIWk8"></elevenlabs-convai>
-<script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-
-
-
-
-           <section itemprop="articleBody">
-  <p class="lead"><strong>"I’ve already got a Facebook page—why would I need a website?"</strong><br>
-    Social media is great for updates and visibility—but it’s not a substitute for your own <strong>professional online presence</strong>. A website gives you control, authority, and long-term growth. Here's why you shouldn’t rely on social platforms alone:
-  </p>
-
-  <h2 id="ownership">1. You Don’t Own Your Social Media Page</h2>
-  <p>Facebook, Instagram, or TikTok could change the rules—or suspend your account—overnight. If that happens, your content, followers, and enquiries could disappear without warning. With a website, <strong>you’re in control</strong>.</p>
-  <p><strong>Risks of social-only strategies:</strong></p>
-  <ul>
-    <li><strong>Algorithm changes hurt reach</strong> – You may have 1,000 followers, but only a fraction actually see your posts unless you pay to boost them.</li>
-    <li><strong>Platform bans and suspensions</strong> – Even a minor policy violation can lead to temporary bans or permanent deletion.</li>
-    <li><strong>No backup for enquiries or client trust</strong> – If your profile vanishes, so do your reviews, messages, and reputation.</li>
-  </ul>
-
-  <h2 id="first-impression">2. A Website Makes a Stronger First Impression</h2>
-  <p>Social media is noisy and cluttered. Your business deserves a clean, focused place to show off your services, personality, and professionalism. A website says, "<strong>I take my work seriously</strong>."</p>
-  <p><strong>What your website can do better:</strong></p>
-  <ul>
-    <li><strong>Tailored design that reflects your brand</strong> – Unlike cookie-cutter profiles, your site can use your colours, logo, and layout.</li>
-    <li><strong>No distractions or competitors</strong> – On Facebook, your customers can be distracted by ads or even click on a rival’s page.</li>
-    <li><strong>One clear call to action</strong> – Whether it’s “Call Now” or “Request a Quote,” your website guides users directly to take action.</li>
-  </ul>
-
-  <h2 id="longterm">3. Long-Term Visibility & Growth</h2>
-  <p>Social posts disappear down the feed fast. A website, especially one built with SEO in mind, brings in traffic for <strong>months or even years</strong>. It's your best bet for steady, organic growth—without paying for ads.</p>
-  <p><strong>Website benefits over time:</strong></p>
-  <ul>
-    <li><strong>Pages that rank on Google</strong> – A blog post or service page can bring in new clients long after it's published.</li>
-    <li><strong>Professional email addresses</strong> – Using <code>you@yourbusiness.co.uk</code> boosts trust far more than a Gmail or Hotmail account.</li>
-    <li><strong>Better analytics</strong> – Learn what people search for, how they find you, and what services are most popular—data social media doesn’t always give.</li>
-  </ul>
-
-  <div class="callout-box p-4 my-4" style="background-color: #f8f9fa; border-left: 4px solid var(--primary-color);">
-    <h3>Already on Social Media? Let’s Build On That.</h3>
-    <p>A website doesn’t replace your Facebook or Instagram—it <strong>amplifies them</strong>. Link your socials, embed your posts, and funnel visitors to your site to book or call you directly.</p>
-    <p>Our <strong>starter websites from £249</strong> connect seamlessly with your social profiles—and give your business the legitimacy it deserves.</p>
-    <ul>
-      <li><strong>Custom contact forms</strong> – Get proper leads instead of late-night DMs.</li>
-      <li><strong>Portfolio and reviews</strong> – Show your best work in one easy-to-navigate place.</li>
-      <li><strong>SEO-ready</strong> – Attract new customers beyond your follower list.</li>
-    </ul>
-    <a href="form.html" class="btn-primary mt-2">Level Up Your Online Presence</a>
-  </div>
-</section>
-
-            
-            <!-- Social Sharing -->
-           <div class="social-sharing">
-    <p class="h5">Share this post:</p>
+<body class="min-h-screen font-poppins">
+    <!-- Background elements -->
+    <div id="stars-container" class="fixed inset-0 z-0 overflow-hidden"></div>
     
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.merchant-web.co.uk/blog.html" class="facebook" target="_blank">
-        <i class="fab fa-facebook-f"></i> Facebook
-    </a>
-    
-    <a href="https://twitter.com/intent/tweet?url=https://www.merchant-web.co.uk/blog.html&text=Why%20every%20sole%20trader%20needs%20a%20website" class="twitter" target="_blank">
-        <i class="fab fa-twitter"></i> Twitter
-    </a>
-    
-    <a href="https://www.linkedin.com/shareArticle?url=https://www.merchant-web.co.uk/blog.html" class="linkedin" target="_blank">
-        <i class="fab fa-linkedin-in"></i> LinkedIn
-    </a>
-    
-    <a href="https://wa.me/?text=Check%20out%20this%20post%20on%20why%20sole%20traders%20need%20websites:%20https://www.merchant-web.co.uk/blog.html" class="whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-</div>
-
-        </article>
-    </div>
-</main>
-
-<!-- Footer -->
-<footer>
-    <div class="container text-center">
-        <p>&copy; 2024 MerchantServices. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/ns.mrchconsult.uk"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/ns.mrchconsult.uk"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.x.com/MerchServ555"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Navigation -->
+    <nav class="relative z-50 py-4 px-6 md:px-12 flex justify-between items-center nav-white shadow-lg">
+        <div class="flex items-center">
+            <span class="text-2xl font-bold text-primary">Merchant-Web</span>
         </div>
-         <div class="quick-links mt-2">
-   <a href="privacy.html" class="text-decoration-none">Privacy Policy</a> |
-   <a href="privacy.html" class="text-decoration-none">Terms of Service</a>
- </div>
- 
- 
-</footer>
+        
+        <div class="hidden md:flex space-x-10">
+            <a href="index.html" class="hover:text-cosmic-600 transition-colors">Home</a>
+            <a href="about.html" class="hover:text-cosmic-600 transition-colors">About</a>
+            <a href="index.html/packages" class="hover:text-cosmic-600 transition-colors">Services</a>
+            <a href="blog.html" class="hover:text-cosmic-600 transition-colors">Blog</a>
+            <a href="index.html/contact" class="hover:text-cosmic-600 transition-colors">Contact</a>
+        </div>
+        
+        <button class="md:hidden text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative z-1 py-20 px-6 md:px-12">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Blogs &
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-300">Insights</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Explore the latest in web design, development trends, SEO strategies, and digital marketing insights from the Merchant-Web team.
+                </p>
+            </div>
+            
+            <!-- Featured Post -->
+            <div id="featured" class="space-card p-8 cosmic-glow rounded-xl mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1 bg-primary text-white rounded-full text-sm font-bold mb-4">FEATURED</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Mastering Colour Theory</h2>
+                        <p class="text-gray-300 mb-6">
+                            Discover how colour theory impacts web design and user experience. Learn the fundamentals of colour harmony, contrast, and accessibility.
+                        </p>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="font-bold">Nick</p>
+                                <p class="text-gray-400 text-sm">23, 2025 • 8 min read</p>
+                            </div>
+                        </div>
+                        <a href="article.html" class="px-6 py-3 bg-primary text-white font-bold rounded-full hover:bg-blue-600 transition-colors btn-glow inline-flex items-center">
+                            Read Article
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="rounded-2xl overflow-hidden cosmic-glow">
+                            <img src="colour_theme.jpg" alt="Mastering Colour Theory" class="w-full h-auto rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="relative z-1 py-16 px-6 md:px-12 bg-space-mid bg-opacity-70">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Explore Categories</h2>
+            <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto">Browse our articles by category to find exactly what you're looking for.</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="article.html" class="space-card p-6 text-center cosmic-glow rounded-xl group" data-category="web-design">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-200 rounded-xl flex items-center justify-center group-hover:bg-blue-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2 group-hover:text-primary transition-colors">Web Design</h3>
+                    <p class="text-gray-400 text-sm">4 Articles</p>
+                </a>
+                
+                <a href="article.html" class="space-card p-6 text-center cosmic-glow rounded-xl group" data-category="development">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-green-200 rounded-xl flex items-center justify-center group-hover:bg-green-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2 group-hover:text-primary transition-colors">Development</h3>
+                    <p class="text-gray-400 text-sm">3 Articles</p>
+                </a>
+                
+                <a href="article.html" class="space-card p-6 text-center cosmic-glow rounded-xl group" data-category="seo">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-yellow-200 rounded-xl flex items-center justify-center group-hover:bg-yellow-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2 group-hover:text-primary transition-colors">SEO</h3>
+                    <p class="text-gray-400 text-sm">3 Articles</p>
+                </a>
+                
+                <a href="article.html" class="space-card p-6 text-center cosmic-glow rounded-xl group" data-category="marketing">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-200 rounded-xl flex items-center justify-center group-hover:bg-purple-300 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2 group-hover:text-primary transition-colors">Marketing</h3>
+                    <p class="text-gray-400 text-sm">2 Articles</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="recent" class="relative z-1 py-20 px-6 md:px-12">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Content -->
+                <div class="lg:w-8/12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12">Recent Articles</h2>
+                    
+                    <div id="articles-container" class="grid grid-cols-1 gap-8">
+                        <!-- Blog Post 1 -->
+                        <article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="web-design" data-title="Mastering Color Theory in Modern Web Design">
+                            <div class="relative mb-6 rounded-2xl overflow-hidden">
+                                <span class="category-badge">Web Design</span>
+                                <img src="colour_theme.jpg" alt="Color Theory in Web Design" class="w-full h-64 object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Mastering Color Theory in Modern Web Design</h3>
+                            <p class="text-gray-300 mb-4">
+                                Learn how to choose the perfect color palette for your website that not only looks great but also enhances user experience and conversion rates.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                        <img src="beautifulface.jpg" alt="Nick Designer" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">Nick</p>
+                                        <p class="text-xs text-gray-400">Oct 10, 2023 • 6 min read</p>
+                                    </div>
+                                </div>
+                                <a href="article.html/article1" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+                                    Read More
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Blog Post 2 -->
+                        <article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="seo" data-title="SEO Strategies That Actually Work in 2024">
+                            <div class="relative mb-6 rounded-2xl overflow-hidden">
+                                <span class="category-badge">SEO</span>
+                                <img src="website-developer.jpg" alt="SEO Strategies" class="w-full h-64 object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">SEO Strategies That Actually Work in 2024</h3>
+                            <p class="text-gray-300 mb-4">
+                                Discover the latest SEO techniques that will help your website rank higher in search results and drive more organic traffic to your business.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                        <img src="beautifulface.jpg" alt="Nick SEO Specialist" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">Nick</p>
+                                        <p class="text-xs text-gray-400">Oct 5, 2023 • 10 min read</p>
+                                    </div>
+                                </div>
+                                <a href="article.html/article2" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+                                    Read More
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <!-- Blog Post 3 -->
+                        <article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="development" data-title="Optimizing Website Performance: A Technical Guide">
+                            <div class="relative mb-6 rounded-2xl overflow-hidden">
+                                <span class="category-badge">Development</span>
+                                <img src="laptop_coding.png" alt="Web Performance" class="w-full h-64 object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Optimizing Website Performance: A Technical Guide</h3>
+                            <p class="text-gray-300 mb-4">
+                                Speed matters! Learn practical techniques to improve your website's loading times and provide a better experience for your visitors.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                                        <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">Nick</p>
+                                        <p class="text-xs text-gray-400">Sept 28, 2023 • 12 min read</p>
+                                    </div>
+                                </div>
+                                <a href="article.html/article3" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+                                    Read More
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+<!-- Blog Post 4 -->
+<article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="design" data-title="The Power of Minimalist Web Design">
+    <div class="relative mb-6 rounded-2xl overflow-hidden">
+        <span class="category-badge">Design</span>
+        <img src="web_web.jpg" alt="Minimalist Web Design" class="w-full h-64 object-cover">
+    </div>
+    <h3 class="text-2xl font-bold mb-4">The Power of Minimalist Web Design</h3>
+    <p class="text-gray-300 mb-4">
+        Discover how simplicity can boost usability, improve readability, and make your website look more professional.
+    </p>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="text-sm font-bold">Nick</p>
+                <p class="text-xs text-gray-400">Oct 5, 2023 • 8 min read</p>
+            </div>
+        </div>
+        <a href="article.html/article4" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Post 5 -->
+<article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="marketing" data-title="SEO in 2023: What Still Works?">
+    <div class="relative mb-6 rounded-2xl overflow-hidden">
+        <span class="category-badge">Marketing</span>
+        <img src="digital-marketing.jpg" alt="SEO Trends" class="w-full h-64 object-cover">
+    </div>
+    <h3 class="text-2xl font-bold mb-4">SEO in 2023: What Still Works?</h3>
+    <p class="text-gray-300 mb-4">
+        Search engines evolve fast—find out which strategies continue to deliver results and which ones to avoid.
+    </p>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="text-sm font-bold">Nick</p>
+                <p class="text-xs text-gray-400">Oct 14, 2023 • 10 min read</p>
+            </div>
+        </div>
+        <a href="article.html/article5" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Post 6 -->
+<article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="business" data-title="Building a Strong Online Brand Identity">
+    <div class="relative mb-6 rounded-2xl overflow-hidden">
+        <span class="category-badge">Business</span>
+        <img src="mockup-trademark.jpg" alt="Brand Identity" class="w-full h-64 object-cover">
+    </div>
+    <h3 class="text-2xl font-bold mb-4">Building a Strong Online Brand Identity</h3>
+    <p class="text-gray-300 mb-4">
+        Learn how consistent branding and messaging can set your business apart in the crowded digital marketplace.
+    </p>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="text-sm font-bold">Nick</p>
+                <p class="text-xs text-gray-400">Oct 21, 2023 • 9 min read</p>
+            </div>
+        </div>
+        <a href="article.html/article6" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Post 7 -->
+<article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="security" data-title="Cybersecurity Basics for Website Owners">
+    <div class="relative mb-6 rounded-2xl overflow-hidden">
+        <span class="category-badge">Security</span>
+        <img src="cyber-security.jpg" alt="Cybersecurity Basics" class="w-full h-64 object-cover">
+    </div>
+    <h3 class="text-2xl font-bold mb-4">Cybersecurity Basics for Website Owners</h3>
+    <p class="text-gray-300 mb-4">
+        Protect your site and your users by learning the fundamentals of web security and data protection.
+    </p>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="text-sm font-bold">Nick</p>
+                <p class="text-xs text-gray-400">Nov 2, 2023 • 11 min read</p>
+            </div>
+        </div>
+        <a href="article.html/article7" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Post 8 -->
+<article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="tools" data-title="Top Productivity Tools for Web Developers">
+    <div class="relative mb-6 rounded-2xl overflow-hidden">
+        <span class="category-badge">Tools</span>
+        <img src="laptop-productivity.jpg" alt="Productivity Tools" class="w-full h-64 object-cover">
+    </div>
+    <h3 class="text-2xl font-bold mb-4">Top Productivity Tools for Web Developers</h3>
+    <p class="text-gray-300 mb-4">
+        Maximize your workflow with these essential apps and extensions designed for developers.
+    </p>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="text-sm font-bold">Nick</p>
+                <p class="text-xs text-gray-400">Nov 10, 2023 • 7 min read</p>
+            </div>
+        </div>
+        <a href="article.html/article8" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </div>
+</article>
+
+<!-- Blog Post 9 -->
+<article class="blog-card space-card p-6 cosmic-glow rounded-xl" data-category="trends" data-title="Web Development Trends to Watch in 2024">
+    <div class="relative mb-6 rounded-2xl overflow-hidden">
+        <span class="category-badge">Trends</span>
+        <img src="virtual-reality.jpg" alt="Web Development Trends" class="w-full h-64 object-cover">
+    </div>
+    <h3 class="text-2xl font-bold mb-4">Web Development Trends to Watch in 2024</h3>
+    <p class="text-gray-300 mb-4">
+        From AI-driven design to next-gen frameworks, explore the trends shaping the future of web development.
+    </p>
+    <div class="flex items-center justify-between">
+        <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="text-sm font-bold">Nick</p>
+                <p class="text-xs text-gray-400">Nov 18, 2023 • 13 min read</p>
+            </div>
+        </div>
+        <a href="article.html/article9" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center read-more-btn">
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </div>
+</article>
+
+</div>
+<!-- Pagination -->
+                    <div class="flex justify-center mt-12 space-x-2">
+                       
+                    </div>
+                </div>
+                                
+                <!-- Sidebar -->
+                <div class="lg:w-4/12">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget space-card p-6 cosmic-glow rounded-xl mb-8">
+                        <h3 class="text-xl font-bold mb-4">Search Articles</h3>
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Search..." class="w-full px-4 py-3 bg-space-dark border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            <button id="search-button" class="absolute right-2 top-2 p-1 bg-primary rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- About Widget -->
+                    <div class="sidebar-widget space-card p-6 cosmic-glow rounded-xl mb-8">
+                        <h3 class="text-xl font-bold mb-4">About Our Blog</h3>
+                        <p class="text-gray-300 mb-4">
+                            Welcome to the Merchant-Web blog, where we share insights, tips, and trends in web design, development, and digital marketing.
+                        </p>
+                        <a href="about.html" class="text-primary hover:text-blue-300 transition-colors font-bold flex items-center">
+                            Learn More About Us
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Popular Posts -->
+                    <div class="sidebar-widget space-card p-6 cosmic-glow rounded-xl mb-8">
+                        <h3 class="text-xl font-bold mb-4">Popular Posts</h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex group">
+                                <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                    <img src="laptop-productivity.jpg" alt="Popular Post" class="w-full h-full object-cover">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold group-hover:text-primary transition-colors">10 Common Web Design Mistakes to Avoid</h4>
+                                    <p class="text-gray-400 text-sm">Aug 23, 2025</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex group">
+                                <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                    <img src="design.jpg" alt="Popular Post" class="w-full h-full object-cover">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold group-hover:text-primary transition-colors">How to Choose the Right Website for Your Business</h4>
+                                    <p class="text-gray-400 text-sm">Aug 23, 2025</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex group">
+                                <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                    <img src="cyber-security.jpg" alt="Popular Post" class="w-full h-full object-cover">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold group-hover:text-primary transition-colors">The Ultimate Guide to Website Security</h4>
+                                    <p class="text-gray-400 text-sm">Aug 23, 2025</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget space-card p-6 cosmic-glow rounded-xl mb-8">
+                        <h3 class="text-xl font-bold mb-4">Popular Tags</h3>
+                        <div class="flex flex-wrap">
+                            <a href="#" class="tag" data-tag="web-design">Web Design</a>
+                            <a href="#" class="tag" data-tag="responsive">Responsive</a>
+                            <a href="#" class="tag" data-tag="seo">SEO</a>
+                            <a href="#" class="tag" data-tag="wordpress">WordPress</a>
+                            <a href="#" class="tag" data-tag="ecommerce">E-commerce</a>
+                            <a href="#" class="tag" data-tag="ux-ui">UX/UI</a>
+                            <a href="#" class="tag" data-tag="performance">Performance</a>
+                            <a href="#" class="tag" data-tag="security">Security</a>
+                            <a href="#" class="tag" data-tag="javascript">JavaScript</a>
+                            <a href="#" class="tag" data-tag="css">CSS</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Subscribe Widget -->
+                    <div id="subscribe" class="sidebar-widget space-card p-6 cosmic-glow rounded-xl">
+                        <h3 class="text-xl font-bold mb-4">Subscribe to Newsletter</h3>
+                        <p class="text-gray-300 mb-4">Get the latest articles and news delivered to your inbox.</p>
+                        <form>
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-space-dark border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary mb-4">
+                            <button type="submit" class="w-full py-3 bg-[#7bd5bf] text-white font-bold rounded-lg hover:bg-[#65dec0] transition-colors btn-glow">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative z-1 py-20 px-6 md:px-12 bg-space-mid bg-opacity-70">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="space-card p-12 cosmic-glow rounded-xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Website?</h2>
+                <p class="text-xl text-gray-300 mb-8">Let's work together to create a website that's truly out of this world.</p>
+                <a href="index.html#contact" class="px-8 py-4 bg-[#7bd5bf] text-white font-bold rounded-full hover:bg-[#65dec0] transition-colors btn-glow inline-block">
+                    Get Started Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="relative z-1 py-12 px-6 md:px-12 bg-space-dark">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        
+                        <span class="text-xl font-bold text-white">Merchant web</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Launching businesses into digital orbit with stunning, high-converting websites.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/ns.mrchconsult.uk" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.x.com/Merch555" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
+                            </svg>
+                            <a href="https://www.instagram.com/ns.mrchconsult.uk" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+</a>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="index.html/packages" class="text-gray-400 hover:text-primary transition-colors">Packages</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Web Design</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">SEO Optimisation</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Web Hosting</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Maintenance</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400">support@merchant-web.co.uk</li>
+                        <li class="text-gray-400">+44 7394542901</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-space-mid mt-12 pt-8 text-center text-gray-500">
+                <p> 2024 Merchant Web / Merchant Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Create twinkling stars background
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsContainer = document.getElementById('stars-container');
+            const starsCount = 150;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const size = Math.random() * 3;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                const opacity = Math.random() * 0.7 + 0.3;
+                star.style.opacity = opacity;
+                
+                const animationDuration = Math.random() * 5 + 3;
+                star.style.animation = `twinkle ${animationDuration}s infinite`;
+                
+                starsContainer.appendChild(star);
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
 
-<!-- Schema Markup -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.merchant-web.co.uk"
-    }, {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://www.merchant-web.co.uk/blog.html"
-    }, {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Sole Trader Websites",
-        "item": "https://www.merchant-web.co.uk/blog.html"
-    }]
-}
-</script>
-
+            // Blog functionality implementation
+            const articles = document.querySelectorAll('.blog-card');
+            const articlesContainer = document.getElementById('articles-container');
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+            const paginationNumbers = document.querySelectorAll('.pagination-number');
+            const paginationPrev = document.querySelector('.pagination-prev');
+            const paginationNext = document.querySelector('.pagination-next');
+            const categoryLinks = document.querySelectorAll('[data-category]');
+            const tagLinks = document.querySelectorAll('.tag');
+            
+            // Store all articles for filtering
+            const allArticles = Array.from(articles);
+            
+            // Pagination variables
+            const articlesPerPage = 3;
+            let currentPage = 1;
+            let filteredArticles = allArticles;
+            
+            // Initialize pagination
+            updatePagination();
+            
+            // Search functionality
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                
+                if (searchTerm === '') {
+                    // If search is empty, show all articles
+                    filteredArticles = allArticles;
+                } else {
+                    // Filter articles based on search term
+                    filteredArticles = allArticles.filter(article => {
+                        const title = article.getAttribute('data-title').toLowerCase();
+                        const category = article.getAttribute('data-category').toLowerCase();
+                        const content = article.querySelector('p').textContent.toLowerCase();
+                        
+                        return title.includes(searchTerm) || 
+                               category.includes(searchTerm) || 
+                               content.includes(searchTerm);
+                    });
+                }
+                
+                currentPage = 1;
+                displayArticles();
+                updatePagination();
+            }
+            
+            // Category filtering
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const category = this.getAttribute('data-category');
+                    
+                    if (category) {
+                        filteredArticles = allArticles.filter(article => {
+                            return article.getAttribute('data-category') === category;
+                        });
+                        
+                        currentPage = 1;
+                        displayArticles();
+                        updatePagination();
+                        
+                        // Scroll to articles section
+                        document.getElementById('recent').scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Tag filtering
+            tagLinks.forEach(tag => {
+                tag.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tagName = this.getAttribute('data-tag');
+                    
+                    if (tagName) {
+                        filteredArticles = allArticles.filter(article => {
+                            const title = article.getAttribute('data-title').toLowerCase();
+                            const content = article.querySelector('p').textContent.toLowerCase();
+                            
+                            return title.includes(tagName) || content.includes(tagName);
+                        });
+                        
+                        currentPage = 1;
+                        displayArticles();
+                        updatePagination();
+                        
+                        // Scroll to articles section
+                        document.getElementById('recent').scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Pagination functionality
+            paginationNumbers.forEach(number => {
+                number.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = parseInt(this.getAttribute('data-page'));
+                    
+                    if (page !== currentPage) {
+                        currentPage = page;
+                        displayArticles();
+                        updatePagination();
+                    }
+                });
+            });
+            
+            paginationPrev.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (currentPage > 1) {
+                    currentPage--;
+                    displayArticles();
+                    updatePagination();
+                }
+            });
+            
+            paginationNext.addEventListener('click', function(e) {
+                e.preventDefault();
+                const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+                
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    displayArticles();
+                    updatePagination();
+                }
+            });
+            
+            // Read More functionality
+            document.querySelectorAll('.read-more-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const article = this.closest('.blog-card');
+                    const title = article.getAttribute('data-title');
+                    
+                    // In a real implementation, this would navigate to the full article page
+                    // For this demo, we'll show an alert
+                    alert(`Loading full article: ${title}`);
+                    
+                    // You would typically redirect to the article page:
+                    // window.location.href = `article.html?title=${encodeURIComponent(title)}`;
+                });
+            });
+            
+            // Display articles for current page
+            function displayArticles() {
+                const startIndex = (currentPage - 1) * articlesPerPage;
+                const endIndex = startIndex + articlesPerPage;
+                const articlesToShow = filteredArticles.slice(startIndex, endIndex);
+                
+                // Clear container
+                articlesContainer.innerHTML = '';
+                
+                // Add articles to show
+                if (articlesToShow.length === 0) {
+                    articlesContainer.innerHTML = `
+                        <div class="col-span-3 text-center py-12">
+                            <h3 class="text-2xl font-bold mb-4">No articles found</h3>
+                            <p class="text-gray-400">Try a different search term or browse our categories.</p>
+                        </div>
+                    `;
+                } else {
+                    articlesToShow.forEach(article => {
+                        articlesContainer.appendChild(article.cloneNode(true));
+                    });
+                    
+                    // Reattach event listeners to new read more buttons
+                    document.querySelectorAll('.read-more-btn').forEach(btn => {
+                        btn.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const article = this.closest('.blog-card');
+                            const title = article.getAttribute('data-title');
+                            alert(`Loading full article: ${title}`);
+                        });
+                    });
+                }
+            }
+            
+            // Update pagination UI
+            function updatePagination() {
+                const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+                
+                // Update page numbers
+                paginationNumbers.forEach(number => {
+                    const pageNum = parseInt(number.getAttribute('data-page'));
+                    
+                    if (pageNum <= totalPages) {
+                        number.style.display = 'flex';
+                        number.classList.toggle('active', pageNum === currentPage);
+                    } else {
+                        number.style.display = 'none';
+                    }
+                });
+                
+                // Update prev/next buttons
+                paginationPrev.style.visibility = currentPage > 1 ? 'visible' : 'hidden';
+                paginationNext.style.visibility = currentPage < totalPages ? 'visible' : 'hidden';
+            }
+        });
+    </script>
 </body>
 </html>

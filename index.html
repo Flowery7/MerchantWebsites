@@ -1,9 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <meta charset="UTF-8">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -11,265 +8,270 @@
     <meta name="description" content="Quality website development in calderdale. Enquire for a quote today!">
     <meta name="keywords" content="web merchant, merchant websites, websites merchant services, web design merchant, website development, web designer, IT services, social media management, logo design, branding, new business websites, web creation, website services, website offers, website discounts, small business websites, e-commerce development, responsive web design, SEO services, digital marketing, user-friendly websites, website optimization, professional web design, custom web solutions, affordable web design, online presence, web development services, IT services Halifax, IT services Bradford, IT services Huddersfield,  website design Halifax, website design Bradford, website design Huddersield">
     <meta name="trustpilot-one-time-domain-verification-id" content="3d56d3e7-687e-410b-b6ad-e87e8b2ab346"/>
-
-   <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Website Design & Development | SEO | Merchant Services" />
-<meta property="og:description" content="Quality Website Design for Sole Traders & Small Businesses Web Design & Development | SEO." />
-<meta property="og:image" content="Social_image_merchant_services_website.png" />
-<meta property="og:url" content="https://www.merchant-web.co.uk" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Website Design & Development| SEO |Merchnat Services" />
-<meta name="twitter:description" content="Quality Website Design for Sole Traders & Small Businesses Web Design & Development | SEO." />
-<meta name="twitter:image" content="Social_image_merchant_services_website.png" />
-
-<!-- Robots and Indexing -->
-<meta name="robots" content="index, follow" />
-<meta name="googlebot" content="index, follow" />
     
-     
-   <link rel="canonical" href="https://www.merchant-web.co.uk/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Website Design & Development | SEO | Merchant Web" />
+    <meta property="og:description" content="Quality Website Design for Sole Traders & Small Businesses Web Design & Development | SEO." />
+    <meta property="og:image" content="Social_image_merchant_services_website.png" />
+    <meta property="og:url" content="https://www.merchant-web.co.uk" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Website Design & Development| SEO |Merchnat Web" />
+    <meta name="twitter:description" content="Quality Website Design for Sole Traders & Small Businesses Web Design & Development | SEO." />
+    <meta name="twitter:image" content="Social_image_merchant_services_website.png" />
+    
+    <!-- Robots and Indexing -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <link rel="canonical" href="https://www.merchant-web.co.uk/">
     <link rel="apple-touch-icon" sizes="180x180" href="merchant-services-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="merchant-services-favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="merchant-services-favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="192x192" href="merchant-services-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="merchant-services-512x512.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#89ABE5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-
+    <link rel="icon" type="image/png" sizes="32x32" href="merchant-services-favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="merchant-services-favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="merchant-services-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="merchant-services-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#89ABE5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Design | Web Development for Small Businesses</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#849bfb',
+                        cosmic: {
+                            100: '#d0d9ff',
+                            200: '#b1c0ff',
+                            300: '#93a7ff',
+                            400: '#849bfb',
+                            500: '#6b82e8',
+                            600: '#5469d1',
+                            700: '#3f52b5',
+                            800: '#2d3c99',
+                            900: '#1e287d',
+                        },
+                        space: {
+                            dark: '#0a0e2a',
+                            mid: '#131c3d',
+                            light: '#1d2a52'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-    
-    
-    body {
-  font-family: 'Poppins', sans-serif;
-}
-
-.navbar {
-  background-color: #f8f9fa; /* Soft true blue */
-}
-
-.navbar a {
-  color: #5E82DA;
-  font-size: 1.1rem;
-  margin-right: 15px;
-  font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, rgba(29, 40, 99, 0.8), rgba(114, 124, 243, 0.8)), url('https://source.unsplash.com/1600x900/?web,technology');
-  background-size: cover;
-  color: white;
-  padding: 100px 0;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-/* Typing Animation */
-#animated-text {
-  display: inline-block;
-  overflow: hidden; /* Ensures text is hidden until animated */
-  white-space: nowrap; /* Prevents text from wrapping */
-  border-right: 2px solid white; /* Simulate a typing cursor */
-  width: 0; /* Start with no width */
-  animation: typing 3s steps(10, end) forwards, blink-cursor 0.5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-
-/* Hero Title Animation */
-.hero h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  animation: fadeInDown 3s ease;
-  position: relative;
-  z-index: 2;
-}
-
-/* Fade-in effect for text */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Shake animation for "Websites from £149" */
-.shake {
-  display: inline-block;
-  animation: shake 1.5s ease-in-out infinite;
-}
-
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-5px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(5px);
-  }
-}
-
-/* Flying saucer animation */
-.flying-saucer {
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0e2a 0%, #1d2a52 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+        
+        
+        .space-card {
+            background: rgba(26, 35, 79, 0.6);
+            backdrop-filter: blur(10px);
+            border: 0.5px solid #0a0e2a;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .space-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(132, 155, 251, 0.1) 0%, transparent 70%);
+            opacity: 0.5;
+            z-index: -1;
+            transform: rotate(15deg);
+        }
+        
+        .space-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(132, 155, 251, 0.2);
+        }
+        
+        .space-card:hover::before {
+            opacity: 0.8;
+        }
+        
+        .alien-shape {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        
+        .ufo {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .package-card {
+            transition: all 0.3s ease;
+        }
+        
+        .package-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .feature-bullet {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .feature-bullet::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .nav-white {
+            background-color: white;
+            color: #849bfb;
+        }
+        
+        .nav-white a {
+            color: #849bfb;
+        }
+        
+        .nav-white a:hover {
+            color: #6b82e8;
+        }
+        
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 350px;
+        }
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        
+        .swiper-pagination-bullet {
+            background-color: #849bfb;
+        }
+        
+        .swiper-button-next, .swiper-button-prev {
+            color: #849bfb;
+        }
+        
+        .cosmic-glow {
+            position: relative;
+        }
+        
+        .cosmic-glow::before {
+  
+  content: '';
   position: absolute;
-  width: 200px;
-  height: auto;
-  top: 20%;
-  right: -5%;
-  animation: flyAcross 5s linear infinite;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(175, 51, 242, 0.25) 0%, transparent 50%),   /* aqua */
+    radial-gradient(circle at 70% 30%, rgba(242, 123, 244, 0.18) 0%, transparent 50%),   /* blue */
+    radial-gradient(circle at 40% 40%, rgba(151, 131, 169, 0.18) 0%, transparent 50%);   /* greeny tint */
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0.7; /* toned down */
+  transition: opacity 0.3s ease;
 }
-
-@keyframes flyAcross {
-  0% {
-    transform: translateX(0) translateY(0) scale(0.5);
-  }
-  25% {
-    transform: translateX(-25vw) translateY(-10%) scale(0.75);
-  }
-  50% {
-    transform: translateX(-50vw) translateY(0) scale(1);
-  }
-  75% {
-    transform: translateX(-75vw) translateY(-10%) scale(1.25);
-  }
-  100% {
-    transform: translateX(-150vw) translateY(0) scale(1.5);
-  }
-}
-
-.mascot {
-  width: 100px; /* Adjust size as needed */
-  height: auto;
-  position: absolute;
-  bottom: -8%; /* Adjust to position below the button */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center it properly */
-  z-index: 2; /* Ensure it's above the background but below text */
-}
-
-
-/* Packages Section */
-#packages {
-  background-color: #849BFB;
-  color: white;
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-  min-height: 400px;
-}
-
-
-
-
-
-
-
-
-.social-share {
-    display: center;
-    gap: 10px;
-}
-
-.social-share a {
-    text-decoration: none;
-    color: white;
-    background-color: #3b5998; /* Facebook color */
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-share a:hover {
-    background-color: #4c70a0;
-}
-
-.social-share .fa {
-    margin-right: 5px;
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
-    .social-share {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.btn {
-    background-color: #722cf3; /* Soft purple */
-    color: white; /* Text color */
-    padding: 7px 15px;
-    border-radius: 10px; /* More rounded corners */
-    border: none; /* Remove border */
-}
-
-.btn:hover {
-    background-color: #722cf3; /* Keep the same color on hover */
-}
-
-footer {
-    background-color: #111;
-    color: white;
-    padding: 6 1000px 0;
-}
-
-footer a {
-    color: #bbb;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: white;
-}
-
 
 
         
-.social-icons i {
-    font-size: 1.5rem;
-    margin: 0 10px;
-    color: white;
-    transition: color 0.3s ease;
+        .cosmic-glow:hover::before {
+            opacity: 0.9;
+        }
+        
+        .hero-glow {
+            position: relative;
+        }
+        
+        .hero-glow::after {
+  content: '';
+  position: absolute;
+  top: -60px;     /* extend further above */
+  bottom: -0px;  /* extend further below */
+  left: 40%;
+  transform: translateX(-50%); /* center beam */
+  width: 180px;   /* wider beam */
+  
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 63, 223, 0.45) 0%,    /* brighter aqua */
+    rgba(0, 200, 255, 0.35) 25%,   /* strong blue tint */
+    rgba(0, 255, 180, 0.25) 50%,   /* vivid greeny fade */
+    rgba(0, 200, 220, 0.15) 75%,   /* softer fade */
+    transparent 100%               /* vanish */
+  );
+
+  filter: blur(20px);   /* stronger glow spread */
+  border-radius: 60%;   /* smoother round edges */
+  z-index: -1;
+  opacity: 1;           /* fully bright */
 }
 
-.social-icons i:hover {
-    color: #88A4E3;
-}
+
+        
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(132, 155, 251, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(132, 155, 251, 0.8);
+        }
+
 
 
 /* Cookie banner styles */
@@ -317,706 +319,667 @@ footer a:hover {
 }
 
 
-        
-        
-/* Flicker animation */
-@keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-}
-
-.flicker {
-    animation: flicker 1s infinite;
-}
 
     </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Merchant Services",
-  "image": "https://www.merchant-web.co.uk/merchant-services-icon.png",
-  "@id": "https://www.merchant-web.co.uk",
-  "url": "https://www.merchant-web.co.uk",
-  "telephone": "+44 7394542901",
-  "priceRange": "£69-£299",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Halifax",
-    "addressRegion": "West Yorkshire",
-    "postalCode": "Hx6",
-    "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 53.7191716,
-    "longitude": -1.8838898
-  },
-  "areaServed": {
-    "@type": "Place",
-    "geo": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 53.480759,
-        "longitude": -2.242631
-      },
-      "geoRadius": 20
-    }
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "09:00",
-      "closes": "17:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "09:00",
-      "closes": "14:00"
-    }
-  ],
-  "sameAs": [
-    "https://facebook.com/ns.mrchconsult.uk",
-    "https://instagram.com/ns.mrchconsult.uk",
-    "https://twitter.com/Merch555"
-  ]
-}
-</script>
 
 
-   
+
+
 </head>
-<body>
-
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Merchant Services</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <!-- Link to Packages section on index.html -->
-        <li class="nav-item"><a href="index.html#packages" class="nav-link">Packages</a></li>
-        <!-- Link to Portfolio/Our Work section on index.html -->
-        <li class="nav-item"><a href="index.html#portfolio" class="nav-link">Our Work</a></li>
-        <!-- Link to About page -->
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <!-- Link to FAQ page -->
-        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-        <!-- Link to Contact section on index.html -->
-        <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
-        <!-- Link to spin section on index.html -->
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-<header class="hero text-center">
-  <div class="container">
-    <h1>
-      Bish<br>Bash<br>Bosh
-      <br>
-      <span class="shake" style="font-size: 1.6rem;">
-         Packages From <span  style="color: #FFC107;">£249</span>
-      </span>
-    </h1>
-    <p>Building responsive, professional <br> websites for small businesses.</p>
-    <a href="tel:+447394542901" class="btn btn-primary mt-4">Call Now</a>
-<br>
-  </div>
-  <!-- Flying saucer image -->
-  <img src="space_craft_website_add.png" alt="Flying Saucer image for alien Web design and development promotion" class="flying-saucer">
-  <!-- Mascot image -->
-  <img src="web_dev_mascot.png" alt="Mascot image for websites in Calderdale Merchant Services , Bish , Bash , Bosh" class="mascot"><br><br><br>
-  
-</header>
-
-
-<!-- Add this script to handle the letter-by-letter animation -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const textLines = [
-            "Bish", 
-            "Bash", 
-            "Bosh"
-        ];  // The text to animate, split by lines
-        const container = document.getElementById("animated-text");
-
-        // Loop through each line of text
-        textLines.forEach((line, lineIndex) => {
-            // Add a line break after each line except the last one
-            const lineContainer = document.createElement("span");
-            container.appendChild(lineContainer);
-
-            // Wrap each letter in a span and apply the animation
-            line.split('').forEach((letter, index) => {
-                const span = document.createElement("span");
-                span.classList.add("letter");
-                span.textContent = letter;
-                span.style.animationDelay = `${(lineIndex * 5 + index) * 0.1}s`; // Staggered delay for each line and letter
-                lineContainer.appendChild(span);
-            });
-
-            // Add a line break after each line except the last one
-            if (lineIndex < textLines.length - 1) {
-                container.appendChild(document.createElement("br"));
-            }
-        });
-    });
-</script>
-
-
-<elevenlabs-convai agent-id="5G6nV8f26bHerWOBIWk8"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-
+<body class="min-h-screen font-poppins">
+    <!-- Background elements -->
+    <div id="stars-container" class="fixed inset-0 z-0 overflow-hidden"></div>
     
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio text-center">
-  <div class="container"><br><br>
-    <h2><span style="color: #5E82DA; font-weight: bold;">Deals that are "Out of this World!"</span></h2>
-
-<p class="mb-5"><br>Discover a website package with everything you'll need to get your business online, receiving organic traffic and generating potential custom. With hosting, domains and even SEO all packaged up from only <strong>£249</strong> We offer a quality, <strong>fully optimised websites</strong> that will impress your customers and help grow your brand. Whether you need a simple landing page, a sleek portfolio, or a <strong>quality</strong> small business website, we've got you covered with a <strong>bespoke design!</strong> Once you have chosen a package, contact us to discuss your project and we will build the site to your specification. <br> <br> We specialise in creating high-quality, affordable websites that showcase your business simply and effectively. Designed with cost efficiency in mind, our websites give small businesses the online advantage of presence without the enormous costs typically involved.
-Our Websites are individually crafted, designed with SEO in mind, help drive traffic to your products or service and provide all the essential links to your social media.
-The websites are built to help you attract and engage customers, all whilst keeping things simple, sleek, and hassle-free. <br> <br> With our service, you’ll get a strong landing page, a reliable website that suits your business needs with zero hidden fees, no unnecessary extras, just great value.
-We always go the extra mile for our customers giving essential tips and advice on strategies to develop business websites by building solid backlinks, building exposure online which can help  generate new custom.
-This is a perfect opportunity to have your business website built and delivered online for minimal cost without sacrificing on quality or functionality. 
-</p>
-
-<img src="alien_mascot.png" alt="Mascot for website design in Halifax, Leeds, Bradford. Merchant Services" class="mascot-above-text" width="250" height="250">
-
-<p class="mb-5" style="color: #5E82DA; font-size: 1.5rem;"><strong>Jam-Packed with Value!</strong></p>
-<!-- Use spans instead of p tags to reduce space between lines -->
-<span><strong>Custom Design</strong> - Tailored to your business</span><br>
-<span><strong>Mobile Optimised</strong> - For a seamless experience</span><br>
-<span><strong>Fast Turnaround</strong> – Your website live in days</span><br>
-<span><strong>SEO-Ready</strong> - Get noticed on Google</span><br>
-<span><strong>Friendly Support</strong> - Every step of the way</span>
-
-<p class="mb-5" style="color: #5E82DA; font-size: 1.5rem;"><strong><br>A limited time offer!</strong></p>
-
-<p class="mb-5">Call us today and get a website design that works for you – starting from just <strong>£99!</strong> <br> Or ask us about the exclusive packages from <strong>£249!</strong> <br><br>See what we've created! At Merchant Services we offer a range of web development and website design services which are built to meet the needs of our clients. Our sites<strong> build trust</strong> with customers, <strong>grow online presence</strong> in search engines and <strong>attract new customers</strong> to your business organically.</p>
-
-<p class="mb-5" style="color: #5E82DA; font-size: 2rem;"><strong><br>Check Out Our Projects!</strong></p>
-
-    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-      <div class="carousel-inner">
-
-        <!-- Example 0 -->
-        <div class="carousel-item active">
-          <div class="card portfolio-card p-3">
-            <img src="web_design_2.png" class="card-img-top" alt="A simple website design showcasing a business services.">
-            <div class="card-body">
-              <h4>Personal Fitness Sites</h4>
-              <p>A simple, professional website ideal for displaying business services and presenting the business to potential customers.</p>
-            </div>
-          </div>
+    <!-- Navigation -->
+    <nav class="relative z-50 py-4 px-6 md:px-12 flex justify-between items-center nav-white shadow-lg">
+        <div class="flex items-center">
+            
+            <span class="text-2xl font-bold text-primary">Merchant-Web</span>
         </div>
-
-        <!-- Example 1 -->
-        <div class="carousel-item">
-          <div class="card portfolio-card p-3">
-            <img src="web_design_1.png" class="card-img-top" alt="A modern website design showcasing a user-friendly interface and flashy colors.">
-            <div class="card-body">
-              <h4>Business Websites</h4>
-              <p>A clean, responsive website ideal for a local businesses to attract new clients and boost online presence.</p>
-            </div>
-          </div>
+        
+       <div class="hidden md:flex space-x-10">
+            <a href="index.html" class="hover:text-cosmic-600 transition-colors">Home</a>
+            <a href="about.html" class="hover:text-cosmic-600 transition-colors">About</a>
+            <a href="index.html#services" class="hover:text-cosmic-600 transition-colors">Services</a>
+            <a href="#blog.html" class="hover:text-cosmic-600 transition-colors">Blog</a>
+            <a href="#contact" class="hover:text-cosmic-600 transition-colors">Contact</a>
         </div>
+        
+        <button class="md:hidden text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </nav>
 
-        <!-- Example 2 -->
-        <div class="carousel-item">
-          <div class="card portfolio-card p-3">
-            <img src="web_design_3.png" class="card-img-top" alt="An e-commerce website design showcasing a user-friendly interface and products.">
-            <div class="card-body">
-              <h4>Tradesmens Websites</h4>
-              <p>A fun website showcasing modern design, used to build trust with new clients and promote services.</p>
-            </div>
-          </div>
-        </div>
-
-
- <!-- Example 2 -->
-        <div class="carousel-item">
-          <div class="card portfolio-card p-3">
-            <img src="web_design_4.png" class="card-img-top" alt="An e-commerce website design showcasing a user-friendly interface and products.">
-            <div class="card-body">
-              <h4>Attract New Customers</h4>
-              <p>Showcasing business services, used to gain confidence with new clients, promote services and recieve online quotes.</p>
-            </div>
-          </div>
-        </div>
-         
-
-        <!-- Example 3 -->
-        <div class="carousel-item">
-          <div class="card portfolio-card p-3">
-            <img src="web_design_5.png" class="card-img-top" alt="A business website design showcasing a simple interface.">
-            <div class="card-body">
-              <h4>Sole Trader Sites</h4>
-              <p>A business website built for growing clients. Standard designs from only £99 </p>
-            </div>
-          </div>
-        </div>
-
-
- <!-- Example 2 -->
-        <div class="carousel-item">
-          <div class="card portfolio-card p-3">
-            <img src="web_design_6.png" class="card-img-top" alt="An e-commerce website design showcasing a user-friendly interface and products.">
-            <div class="card-body">
-              <h4>What's Your Big Idea?</h4>
-              <p>Let us hear from you about your project. What type of site would you like us to create?</p>
-            </div>
-          </div>
-        </div>
-
-         
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    <!-- Hero Section -->
+    <section id="home" class="relative z-1 min-h-screen flex items-center pt-20 pb-32 px-6 md:px-12">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                        Web Design That's
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-300">Out of This World</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">
+                        We create stunning, high-performing websites that attract visitors and can convert them into customers. Our cosmic designs can help you get lightyears ahead of the competition.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#packages" class="px-8 py-4 bg-[#7bd5bf] text-white font-bold rounded-full hover:bg-[#65dec0] transition-colors btn-glow">
+                            Explore Packages
+                        </a>
+                        <a href="#contact" class="px-8 py-4 bg-[#849bfb] border-2 border-primary text-white font-bold rounded-full hover:bg-primary/20 transition-colors">
+                            Request Brochure
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-80 h-80 hero-glow">
+                        <div class="md:w-1/2 flex justify-center">
+  <div class="relative w-80 h-80 hero-glow">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-300/20 rounded-full filter blur-xl animate-pulse-slow"></div>
+    
+    <div class="relative w-80 h-80">
+      <!-- UFO image (shakes) -->
+      <img src="space_craft_website_add.png" alt="Futuristic UFO" class="ufo absolute inset-0 m-auto">
+      
+      <!-- Mascot image (static) -->
+      <img src="web_dev_mascot.png" alt="Web Design Service" class="mascot absolute inset-0 m-auto">
     </div>
   </div>
-</section>
-
+</div>
 
 <style>
-  .portfolio-card {
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
+.ufo {
+  width: 220px;
+  height: 132px;
+  animation: shake 0.5s infinite;
+  margin-top: -50px; /* adjust this value as needed */
+}
 
-  .portfolio-card:hover {
-    transform: scale(1.05);
-  }
 
-  /* Ensure the images fit nicely on desktop */
-  .carousel-item img {
-    max-width: 100%; /* Make sure the image fits within the card */
-    height: auto; /* Maintain aspect ratio */
-  }
+.mascot {
+  max-width: 200px;
+  display: block;
+  animation: none !important;
+  transform: none !important;
+}
 
-  @media (min-width: 768px) {
-    .carousel-item img {
-      max-width: 600px; /* Set a max width for the image on larger screens */
-      width: 100%; /* Make sure the image expands to fill the card */
-    }
-
-    .portfolio-card {
-      display: flex; /* Center the card content */
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto; /* Center the card horizontally */
-      max-width: 600px; /* Set a max width for the card */
-    }
-  }
+@keyframes shake {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(2px, 2px) rotate(1deg); }
+  50%  { transform: translate(-2px, -2px) rotate(-1deg); }
+  75%  { transform: translate(2px, -2px) rotate(1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
 </style>
 
 
-  <!-- Social Media Section -->
-    <section id="contact-section" class="text-center py-5" style="background-color: #ffffff;">
-    <div class="container">
-      <p>
-        Follow us on Social Media
-      </p>
-      <div class="social-media-icons mt-4">
-        <a href="https://www.facebook.com/ns.mrchconsult.uk" target="_blank" class="mx-3">
-          <i class="fab fa-facebook fa-2x" style="color: #3b5998;"></i>
-        </a>
-        <a href="https://twitter.com/MerchServ555" target="_blank" class="mx-3">
-          <i class="fab fa-twitter fa-2x" style="color: #00acee;"></i>
-        </a>
-        <a href="https://www.instagram.com/ns.mrchconsult.uk" target="_blank" class="mx-3">
-          <i class="fab fa-instagram fa-2x" style="color: #e4405f;"></i>
-        </a>
-        <a href="https://wa.me/44 7394542901" target="_blank" class="mx-3">
-    <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
-</a>
 
-        </a>
-      </div>
-    </div>
-  </section>
-
-    
-    <section id="packages" class="packages text-center" style="position: relative; overflow: hidden;">
-  <div class="container" style="z-index: 2; padding: 20px;">
-    <!-- New text addition starts here -->
-    <div class="container">
-        <!-- New text addition starts here -->
-      <h2 class="mb-4 text-center" style="color: #FFFFFF; font-size: 3rem;"><strong>Bish Bash Bosh</strong></h2>
-<img src="business_van_image.png" alt="Alien business, website for van logo wrap, marketing logo, design." class="d-block mx-auto img-fluid" style="max-width: 300px; height: auto;">
-
-        <p>Our sites are <strong>user-friendly</strong> and offer customisable website designs with both <strong>visual appeal</strong> and <strong>UX design</strong> in mind, ensuring your site looks great and functions seamlessly on all devices. We don’t just stop at creating beautiful <strong>web pages</strong> —our service can also provide <strong>SEO tools</strong> to help your site rank higher in search engines. Whether you want to sell products or promote services, we give you all the functions you need.</p>
-        <p>All our websites come with reliable<strong> web hosting</strong>, so you can focus on growing your business. Plus, you’ll get access to a free website audit every 12 months. From <strong>visual design</strong> to the technical side, we're here to support you every step of the way.</p>
-        <!-- New text addition ends here -->
-
-        <h2>
-            <span style="color: #FFFFFF; font-weight: bold;">Please contact before purchase.</span>
-        </h2>
-
-        <div class="row justify-content-center text-center">
-            <div class="col-md-8">
-                <a href="form.html" class="btn btn-primary mt-3 mb-4">Fill Out the Form</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-       <p class="mb-5">If your chosen website design is with Merchant Services. You can relax and <strong>feel confident</strong> on the delivery. Let our expert build a site that matches the <strong>passion</strong> you put into your business. With our services you can have a website that not only looks great but also deliver's for your customers and ultimatley your business. You can grow with us. <strong>Our sites</strong> are tailored to your business needs and always have the <strong>user experience</strong> in mind.<br><br><strong>Impress</strong>  your clients, <strong>build trust</strong> and grow your business. Select the package that best suits your business needs and give us a call. Now, we want to understand your aims so we can create the best site possible for your budget. <strong>You're not just a customer</strong>, we want to really get behind your project. <br><br> 
-<strong style="font-size: 1.8rem;">Choose us to build your Website!</strong>
-<br><br>*Our packages have set prices, if you require more complex projects prices may vary.*</p>
-<div class="row">
-            <!-- Package 1 -->
-           <div class="col-md-4 mb-4">
-  <div class="card package-card p-3">
-    <div class="card-body">
-      <img src="package_basic.png" alt="Standard Website Design" class="img-fluid mb-3" style="height: 100px; width: auto;">
-      <h3>Standard Website Design</h3>
-      <p>A quality mobile optimised website to get your business online quickly.</p>
-      <p class="price h5">£99</p>
-      <a href="https://merchant-services.sumupstore.com/product/basic-website-package" class="btn btn-primary mt-3">Get Started</a>
-    </div>
-  </div>
+    <section id="about" class="relative z-1 py-20 px-6 md:px-12 bg-space-mid bg-opacity-70">
+        <div class="container mx-auto max-w-6xl">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-[#ffffff]">
+    Why Choose Web Design Service?
+  </h2>
+
+  
+
+  <p class="text-center text-[#ffffff] mb-16 max-w-3xl mx-auto font-bold">
+  We're not just another web agency. We create digital user experiences that can transport your business to new frontiers.
+</p>
+
 </div>
 
-            <!-- Package 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card package-card p-3">
-                    <div class="card-body">
-                       <img src="package_standard.png" alt="Standard Website Design" class="img-fluid mb-3" style="height: 100px; width: auto;">
-                        <h3>Professional Website Package</h3>
-                        <p>A website with advanced features and good SEO optimization.</p>
-                        <p class="price h5">£249</p>
-                        <a href="https://merchant-services.sumupstore.com/product/professional-website-package" class="btn btn-primary mt-3">Get Started</a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Package 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card package-card p-3">
-                    <div class="card-body">
-                        <img src="package_pre.png" alt="Standard Website Design" class="img-fluid mb-3" style="height: 100px; width: auto;">
-                        <h3>Full Business Package</h3>
-                        <p>The full business solution: website, SEO, and social media optimisation.</p>
-                        <p class="price h5">£399</p>
-                        <a href="https://merchant-services.sumupstore.com/product/full-business-package" class="btn btn-primary mt-3">Get Started</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <div class="space-card p-8 cosmic-glow rounded-xl" style="background-color:#0a0e2a;">
+  <!-- Image container -->
+  <div class="w-100 h-60 bg-pink-200 rounded-xl flex items-center justify-center mb-6 overflow-hidden">
+    <img src="web_design_6.png" alt="Icon Image" class="w-full h-full object-cover">
+  </div>
+
+  <h3 class="text-xl font-bold mb-3 text-[#848bfb]">Cutting-Edge Design</h3>
+  <p class="text-[#ffffff]">
+    Our websites aren't just beautiful—they're engineered for maximum user engagement and conversion rates. Discover a website package with everything you'll need to get your business online, receiving organic traffic and generating potential custom. With hosting, domains and even SEO all packaged up from only <strong>£249</strong> We offer a quality, <strong>fully optimised websites</strong> that will impress your customers and help grow your brand. Whether you need a simple landing page, a sleek portfolio, or a <strong>quality</strong> small business website, we've got you covered with a <strong>bespoke design!</strong> Once you have chosen a package, contact us to discuss your project and we will build the site to your specification.
+  </p>
+</div>
+
+      
+      <div class="space-card p-8 cosmic-glow rounded-xl" style="background-color:#0a0e2a;">
+        
+          <div class="w-100 h-60 bg-pink-200 rounded-xl flex items-center justify-center mb-6 overflow-hidden">
+    <img src="virtual-reality.jpg" alt="Icon Image" class="w-full h-full object-cover">
+  </div>
+
+        <h3 class="text-xl font-bold mb-3 text-[#848bfb]">Blazing Fast Performance</h3>
+        <p class="text-[#ffffff]">We optimise every aspect of your website for speed, because every second counts in space and on the web. The websites are built to help you attract and engage customers, all whilst keeping things simple, sleek, and hassle-free. <br> <br> We specialise in creating high-quality, affordable websites that showcase your business simply and effectively. Designed with cost efficiency in mind, our websites give small businesses the online advantage of presence without the enormous costs typically involved.
+Our Websites are individually crafted, designed with SEO in mind, help drive traffic to your products or service and provide all the essential links to your social media. </p>
+      </div>
+      
+      <div class="space-card p-8 cosmic-glow rounded-xl" style="background-color:#0a0e2a;">
+
+       <div class="w-100 h-60 bg-pink-200 rounded-xl flex items-center justify-center mb-6 overflow-hidden">
+    <img src="ongoing_support.jpg" alt="Icon Image" class="w-full h-full object-cover">
+  </div>
+        
+        <h3 class="text-xl font-bold mb-3 text-[#848bfb]">Ongoing Support</h3>
+        <p class="text-[#ffffff]">We don't just build your website and disappear. We provide continuous maintenance and updates. We always go the extra mile for our customers giving essential tips and advice on strategies to develop business websites by building solid backlinks, building exposure online which can help  generate new custom.
+This is a perfect opportunity to have your business website built and delivered online for minimal cost without sacrificing on quality or functionality.<br><br> With our service, you’ll get a strong landing page, a reliable website that suits your business needs with zero hidden fees, no unnecessary extras, just great value.
+</p>
+      </div>
+      
+
     </div>
+  </div>
 </section>
 
-   <section id="contact" class="contact-us text-center py-5">
-  <div class="container">
-    <h2>
-      <span class="wave-text">
-        <span style="color: #5E82DA; font-weight: bold;">C</span>
-        <span style="color: #5E82DA; font-weight: bold;">o</span>
-        <span style="color: #5E82DA; font-weight: bold;">n</span>
-        <span style="color: #5E82DA; font-weight: bold;">t</span>
-        <span style="color: #5E82DA; font-weight: bold;">a</span>
-        <span style="color: #5E82DA; font-weight: bold;">c</span>
-        <span style="color: #5E82DA; font-weight: bold;">t</span>
-        &nbsp;
-        <span style="color: #5E82DA; font-weight: bold;">U</span>
-        <span style="color: #5E82DA; font-weight: bold;">s</span>
-      </span>
-    </h2>
-    <p class="mb-4">Please contact us before making a purchase to discuss your brief in detail so we can build the best possible site for your business.</p>
-    <div class="contact-details">
-      <p><i class="fas fa-phone-alt"></i> <a href="tel:+447394542901">07394542901</a></p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:support@merchant-web.co.uk">support@merchant-web.co.uk</a></p>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="relative z-1 py-20 px-6 md:px-12">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Cosmic Portfolio</h2>
+            <p class="text-center text-[#ffffff]-300 mb-16 max-w-3xl mx-auto font-bold">Explore some of our stellar creations. We have a catalogue of over 50 Websites</p>
+            
+            
+<!-- Slider main container -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <!-- Nebula Tech -->
+    <div class="swiper-slide">
+      <div class="h-full rounded-2xl overflow-hidden cosmic-glow">
+        <div class="space-card h-full rounded-[0.9rem] overflow-hidden">
+          <div class="h-48 relative flex items-center justify-center overflow-hidden">
+            <img src="web_design_6.png" alt="Nebula Tech" class="w-full h-full object-cover">
+            <!-- Overlay disabled -->
+<div class="absolute inset-0 hidden"></div>
+
+           
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Restaurants</h3>
+            <p class="text-[#ffffff]-300 font-bold">Websites for the hospitality industries. Providing ordering, reservations, and menu management.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-     <div class="social-share-container">
-   <h3 style="text-align: center; font-size: 1.1rem; color: #333333;">Easily share this Website!</h3>
+    <!-- Galactic Travel -->
+    <div class="swiper-slide">
+      <div class="h-full rounded-2xl overflow-hidden cosmic-glow">
+        <div class="space-card h-full rounded-[0.9rem] overflow-hidden">
+          <div class="h-48 relative flex items-center justify-center overflow-hidden">
+            <img src="web_design_5.png" alt="Galactic Travel" class="w-full h-full object-cover">
+            <!-- Overlay disabled -->
+<div class="absolute inset-0 hidden"></div>
 
-    <div class="social-sharing">
-    <p class="h5">Share this post:</p>
-    
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.merchant-web.co.uk" class="facebook" target="_blank">
-        <i class="fab fa-facebook-f"></i> Facebook
-    </a>
-    
-    <a href="https://twitter.com/intent/tweet?url=https://www.merchant-web.co.uk" class="twitter" target="_blank">
-        <i class="fab fa-twitter"></i> Twitter
-    </a>
-    
-    <a href="https://www.linkedin.com/shareArticle?url=https://www.merchant-web.co.uk" class="linkedin" target="_blank">
-        <i class="fab fa-linkedin-in"></i> LinkedIn
-    </a>
-    
-    <a href="https://wa.me/?text=Check%20out%20this%20post%20on%20why%20sole%20traders%20need%20websites:%20https://www.merchant-web.co.u" class="whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-</div>
-</div>
-
-
-     
-          <div class="row justify-content-center text-center">
-  <div class="col-md-8">
-    <a href="form.html" class="btn btn-primary mt-3">Query form</a>
-  </div>
-</div>
-    </section>
-    
-    <style>
-  .wave-text span {
-    display: inline-block;
-    animation: wave 1.5s infinite ease-in-out;
-  }
-
-  @keyframes wave {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-
-  /* Add delays to each letter */
-  .wave-text span:nth-child(1) { animation-delay: 0s; }
-  .wave-text span:nth-child(2) { animation-delay: 0.1s; }
-  .wave-text span:nth-child(3) { animation-delay: 0.2s; }
-  .wave-text span:nth-child(4) { animation-delay: 0.3s; }
-  .wave-text span:nth-child(5) { animation-delay: 0.4s; }
-  .wave-text span:nth-child(6) { animation-delay: 0.5s; }
-  .wave-text span:nth-child(7) { animation-delay: 0.6s; }
-  .wave-text span:nth-child(8) { animation-delay: 0.7s; }
-  .wave-text span:nth-child(9) { animation-delay: 0.8s; }
-  .wave-text span:nth-child(10) { animation-delay: 0.9s; }
-</style>
-
-<!-- Footer Section -->
-<footer>
-    <div class="container text-center">
-        <p>&copy; 2024 MerchantServices. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/ns.mrchconsult.uk"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/ns.mrchconsult.uk"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.x.com/MerchServ555"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Health and Beauty Websites</h3>
+            <p class="text-gray-300">An immersive booking experience with stunning visuals of professional services.</p>
+          </div>
         </div>
-         <div class="quick-links mt-2">
-   <a href="privacy.html" class="text-decoration-none">Privacy Policy</a>
-   <a href="privacy.html" class="text-decoration-none">Terms of Service</a>
- </div>
+      </div>
+    </div>
+
+    <!-- Astro Fitness -->
+    <div class="swiper-slide">
+      <div class="h-full rounded-2xl overflow-hidden cosmic-glow">
+        <div class="space-card h-full rounded-[0.9rem] overflow-hidden">
+          <div class="h-48 relative flex items-center justify-center overflow-hidden">
+            <img src="web_design_4.png" alt="Astro Fitness" class="w-full h-full object-cover">
+            <!-- Overlay disabled -->
+<div class="absolute inset-0 hidden"></div>
+
+            
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Luxury Furniture</h3>
+            <p class="text-gray-300">A high-energy website with dynamic product displays and an immersive shopping experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Space Cafe -->
+    <div class="swiper-slide">
+      <div class="h-full rounded-2xl overflow-hidden cosmic-glow">
+        <div class="space-card h-full rounded-[0.9rem] overflow-hidden">
+          <div class="h-48 relative flex items-center justify-center overflow-hidden">
+            <img src="web_design_3.png" alt="Space Cafe" class="w-full h-full object-cover">
+            <!-- Overlay disabled -->
+<div class="absolute inset-0 hidden"></div>
+
+            
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Performing Arts</h3>
+            <p class="text-gray-300">A Dance-themed website with online classes and a ticket ordering system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cosmic Apparel -->
+    <div class="swiper-slide">
+      <div class="h-full rounded-2xl overflow-hidden cosmic-glow">
+        <div class="space-card h-full rounded-[0.9rem] overflow-hidden">
+          <div class="h-48 relative flex items-center justify-center overflow-hidden">
+            <img src="web_design_2.png" alt="Cosmic Apparel" class="w-full h-full object-cover">
+            <!-- Overlay disabled -->
+<div class="absolute inset-0 hidden"></div>
+
+           
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Sales </h3>
+            <p class="text-gray-300">An online store for secondhand cars, with regular updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orbit Finance -->
+    <div class="swiper-slide">
+      <div class="h-full rounded-2xl overflow-hidden cosmic-glow">
+        <div class="space-card h-full rounded-[0.9rem] overflow-hidden">
+          <div class="h-48 relative flex items-center justify-center overflow-hidden">
+            <img src="web_design_1.png" alt="Orbit Finance" class="w-full h-full object-cover">
+            <!-- Overlay disabled -->
+<div class="absolute inset-0 hidden"></div>
+
+            
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Personal fitness</h3>
+            <p class="text-gray-300">A professional fitness website with secure client portal and interactive workouts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Swiper controls -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="relative z-1 py-20 px-6 md:px-12 bg-space-mid bg-opacity-70">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Stellar Service</h2>
+            <p class="text-center text-[#ffffff]-300 mb-16 max-w-3xl mx-auto">We provide comprehensive web solutions that cover every aspect of your online presence.</p>       
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Built-in SEO Features</h3>
+                    <ul class="space-y-4">
+                        <li class="feature-bullet">Fully optimized site structure for search engine crawling</li>
+                        <li class="feature-bullet">Lightning-fast loading speeds (Core Web Vitals optimized)</li>
+                        <li class="feature-bullet">Mobile-responsive design that ranks higher with Google</li>
+                        <li class="feature-bullet">Structured data markup for rich search results</li>
+                        <li class="feature-bullet">SEO-friendly URLs and XML sitemap automation</li>
+                        <li class="feature-bullet">Meta tags optimization and social media integration</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-primary">Premium Hosting Benefits</h3>
+                    <ul class="space-y-4">
+                        <li class="feature-bullet">Blazing-fast SSD servers with global CDN distribution</li>
+                        <li class="feature-bullet">99.9% uptime guarantee with 24/7 monitoring</li>
+                        <li class="feature-bullet">Free SSL certificates for enhanced security</li>
+                        <li class="feature-bullet">Automated daily backups and one-click restore</li>
+                        <li class="feature-bullet">Scalable resources that grow with your business</li>
+                        <li class="feature-bullet">Advanced caching for optimal performance</li>
+                    </ul>
+                </div>
+            </div>
+            
+<br><br>
+<img src="laptop_coding.png" 
+     alt="Orbit Finance" 
+     class="w-full h-full object-cover rounded-md">
+            <div class="mt-16 space-card p-8 cosmic-glow">
+              <div class="flex items-center gap-3 mb-6">  
+          <div class="flex flex-col items-center text-center leading-tight">
+  <h2 class="text-3xl md:text-4xl font-bold text-center leading-tight">
+  Our Commitment
+  
+</h2>
+
+</div>
+
+
+
+
+</div>
+
+                <p class="text-[#849bfb] mb-4 font-bold">Your website isn't a one-time project—it's a living entity that needs regular care. Our maintenance package includes:</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li class="feature-bullet">Regular security updates and vulnerability patches</li>
+                    <li class="feature-bullet">Content updates and minor design tweaks</li>
+                    <li class="feature-bullet">Performance optimization and speed enhancements</li>
+                    <li class="feature-bullet">Compatibility updates for new devices and browsers</li>
+                    <li class="feature-bullet">SEO adjustments to keep up with algorithm changes</li>
+                    <li class="feature-bullet">24/7 technical support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<section id="us" class="relative z-1 py-20 px-6 md:px-12 bg-space-mid bg-opacity-70"></section>
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-[#ffffff]">
+                Your Website Our passion
+            </h2>
+
+            <p class="text-center text-[#ffffff] mb-16 max-w-3xl mx-auto font-bold">
+                We're not just another web company. Your website is custom built to your specification, delivered and supported by us.
+            </p>
+        </div>
+
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- First Column (Text Content) -->
+                <div class="space-card p-8 cosmic-glow rounded-xl" style="background-color:#0a0e2a;">
+                    <div class="w-16 h-16 bg-yellow-200 rounded-xl flex items-center justify-center mb-6">
+                        <!-- icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#848bfb]">Start your journey with us</h3>
+                    <p class="text-[#ffffff]">Our sites are user-friendly and offer customisable website designs with both visual appeal and UX design in mind, ensuring your site looks great and functions seamlessly on all devices. We don't just stop at creating beautiful web pages —our service can also provide SEO tools to help your site rank higher in search engines. Whether you want to sell products or promote services, we give you all the functions you need.
+
+                    All our Pro & Elite websites come with reliable web hosting, so you can focus on growing your business. Plus, you'll get access to a free website audit every 12 months. From visual design to the technical side, we're here to support you every step of the way.
+
+                    Please contact before purchase.</p>
+                </div>
+                
+                <!-- Second Column (Image) -->
+                <div class="image-container cosmic-glow rounded-xl">
+                    <img src="website_design_page1.png" alt="Web development and design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+   <!-- Testimonial Section -->
+<section class="relative z-1 py-20 px-6 md:px-12" style="background: linear-gradient(135deg, #0a0e2a 0%, #1d2a52 100%);">
+  <div class="container mx-auto max-w-4xl">
+    <!-- Section Header -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+      What Our Clients Say
+    </h2>
+
+    <div class="space-card p-8 md:p-12 text-center cosmic-glow rounded-xl" style="background: rgba(26, 35, 79, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(132, 155, 251, 0.3);">
+      
+      <!-- Image instead of initials -->
+      <div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-4 border-yellow-400">
+        <img src="testinmonial.jpg" alt="Jayson Sheppard" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Yellow stars -->
+      <div class="flex justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.449a1 1 0 00-.364 1.118l1.287 3.959c.3.921-.755 1.688-1.54 1.118l-3.37-2.449a1 1 0 00-1.176 0l-3.37 2.449c-.785.57-1.84-.197-1.54-1.118l1.287-3.959a1 1 0 00-.364-1.118L2.07 9.386c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.959z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.449a1 1 0 00-.364 1.118l1.287 3.959c.3.921-.755 1.688-1.54 1.118l-3.37-2.449a1 1 0 00-1.176 0l-3.37 2.449c-.785.57-1.84-.197-1.54-1.118l1.287-3.959a1 1 0 00-.364-1.118L2.07 9.386c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.959z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.449a1 1 0 00-.364 1.118l1.287 3.959c.3.921-.755 1.688-1.54 1.118l-3.37-2.449a1 1 0 00-1.176 0l-3.37 2.449c-.785.57-1.84-.197-1.54-1.118l1.287-3.959a1 1 0 00-.364-1.118L2.07 9.386c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.959z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.449a1 1 0 00-.364 1.118l1.287 3.959c.3.921-.755 1.688-1.54 1.118l-3.37-2.449a1 1 0 00-1.176 0l-3.37 2.449c-.785.57-1.84-.197-1.54-1.118l1.287-3.959a1 1 0 00-.364-1.118L2.07 9.386c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.959z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.959a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.449a1 1 0 00-.364 1.118l1.287 3.959c.3.921-.755 1.688-1.54 1.118l-3.37-2.449a1 1 0 00-1.176 0l-3.37 2.449c-.785.57-1.84-.197-1.54-1.118l1.287-3.959a1 1 0 00-.364-1.118L2.07 9.386c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.959z"/></svg>
+      </div>
+
+      <!-- Testimonial text -->
+      <p class="text-xl italic mb-6 text-gray-200">
+        "Very Happy with the experience! Had my website built by Nick recently and was very impressed with his service. Highly recommend his services!"
+      </p>
+
+      <!-- Client name -->
+      <p class="font-bold text-lg text-white">Jayson Sheppard</p>
+      <p class="text-primary">CEO, Excell Scaffolding</p>
+    </div>
+  </div>
+</section>
+
+
 
    
-</footer>
+<section id="packages" class="relative z-1 py-20 px-6 md:px-12 bg-space-mid bg-opacity-70">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Launch Your Website to the Stars</h2>
+            <p class="text-center text-gray-300 mb-16 max-w-3xl mx-auto">Choose the package that's right for your mission. All packages include our signature cosmic design.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Design Only -->
+                <div class="package-card space-card p-8 text-center relative cosmic-glow" style="margin-top: 1.5rem;">
+    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white font-bold px-4 py-2 rounded-full z-10 whitespace-nowrap">
+        STANDARD
+    </div>
+
+                    <h3 class="text-2xl font-bold mb-4">Starter</h3>
+                    <div class="text-4xl font-bold text-primary mb-2">£99</div>
+                    <p class="text-gray-300 mb-6">One-time payment</p>
+                    <ul class="space-y-3 mb-8 text-left">
+                        <li class="feature-bullet">Custom Website Design</li>
+                        <li class="feature-bullet">3 Page Website</li>
+                        <li class="feature-bullet">Basic SEO Setup</li>
+                        <li class="feature-bullet">Mobile Responsive</li>
+                        <li class="feature-bullet">1 Round of Revisions</li>
+                        <li class="text-gray-500">❌ No Hosting Included</li>
+                        <li class="text-gray-500">❌ No Domain Included</li>
+                        <li class="text-gray-500">❌ No Maintenance</li>
+                    </ul>
+                    <button class="w-full py-3 border-2 border-primary text-white font-bold rounded-lg hover:bg-primary/20 transition-colors">
+                        Select Plan
+                    </button>
+                </div>
+                
+               <!-- Design + Domain + Hosting -->
+<div class="package-card space-card p-8 text-center relative cosmic-glow" style="margin-top: 1.5rem;">
+    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#e52099] text-white font-bold px-4 py-2 rounded-full z-10 whitespace-nowrap">
+        STATIC SITES
+    </div>
+    <h3 class="text-2xl font-bold mb-4 mt-2">Pro</h3>
+    <div class="text-4xl font-bold text-[#e52099] mb-2">£199</div>
+    <p class="text-gray-300 mb-6">One-time payment</p>
+    <ul class="space-y-3 mb-8 text-left">
+        <li class="feature-bullet">Custom Website Design</li>
+        <li class="feature-bullet">3 Page Website</li>
+        <li class="feature-bullet">SEO Setup</li>
+        <li class="feature-bullet">Mobile Responsive</li>
+        <li class="feature-bullet">3 Rounds of Revisions</li>
+        <li class="feature-bullet">1 Year Domain Registration</li>
+        <li class="feature-bullet">12 Months Basic Hosting</li>
+        <li class="text-gray-500">❌ No Maintenance</li>
+    </ul>
+    <button class="w-full py-3 bg-[#e52099] text-white font-bold rounded-lg hover:bg-[#c01980]/80 transition-colors btn-glow">
+        Select Plan
+    </button>
+</div>
+                
+                <!-- Full Package -->
+                <div class="package-card space-card p-8 text-center relative cosmic-glow" style="margin-top: 1.5rem;">
+    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#7bd5bf] text-white font-bold px-4 py-2 rounded-full z-10 whitespace-nowrap">
+    MOST POPULAR
+</div>
+
+                    <h3 class="text-2xl font-bold mb-4">Elite</h3>
+                    <div class="text-4xl font-bold text-[#7bd5bf] mb-2">£249</div>
+                    <p class="text-gray-300 mb-6">One-time payment</p>
+                    <ul class="space-y-3 mb-8 text-left">
+                        <li class="feature-bullet">Premium Website Design</li>
+                        <li class="feature-bullet">3 Pages</li>
+                        <li class="feature-bullet">Complete SEO Optimization</li>
+                        <li class="feature-bullet">Mobile Responsive</li>
+                        <li class="feature-bullet">Unlimited Revisions</li>
+                        <li class="feature-bullet">Domain Valued up to £10</li>
+                        <li class="feature-bullet">12 Months Fast Hosting</li>
+                        <li class="feature-bullet">Ongoing Maintenance</li>
+                    </ul>
+                    <button class="w-full py-3 bg-[#7bd5bf] text-white font-bold rounded-lg hover:bg-[#65dec0]/80 transition-colors">
+    Select Plan
+</button>
 
 
-        <script>
- (function() {
-    // Create the pop-up container
-    const popup = document.createElement('div');
-    popup.id = 'custom-popup';
-    Object.assign(popup.style, {
-        display: 'none',
-        position: 'fixed',
-        left: '50%',
-        top: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: '320px',
-        padding: '20px',
-        backgroundColor: '#fff',
-        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
-        zIndex: '1000',
-        borderRadius: '8px',
-        textAlign: 'center'
-    });
+                </div>
+            </div>
+            
+            <!-- Payment Options -->
+            <div class="mt-16 space-card p-8 cosmic-glow">
+                <h3 class="text-2xl font-bold mb-6 text-center text-[#ffffff]">Based On Elite Packages</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center p-6 bg-space-dark rounded-xl">
+                        <h4 class="text-xl font-bold mb-3">Monthly Payments</h4>
+                        <div class="text-3xl font-bold text-[#7bd5bf]">£17.99</div>
+                        <p class="text-gray-300 mt-2">Spread the cost over 12 months</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-space-dark rounded-xl">
+                        <h4 class="text-xl font-bold mb-3">Pay in Three</h4>
+                        <div class="text-3xl font-bold text-primary">3 x £83</div>
+                        <p class="text-gray-300 mt-2">Interest-free installment plan</p>
+                    </div>
+                    
+                    <div class="text-center p-6 bg-space-dark rounded-xl">
+                        <h4 class="text-xl font-bold mb-3">One Off Payment</h4>
+                        <div class="text-3xl font-bold text-[#e52099]">£249 </div>
+                        <p class="text-gray-300 mt-2">Deposit £79 + £170 Final payment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Create the close button
-    const closeButton = document.createElement('span');
-    closeButton.textContent = '×';
-    Object.assign(closeButton.style, {
-        position: 'absolute',
-        top: '10px',
-        right: '15px',
-        fontSize: '24px',
-        cursor: 'pointer'
-    });
-    closeButton.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
+    <!-- Contact Section -->
+    <section id="contactForm" class="relative z-1 py-20 px-6 md:px-12">
+        <div class="container mx-auto max-w-4xl">
+            <div class="space-card p-8 md:p-12 cosmic-glow">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Request Our Information Brochure</h2>
+                <p class="text-center text-gray-300 mb-8">Enter your details below to receive our complete service brochure directly to your inbox.</p>
+                
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-300 mb-2" for="name">Full Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 bg-space-dark border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-300 mb-2" for="email">Email Address</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 bg-space-dark border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-300 mb-2" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 bg-space-dark border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-300 mb-2" for="info">Additional Information</label>
+                        <textarea id="info" rows="4" class="w-full px-4 py-3 bg-space-dark border border-primary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="px-8 py-4 bg-[#7bd5bf] text-white font-bold rounded-full hover:bg-[#65dec0] transition-colors btn-glow">
+                            Request Brochure Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-    // Create title
-    const title = document.createElement('h2');
-    title.textContent = 'Need A High Value Website?';
-    Object.assign(title.style, {
-        fontSize: '22px',
-        fontWeight: 'bold',
-        color: '#849BFB' // Title color
-    });
-
-    // Create message
-    const message = document.createElement('p');
-    message.innerHTML = 'Enter your email to receive all the info in our welcome brochure. <br><br>'
-                      + ' You can unsubscribe at any time. By clicking "Subscribe", you agree to our'
-                      + '<a href="<br>privacy.html" target="_blank" style="color: #849BFB; text-decoration: none;">Privacy Policy</a>.';
-    Object.assign(message.style, {
-        color: '#333', // Dark grey text
-        marginBottom: '20px'
-    });
-
-
-    // Create email capture form
-    const form = document.createElement('form');
-    form.id = 'custom-subscribe-form';
-    form.style.textAlign = 'center';
-
-    const inputField = document.createElement('input');
-    inputField.type = 'text';
-    inputField.id = 'custom-email';
-    inputField.placeholder = 'Email';
-    inputField.required = true;
-    Object.assign(inputField.style, {
-        width: '100%',
-        padding: '10px',
-        margin: '10px 0',
-        border: '1px solid #ccc',
-        borderRadius: '4px'
-    });
-
-    const submitButton = document.createElement('button');
-    submitButton.type = 'submit';
-    submitButton.textContent = 'Subscribe';
-    Object.assign(submitButton.style, {
-        padding: '12px 20px',
-        backgroundColor: '#722cf3', // Purple button
-        color: '#fff',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        fontSize: '14px',
-        fontWeight: 'bold',
-        width: '50%',
-        marginTop: '10px'
-    });
-
-    const successMessage = document.createElement('p');
-    successMessage.id = 'custom-subscribe-message';
-    successMessage.textContent = 'Thank you!';
-    Object.assign(successMessage.style, {
-        textAlign: 'center',
-        color: 'green',
-        display: 'none'
-    });
-
-    const errorMessage = document.createElement('p');
-    errorMessage.id = 'custom-subscribe-error';
-    errorMessage.textContent = 'Something went wrong. Please try again.';
-    Object.assign(errorMessage.style, {
-        textAlign: 'center',
-        color: 'red',
-        display: 'none'
-    });
-
-    // Create call button
-    const callButton = document.createElement('button');
-    callButton.textContent = 'Call Us Now';
-    Object.assign(callButton.style, {
-        padding: '12px 20px',
-        backgroundColor: '#722cf3', // Purple button
-        color: '#fff',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        fontSize: '14px',
-        fontWeight: 'bold',
-        width: '50%',
-        marginTop: '10px'
-    });
-    callButton.addEventListener('click', () => {
-        window.location.href = 'tel:+447394542901'; // Replace with your phone number
-    });
-
-    // Append elements
-    form.appendChild(inputField);
-    form.appendChild(submitButton);
-    popup.appendChild(closeButton);
-    popup.appendChild(title);
-    popup.appendChild(message);
-    popup.appendChild(form);
-    popup.appendChild(successMessage);
-    popup.appendChild(errorMessage);
-    popup.appendChild(callButton);
-    document.body.appendChild(popup);
-
-    // Show the pop-up after 40 seconds
-    setTimeout(() => {
-        popup.style.display = 'block';
-    }, 50000);
-
-    // Email validation
-    function validateInput(value) {
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return emailPattern.test(value);
-    }
-
-    form.addEventListener('submit', async function(event) {
-        event.preventDefault();
-        const email = inputField.value.trim();
-
-        if (!validateInput(email)) {
-            errorMessage.textContent = 'Please enter a valid email address.';
-            errorMessage.style.display = 'block';
-            successMessage.style.display = 'none';
-            return;
-        }
-
-        submitButton.disabled = true;
-        submitButton.textContent = 'Submitting...';
-
-        try {
-            const response = await fetch('https://xp7guwz9r6.execute-api.eu-west-2.amazonaws.com/Testing/lead_capture', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email: email })
-            });
-
-            if (response.ok) {
-                successMessage.style.display = 'block';
-                errorMessage.style.display = 'none';
-                setTimeout(() => {
-                    popup.style.display = 'none';
-                }, 3000);
-            } else {
-                errorMessage.textContent = 'Subscription failed. Please try again.';
-                errorMessage.style.display = 'block';
-            }
-        } catch (error) {
-            errorMessage.textContent = 'Network error. Please check your connection.';
-            errorMessage.style.display = 'block';
-        } finally {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Subscribe';
-        }
-    });
-})();
-</script>
+    <!-- Footer -->
+    <footer class="relative z-1 py-12 px-6 md:px-12 bg-space-dark">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        
+                        <span class="text-xl font-bold text-white">Merchant web</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Launching businesses into digital orbit with stunning, high-converting websites.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/ns.mrchconsult.uk" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.x.com/Merch555" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
+                            </svg>
+                            <a href="https://www.instagram.com/ns.mrchconsult.uk" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+</a>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="index.html/packages" class="text-gray-400 hover:text-primary transition-colors">Packages</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Web Design</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">SEO Optimisation</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Web Hosting</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Maintenance</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400">support@merchant-web.co.uk</li>
+                        <li class="text-gray-400">+44 7394542901</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-space-mid mt-12 pt-8 text-center text-gray-500">
+                <p> 2024 Merchant Web / Merchant Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -1096,6 +1059,199 @@ function blockCookies() {
 }
 
 </script>  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        // Create twinkling stars background
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsContainer = document.getElementById('stars-container');
+            const starsCount = 150;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const size = Math.random() * 3;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                const opacity = Math.random() * 0.7 + 0.3;
+                star.style.opacity = opacity;
+                
+                const animationDuration = Math.random() * 5 + 3;
+                star.style.animation = `twinkle ${animationDuration}s infinite`;
+                
+                starsContainer.appendChild(star);
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Package selection interaction
+            const packageButtons = document.querySelectorAll('.package-card button');
+            packageButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    packageButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white');
+                        btn.classList.add('border-2', 'border-primary', 'text-white');
+                        btn.textContent = 'Select Plan';
+                    });
+                    
+                    this.classList.remove('border-2', 'border-primary', 'text-white');
+                    this.classList.add('bg-primary', 'text-white');
+                    this.textContent = 'Selected ✓';
+                });
+            });
+            
+            // Initialize Swiper
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 20,
+                    stretch: 0,
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        });
+    </script>
+
+<script>document.getElementById('contactForm').addEventListener('submit', async function(e) {
+e.preventDefault();
+
+// Get form elements
+const form = e.target;
+const submitBtn = form.querySelector('button[type="submit"]');
+const originalBtnText = submitBtn.textContent;
+
+// Form data
+const formData = {
+name: form.name.value.trim(),
+email: form.email.value.trim().toLowerCase(),
+phone: form.phone.value.trim(),
+message: form.message.value.trim()
+};
+
+// Simple client-side validation
+if (!formData.name || !formData.email || !formData.message) {
+alert('Please fill in all required fields');
+return;
+}
+
+// Email regex check
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(formData.email)) {
+alert('Please enter a valid email address');
+return;
+}
+
+try {
+// Disable button and show loading state
+submitBtn.disabled = true;
+submitBtn.textContent = 'Sending...';
+
+// Call Lambda function
+const response = await fetch('https://s3tsujkqp27igrtc6mxwsgnxgu0gsydm.lambda-url.eu-west-2.on.aws/', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+},
+body: JSON.stringify(formData)
+});
+
+const result = await response.json();
+
+if (response.ok) {
+// Success - clear form and show message
+form.reset();
+showSuccessMessage('Message sent successfully! We\'ll get back to you soon.');
+} else {
+// Handle API errors
+console.error('Error:', result);
+showErrorMessage(result.error || 'Failed to send message. Please try again.');
+}
+} catch (error) {
+console.error('Network error:', error);
+showErrorMessage('Network error. Please check your connection and try again.');
+} finally {
+// Reset button state
+submitBtn.disabled = false;
+submitBtn.textContent = originalBtnText;
+}
+});
+
+// Helper functions for showing messages
+function showSuccessMessage(message) {
+// Remove any existing messages
+const existingMessages = document.querySelectorAll('.form-message');
+existingMessages.forEach(msg => msg.remove());
+
+// Create success message element
+const messageDiv = document.createElement('div');
+messageDiv.className = 'form-message success-message';
+messageDiv.textContent = message;
+
+// Insert after the form
+const formContainer = document.querySelector('.form-container');
+formContainer.appendChild(messageDiv);
+
+// Auto-hide after 5 seconds
+setTimeout(() => {
+messageDiv.remove();
+}, 5000);
+}
+
+function showErrorMessage(message) {
+// Remove any existing messages
+const existingMessages = document.querySelectorAll('.form-message');
+existingMessages.forEach(msg => msg.remove());
+
+// Create error message element
+const messageDiv = document.createElement('div');
+messageDiv.className = 'form-message error-message';
+messageDiv.textContent = message;
+
+// Insert after the form
+const formContainer = document.querySelector('.form-container');
+formContainer.appendChild(messageDiv);
+}</script>
+
+
 </body>
 </html>
-
