@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Insights | Merchant Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0e2a 0%, #1d2a52 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+        
+        .space-card {
+            background: rgba(26, 35, 79, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid #0a0e2a;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .space-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(132, 155, 251, 0.1) 0%, transparent 70%);
+            opacity: 0.5;
+            z-index: -1;
+            transform: rotate(15deg);
+        }
+        
+        .space-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(132, 155, 251, 0.2);
+        }
+        
+        .space-card:hover::before {
+            opacity: 0.8;
+        }
+        
+       .cosmic-glow {
+            position: relative;
+        }
+        
+        .cosmic-glow::before {
+  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(175, 51, 242, 0.25) 0%, transparent 50%),   /* aqua */
+    radial-gradient(circle at 70% 30%, rgba(242, 123, 244, 0.18) 0%, transparent 50%),   /* blue */
+    radial-gradient(circle at 40% 40%, rgba(151, 131, 169, 0.18) 0%, transparent 50%);   /* greeny tint */
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0.7; /* toned down */
+  transition: opacity 0.3s ease;
+}
+
+
+        
+        .cosmic-glow:hover::before {
+            opacity: 0.9;
+        }
+        
+        .hero-glow {
+            position: relative;
+        }
+        
+        .hero-glow::after {
+  content: '';
+  position: absolute;
+  top: -60px;     /* extend further above */
+  bottom: -0px;  /* extend further below */
+  left: 40%;
+  transform: translateX(-50%); /* center beam */
+  width: 180px;   /* wider beam */
+  
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 63, 223, 0.45) 0%,    /* brighter aqua */
+    rgba(0, 200, 255, 0.35) 25%,   /* strong blue tint */
+    rgba(0, 255, 180, 0.25) 50%,   /* vivid greeny fade */
+    rgba(0, 200, 220, 0.15) 75%,   /* softer fade */
+    transparent 100%               /* vanish */
+  );
+
+  filter: blur(20px);   /* stronger glow spread */
+  border-radius: 60%;   /* smoother round edges */
+  z-index: -1;
+  opacity: 1;           /* fully bright */
+}
+
+
+        
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(132, 155, 251, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(132, 155, 251, 0.8);
+        }
+        
+        .category-badge {
+            background: rgba(132, 155, 251, 0.9);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(26, 35, 79, 0.6);
+            color: #849bfb;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin: 0 0.5rem 0.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            background: #849bfb;
+            color: white;
+        }
+        
+        .article-content {
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #d0d9ff;
+        }
+        
+        .article-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #b1c0ff;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            color: #e2e8f0;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-content blockquote {
+            border-left: 4px solid #849bfb;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+        
+        .nav-white {
+            background-color: white;
+            color: #849bfb;
+        }
+        
+        .nav-white a {
+            color: #849bfb;
+        }
+        
+        .nav-white a:hover {
+            color: #6b82e8;
+        }
+        
+        .share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(26, 35, 79, 0.6);
+            color: #849bfb;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            background: #849bfb;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .author-card {
+            transition: all 0.3s ease;
+        }
+        
+        .author-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .article-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(132, 155, 251, 0.3);
+        }
+        
+        .tab-button {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            background: rgba(26, 35, 79, 0.6);
+            color: #849bfb;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active {
+            background: #849bfb;
+            color: white;
+        }
+        
+        .tab-button:hover:not(.active) {
+            background: rgba(132, 155, 251, 0.3);
+        }
+        
+        .article-tab {
+            display: none;
+        }
+        
+        .article-tab.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-poppins">
+    <!-- Background elements -->
+    <div id="stars-container" class="fixed inset-0 z-0 overflow-hidden"></div>
+    
+    <!-- Navigation -->
+    <nav class="relative z-50 py-4 px-6 md:px-12 flex justify-between items-center nav-white shadow-lg">
+        <div class="flex items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">Merchant-Web</a>
+        </div>
+        
+        <div class="hidden md:flex space-x-10">
+            <a href="index.html" class="hover:text-cosmic-600 transition-colors">Home</a>
+            <a href="about.html" class="hover:text-cosmic-600 transition-colors">About</a>
+            <a href="index.html/packages" class="hover:text-cosmic-600 transition-colors">Services</a>
+            <a href="blog.html" class="hover:text-cosmic-600 transition-colors">Blog</a>
+            <a href="index.html/contact" class="hover:text-cosmic-600 transition-colors">Contact</a>
+        </div>
+        
+        <button class="md:hidden text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Article Section -->
+    <section class="relative z-10 py-12 px-6 md:px-12">
+        <div class="container mx-auto max-w-4xl">
+            <!-- Breadcrumb -->
+            <nav class="mb-8">
+                <ol class="flex items-center space-x-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li><a href="blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li class="text-primary">Web Design Insights</li>
+                </ol>
+            </nav>
+
+           
+
+
+            <!-- Article 1: Responsive Design -->
+            <article id="article1" class="article-tab active">
+                <!-- Article Header -->
+<header class="space-card p-8 cosmic-glow rounded-xl mb-12">
+    <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="category-badge">Web Design</span>
+        <span class="text-sm text-gray-400">23, 2025</span>
+        <span class="text-sm text-gray-400">•</span>
+        <span class="text-sm text-gray-400">8 min read</span>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        Mastering Colour Theory in Web Design
+    </h1>
+    
+    <p class="text-xl text-gray-300 mb-8">
+        Unlock the power of colour theory to create visually stunning websites that engage users, boost conversions, and strengthen brand identity.
+    </p>
+    
+    <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold">Nick</p>
+                <p class="text-gray-400 text-sm">Founder & Lead Designer</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-400 text-sm">Share:</span>
+            <a href="#" class="share-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+           
+            <a href="#" class="share-btn">
+                <i class="fas fa-link"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="rounded-2xl overflow-hidden cosmic-glow mb-12">
+    <img src="colour_theme.jpg" alt="Mastering Colour Theory in Web Design" class="w-full h-auto">
+</div>
+
+<!-- Article Content -->
+<div class="space-card p-8 cosmic-glow rounded-xl mb-12 article-content">
+    <h2>Introduction to Colour Theory</h2>
+    
+    <p>Colour theory is more than just picking shades that look nice together—it’s the science and art of using colours to evoke emotion, establish hierarchy, and guide user interaction. In web design, colour choices can influence how users feel about a brand and whether they take desired actions.</p>
+    
+    <p>From the psychology of colour to the practical use of palettes, mastering colour theory can elevate your design work and make your websites truly unforgettable.</p>
+    
+    <h2>The Psychology of Colour</h2>
+    
+    <p>Different colours can trigger different emotions. Blue often conveys trust and calmness, red suggests urgency and passion, while green evokes growth and balance. Understanding these associations allows designers to align colour choices with brand identity and user expectations.</p>
+    
+    <blockquote>
+        "Colour is the silent language of design—it speaks to users before they even read a single word." – Design Principles Journal
+    </blockquote>
+    
+    <p>For example, financial websites often use blue to suggest reliability, while wellness brands lean toward green for its calming and natural feel.</p>
+    
+    <h2>Building Effective Colour Palettes</h2>
+    
+    <p>Designers often use the colour wheel to create palettes that are visually appealing and balanced. Common approaches include:</p>
+    <ul>
+        <li><strong>Monochromatic:</strong> Different shades of the same colour for a clean, cohesive look.</li>
+        <li><strong>Complementary:</strong> Opposite colours on the wheel, creating contrast and energy.</li>
+        <li><strong>Analogous:</strong> Colours next to each other on the wheel, offering harmony and flow.</li>
+    </ul>
+    
+    <p>By combining these principles with digital tools like Adobe Color or Coolors, designers can experiment and refine palettes that both look good and function effectively.</p>
+    
+    <h2>Accessibility and Contrast</h2>
+    
+    <p>Beyond aesthetics, accessibility must be considered. Sufficient colour contrast ensures text is readable for all users, including those with visual impairments. Tools like the WCAG contrast checker help ensure compliance and inclusivity.</p>
+    
+    <h2>Conclusion: Designing with Purpose</h2>
+    
+    <p>Colour theory isn’t about rigid rules—it’s about understanding how colours work together and how they affect people. By applying these principles thoughtfully, web designers can craft experiences that are not only visually engaging but also meaningful and user-friendly.</p>
+    
+    <p>When used with intention, colour becomes one of the most powerful tools in a designer’s toolkit—capable of transforming a simple layout into a memorable digital experience.</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap items-center mb-12">
+    <span class="text-gray-400 mr-4">Tags:</span>
+    <a href="#" class="tag">Web Design</a>
+    <a href="#" class="tag">Colour Theory</a>
+    <a href="#" class="tag">UX/UI</a>
+    <a href="#" class="tag">Accessibility</a>
+    <a href="#" class="tag">Design Principles</a>
+</div>
+</article>
+
+<article id="article2" class="article-tab active"></article> 
+            <!-- Article Header -->
+<header class="space-card p-8 cosmic-glow rounded-xl mb-12">
+    <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="category-badge">SEO</span>
+        <span class="text-sm text-gray-400">23, 2025</span>
+        <span class="text-sm text-gray-400">•</span>
+        <span class="text-sm text-gray-400">9 min read</span>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        SEO That Actually Works in 2025
+    </h1>
+    
+    <p class="text-xl text-gray-300 mb-8">
+        Search engines are smarter than ever. Discover the strategies and techniques that really move the needle in 2025—beyond keywords and backlinks.
+    </p>
+    
+    <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold">Nick</p>
+                <p class="text-gray-400 text-sm">Founder & Lead Designer</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-400 text-sm">Share:</span>
+            <a href="#" class="share-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+           
+            <a href="#" class="share-btn">
+                <i class="fas fa-link"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="rounded-2xl overflow-hidden cosmic-glow mb-12">
+    <img src="digital-marketing.jpg" alt="SEO That Actually Works in 2025" class="w-full h-auto">
+</div>
+
+<!-- Article Content -->
+<div class="space-card p-8 cosmic-glow rounded-xl mb-12 article-content">
+    <h2>The Changing Landscape of SEO</h2>
+    
+    <p>SEO in 2025 looks very different from the early days of keyword stuffing and link farms. Search engines like Google now rely heavily on AI, user experience signals, and semantic understanding of content. This means the old tricks don’t work anymore—real value does.</p>
+    
+    <p>If you want to rank today, your focus has to shift from chasing algorithms to creating websites that genuinely serve people better than the competition.</p>
+    
+    <h2>AI and Search Intent</h2>
+    
+    <p>Artificial intelligence has transformed search. Google’s algorithms can now understand context, tone, and even user intent behind queries. That means keyword matching alone isn’t enough. Instead, you need to design content that answers questions fully and aligns with what the user is really looking for.</p>
+    
+    <blockquote>
+        "In 2025, the best SEO strategy is to optimize for people first—because that’s exactly what search engines are doing too." – Digital Marketing Weekly
+    </blockquote>
+    
+    <p>For example, if someone searches “best budget fitness apps,” the algorithm now favors detailed guides, comparisons, and first-hand reviews rather than thin keyword-heavy articles.</p>
+    
+    <h2>Technical SEO Still Matters</h2>
+    
+    <p>Even as AI drives smarter rankings, technical SEO remains the foundation. Factors like:</p>
+    <ul>
+        <li><strong>Page speed:</strong> Faster sites rank higher and convert better.</li>
+        <li><strong>Mobile-first design:</strong> With mobile dominating traffic, responsive layouts are non-negotiable.</li>
+        <li><strong>Core Web Vitals:</strong> Smooth loading, interactivity, and visual stability all feed into rankings.</li>
+        <li><strong>Structured data:</strong> Schema markup helps search engines understand and display content with rich snippets.</li>
+    </ul>
+    
+    <p>A well-optimized website architecture ensures crawlers and users can navigate without friction.</p>
+    
+    <h2>Content Depth and Authority</h2>
+    
+    <p>Search engines now reward content that demonstrates <em>E-E-A-T</em> (Experience, Expertise, Authoritativeness, Trustworthiness). Shallow blog posts no longer cut it. Instead, aim for content that shows real-world knowledge, is backed by credible sources, and offers depth rather than fluff.</p>
+    
+    <p>Video, audio, and interactive content also play a role—enhancing engagement and keeping visitors on-page longer, which boosts your authority signals.</p>
+    
+    <h2>Building Links in 2025</h2>
+    
+    <p>Link building is still important, but it’s not about quantity anymore. Search engines value natural, context-rich mentions from authoritative websites. Guest contributions, partnerships, and digital PR campaigns work far better than buying low-quality backlinks.</p>
+    
+    <h2>Conclusion: The Future-Proof SEO Mindset</h2>
+    
+    <p>SEO in 2025 is about creating real value for users, supported by strong technical foundations. Focus on understanding search intent, optimizing performance, and building trust through quality content and ethical link strategies.</p>
+    
+    <p>By aligning with how search engines are evolving, your SEO efforts won’t just survive algorithm updates—they’ll thrive on them.</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap items-center mb-12">
+    <span class="text-gray-400 mr-4">Tags:</span>
+    <a href="#" class="tag">SEO</a>
+    <a href="#" class="tag">Digital Marketing</a>
+    <a href="#" class="tag">Content Strategy</a>
+    <a href="#" class="tag">Web Performance</a>
+    <a href="#" class="tag">2025 Trends</a>
+</div>
+</article>
+
+
+
+<!-- Article Header -->
+<header class="space-card p-8 cosmic-glow rounded-xl mb-12">
+    <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="category-badge">Web Performance</span>
+        <span class="text-sm text-gray-400">23, 2025</span>
+        <span class="text-sm text-gray-400">•</span>
+        <span class="text-sm text-gray-400">7 min read</span>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        Optimising Web Performance in 2025
+    </h1>
+    
+    <p class="text-xl text-gray-300 mb-8">
+        Faster websites improve user experience, engagement, and SEO. Learn the latest techniques to make your site lightning-fast and highly responsive in 2025.
+    </p>
+    
+    <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold">Nick</p>
+                <p class="text-gray-400 text-sm">Founder & Lead Designer</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-400 text-sm">Share:</span>
+            <a href="#" class="share-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+           
+            <a href="#" class="share-btn">
+                <i class="fas fa-link"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="rounded-2xl overflow-hidden cosmic-glow mb-12">
+    <img src="laptop_coding.png" alt="Optimising Web Performance" class="w-full h-auto">
+</div>
+
+<!-- Article Content -->
+<div class="space-card p-8 cosmic-glow rounded-xl mb-12 article-content">
+    <h2>Why Web Performance Matters</h2>
+    
+    <p>In 2025, web performance is more than just a nice-to-have—it directly impacts user engagement, conversion rates, and search rankings. Slow websites frustrate users and increase bounce rates, while fast-loading pages keep visitors happy and improve SEO.</p>
+    
+    <p>Optimising performance isn’t just about speed; it’s about creating smooth, responsive experiences across all devices.</p>
+    
+    <h2>Core Performance Metrics</h2>
+    
+    <p>Modern web performance focuses on key metrics, including:</p>
+    <ul>
+        <li><strong>Largest Contentful Paint (LCP):</strong> How quickly the main content loads.</li>
+        <li><strong>First Input Delay (FID):</strong> The time until the site responds to user interactions.</li>
+        <li><strong>Cumulative Layout Shift (CLS):</strong> Measures visual stability to prevent unexpected content shifts.</li>
+    </ul>
+    
+    <p>Tracking these metrics with tools like Google PageSpeed Insights, Lighthouse, and Web Vitals helps identify bottlenecks and improvement areas.</p>
+    
+    <h2>Optimisation Techniques</h2>
+    
+    <p>Several modern strategies can drastically improve web performance:</p>
+    <ul>
+        <li><strong>Image and Media Optimisation:</strong> Use modern formats like WebP or AVIF, compress images, and lazy-load offscreen content.</li>
+        <li><strong>Code Splitting and Minification:</strong> Break JavaScript into smaller chunks and minify CSS/JS to reduce load times.</li>
+        <li><strong>Server-Side Rendering (SSR) and Caching:</strong> Render pages server-side when possible and leverage caching strategies like CDNs for faster delivery.</li>
+        <li><strong>Efficient Fonts:</strong> Use variable fonts, preload critical fonts, and avoid excessive font weights/styles.</li>
+        <li><strong>Optimised Third-Party Scripts:</strong> Limit unnecessary scripts and load essential ones asynchronously.</li>
+    </ul>
+    
+    <h2>Mobile-First Performance</h2>
+    
+    <p>With mobile traffic dominating, optimising for small screens is crucial. Prioritise fast loading on mobile by reducing page weight, enabling responsive images, and eliminating render-blocking resources.</p>
+    
+    <h2>Conclusion: Performance as a Habit</h2>
+    
+    <p>Web performance isn’t a one-time fix—it’s an ongoing process. By monitoring metrics, applying optimisation techniques, and focusing on user experience, you can ensure your website remains fast, responsive, and competitive in 2025.</p>
+    
+    <p>Ultimately, speed is more than a number—it’s a reflection of quality and professionalism that users and search engines notice immediately.</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap items-center mb-12">
+    <span class="text-gray-400 mr-4">Tags:</span>
+    <a href="#" class="tag">Web Performance</a>
+    <a href="#" class="tag">SEO</a>
+    <a href="#" class="tag">UX/UI</a>
+    <a href="#" class="tag">PageSpeed</a>
+    <a href="#" class="tag">2025 Trends</a>
+</div>
+</article>
+
+<!-- Article Header -->
+<header class="space-card p-8 cosmic-glow rounded-xl mb-12">
+    <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="category-badge">Web Design</span>
+        <span class="text-sm text-gray-400">23, 2025</span>
+        <span class="text-sm text-gray-400">•</span>
+        <span class="text-sm text-gray-400">6 min read</span>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        Embracing Minimalist Web Design in 2025
+    </h1>
+    
+    <p class="text-xl text-gray-300 mb-8">
+        Minimalism isn’t just a trend—it’s a timeless approach to web design that emphasizes clarity, simplicity, and usability. Learn how to master minimalist design for modern websites.
+    </p>
+    
+    <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold">Nick</p>
+                <p class="text-gray-400 text-sm">Founder & Lead Designer</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-400 text-sm">Share:</span>
+            <a href="#" class="share-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+         
+            <a href="#" class="share-btn">
+                <i class="fas fa-link"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="rounded-2xl overflow-hidden cosmic-glow mb-12">
+    <img src="design.jpg" alt="Minimalist Web Design" class="w-full h-auto">
+</div>
+
+<!-- Article Content -->
+<div class="space-card p-8 cosmic-glow rounded-xl mb-12 article-content">
+    <h2>Understanding Minimalist Web Design</h2>
+    
+    <p>Minimalist web design focuses on removing unnecessary elements, prioritizing essential content, and creating an intuitive, distraction-free user experience. It’s about doing more with less, using space, typography, and subtle visuals effectively.</p>
+    
+    <p>In 2025, minimalism isn’t just an aesthetic—it’s a usability strategy that helps users navigate websites quickly and efficiently.</p>
+    
+    <h2>Key Principles of Minimalist Design</h2>
+    
+    <ul>
+        <li><strong>Whitespace:</strong> Strategic use of empty space improves readability and draws attention to key elements.</li>
+        <li><strong>Simple Typography:</strong> Clear, legible fonts with thoughtful hierarchy guide users naturally through the content.</li>
+        <li><strong>Limited Colour Palette:</strong> A few complementary colours create harmony and reduce visual noise.</li>
+        <li><strong>Focus on Functionality:</strong> Every element should serve a purpose; avoid decorative clutter.</li>
+        <li><strong>Visual Hierarchy:</strong> Use size, contrast, and placement to guide user attention and create a clear flow.</li>
+    </ul>
+    
+    <h2>Minimalism and User Experience</h2>
+    
+    <p>Minimalist design enhances usability by reducing distractions and improving focus. Users can find information faster, interact with calls-to-action more effectively, and experience a clean, professional interface.</p>
+    
+    <blockquote>
+        "Minimalism isn’t about less, it’s about more of what matters." – UX Design Insights
+    </blockquote>
+    
+    <h2>Modern Minimalist Techniques</h2>
+    
+    <p>Some practical approaches for minimalist design in 2025 include:</p>
+    <ul>
+        <li>Using subtle animations to provide feedback without overwhelming users.</li>
+        <li>Optimising images and media for speed while keeping the interface clean.</li>
+        <li>Employing modular grid layouts to maintain balance and alignment.</li>
+        <li>Integrating dark and light modes to reduce visual strain.</li>
+    </ul>
+    
+    <h2>Conclusion: Less is More</h2>
+    
+    <p>Minimalist web design is about intentionality. Every element should have a purpose, every colour and font choice should enhance clarity, and every interaction should feel effortless.</p>
+    
+    <p>By embracing minimalism, designers can create timeless, elegant websites that are not only visually appealing but also highly functional and user-friendly in 2025.</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap items-center mb-12">
+    <span class="text-gray-400 mr-4">Tags:</span>
+    <a href="#" class="tag">Web Design</a>
+    <a href="#" class="tag">Minimalism</a>
+    <a href="#" class="tag">UX/UI</a>
+    <a href="#" class="tag">Design Principles</a>
+    <a href="#" class="tag">2025 Trends</a>
+</div>
+</article>
+
+
+<!-- Article Header -->
+<header class="space-card p-8 cosmic-glow rounded-xl mb-12">
+    <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="category-badge">SEO</span>
+        <span class="text-sm text-gray-400">23, 2025</span>
+        <span class="text-sm text-gray-400">•</span>
+        <span class="text-sm text-gray-400">8 min read</span>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        SEO Strategies That Actually Work in 2025
+    </h1>
+    
+    <p class="text-xl text-gray-300 mb-8">
+        Search engine optimisation has evolved. Discover the latest tactics to rank higher, drive quality traffic, and grow your online presence in 2025.
+    </p>
+    
+    <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold">Nick</p>
+                <p class="text-gray-400 text-sm">Founder & Lead Designer</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-400 text-sm">Share:</span>
+            <a href="#" class="share-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+          
+            <a href="#" class="share-btn">
+                <i class="fas fa-link"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="rounded-2xl overflow-hidden cosmic-glow mb-12">
+    <img src="digital-marketing.jpg" alt="SEO Strategies 2025" class="w-full h-auto">
+</div>
+
+<!-- Article Content -->
+<div class="space-card p-8 cosmic-glow rounded-xl mb-12 article-content">
+    <h2>The New Era of SEO</h2>
+    
+    <p>SEO in 2025 is no longer about keyword stuffing or backlinks alone. Search engines now prioritise user intent, content quality, and overall website experience. Effective SEO is about providing real value and optimising every aspect of your site.</p>
+    
+    <h2>Focus on User Intent</h2>
+    
+    <p>Understanding what your audience wants is critical. Modern SEO targets queries by matching content to user intent—informational, navigational, or transactional. Tools like AI-driven keyword analysis help identify what your audience truly seeks.</p>
+    
+    <blockquote>
+        "Optimising for people first is the fastest route to ranking well." – SEO Today
+    </blockquote>
+    
+    <h2>Content Depth and Authority</h2>
+    
+    <p>High-quality content that demonstrates expertise and trustworthiness (E-E-A-T) is rewarded. Comprehensive guides, case studies, and practical tutorials outperform short, thin pages. Use structured content with headings, lists, and visuals to make information digestible.</p>
+    
+    <h2>Technical SEO Essentials</h2>
+    
+    <ul>
+        <li><strong>Site Speed:</strong> Faster websites improve rankings and user satisfaction.</li>
+        <li><strong>Mobile Optimisation:</strong> Responsive design is critical as mobile-first indexing dominates.</li>
+        <li><strong>Schema Markup:</strong> Helps search engines understand content and display rich snippets.</li>
+        <li><strong>Secure and Accessible Sites:</strong> HTTPS and clear navigation enhance trust and crawlability.</li>
+    </ul>
+    
+    <h2>Modern Link Building</h2>
+    
+    <p>Backlinks remain important, but quality matters more than quantity. Earn links through authoritative content, partnerships, and digital PR rather than low-quality purchases. Natural, context-relevant links signal trustworthiness to search engines.</p>
+    
+    <h2>Analytics and Continuous Improvement</h2>
+    
+    <p>Use analytics to monitor traffic, engagement, and conversion metrics. SEO is an ongoing process—regularly update content, fix errors, and adapt strategies to algorithm changes and user behaviour.</p>
+    
+    <h2>Conclusion: SEO for 2025</h2>
+    
+    <p>SEO in 2025 combines technical precision, content excellence, and user-focused strategy. By prioritising experience, intent, and quality, you can achieve sustainable rankings, higher traffic, and measurable growth.</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap items-center mb-12">
+    <span class="text-gray-400 mr-4">Tags:</span>
+    <a href="#" class="tag">SEO</a>
+    <a href="#" class="tag">Content Marketing</a>
+    <a href="#" class="tag">Web Performance</a>
+    <a href="#" class="tag">Digital Marketing</a>
+    <a href="#" class="tag">2025 Trends</a>
+</div>
+</article>
+
+<!-- Article Header -->
+<header class="space-card p-8 cosmic-glow rounded-xl mb-12">
+    <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="category-badge">Branding</span>
+        <span class="text-sm text-gray-400">23, 2025</span>
+        <span class="text-sm text-gray-400">•</span>
+        <span class="text-sm text-gray-400">7 min read</span>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        Branding Strategies That Stand Out in 2025
+    </h1>
+    
+    <p class="text-xl text-gray-300 mb-8">
+        Strong branding goes beyond logos. Learn how to create memorable, authentic brands that resonate with audiences and drive loyalty in 2025.
+    </p>
+    
+    <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold">Nick</p>
+                <p class="text-gray-400 text-sm">Founder & Lead Designer</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-400 text-sm">Share:</span>
+            <a href="#" class="share-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            <a href="#" class="share-btn">
+                <i class="fas fa-link"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="rounded-2xl overflow-hidden cosmic-glow mb-12">
+    <img src="mockup-trademark.jpg" alt="Branding Strategies 2025" class="w-full h-auto">
+</div>
+
+<!-- Article Content -->
+<div class="space-card p-8 cosmic-glow rounded-xl mb-12 article-content">
+    <h2>Understanding Modern Branding</h2>
+    
+    <p>Branding in 2025 goes beyond visual identity—it’s about perception, experience, and connection. A strong brand communicates its values, personality, and promise consistently across all touchpoints, creating trust and loyalty with audiences.</p>
+    
+    <p>Successful brands are not just seen—they are felt, remembered, and recommended.</p>
+    
+    <h2>Core Elements of Branding</h2>
+    
+    <ul>
+        <li><strong>Visual Identity:</strong> Logo, typography, colour palette, and imagery that reflect your brand personality.</li>
+        <li><strong>Brand Voice:</strong> Tone, language, and messaging that resonate with your target audience.</li>
+        <li><strong>Consistency:</strong> Uniform experience across website, social media, packaging, and customer interactions.</li>
+        <li><strong>Purpose & Values:</strong> A clear mission and values that guide decision-making and connect emotionally with audiences.</li>
+    </ul>
+    
+    <h2>Authenticity and Storytelling</h2>
+    
+    <p>Modern branding relies on authenticity. Consumers value transparency and relatable storytelling. Sharing real stories, behind-the-scenes insights, and customer experiences builds trust and differentiates your brand in a crowded marketplace.</p>
+    
+    <blockquote>
+        "Brands that are authentic, clear, and consistent are the ones people remember." – Branding Insights
+    </blockquote>
+    
+    <h2>Digital Branding Strategies</h2>
+    
+    <p>In the digital era, branding extends into every online interaction:</p>
+    <ul>
+        <li>Website design and user experience that reflect your brand values.</li>
+        <li>Social media presence that communicates personality and engages communities.</li>
+        <li>Content marketing that reinforces your expertise and brand story.</li>
+        <li>Visual storytelling with consistent imagery, video, and graphics.</li>
+    </ul>
+    
+    <h2>Conclusion: Building Brands That Last</h2>
+    
+    <p>Branding in 2025 is about creating meaningful connections and memorable experiences. By combining consistency, authenticity, and thoughtful storytelling, you can craft a brand that resonates with your audience, stands out from the competition, and endures over time.</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap items-center mb-12">
+    <span class="text-gray-400 mr-4">Tags:</span>
+    <a href="#" class="tag">Branding</a>
+    <a href="#" class="tag">Marketing</a>
+    <a href="#" class="tag">Digital Strategy</a>
+    <a href="#" class="tag">UX/UI</a>
+    <a href="#" class="tag">2025 Trends</a>
+</div>
+</article>
+
+
+<!-- Article Header -->
+<header class="space-card p-8 cosmic-glow rounded-xl mb-12">
+    <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="category-badge">Security</span>
+        <span class="text-sm text-gray-400">23, 2025</span>
+        <span class="text-sm text-gray-400">•</span>
+        <span class="text-sm text-gray-400">6 min read</span>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        Basic Website Security Practices for 2025
+    </h1>
+    
+    <p class="text-xl text-gray-300 mb-8">
+        Keeping your website secure is essential for protecting your business and users. Learn the fundamental security practices that every website should follow in 2025.
+    </p>
+    
+    <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold">Nick</p>
+                <p class="text-gray-400 text-sm">Founder & Lead Designer</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-400 text-sm">Share:</span>
+            <a href="#" class="share-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+           
+            <a href="#" class="share-btn">
+                <i class="fas fa-link"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="rounded-2xl overflow-hidden cosmic-glow mb-12">
+    <img src="cyber-security.jpg" alt="Basic Website Security" class="w-full h-auto">
+</div>
+
+<!-- Article Content -->
+<div class="space-card p-8 cosmic-glow rounded-xl mb-12 article-content">
+    <h2>Why Website Security Matters</h2>
+    
+    <p>Website security is critical for protecting sensitive data, maintaining user trust, and preventing downtime. Even small websites can be targeted by hackers, malware, or phishing attacks, making basic security practices essential.</p>
+    
+    <h2>Essential Security Practices</h2>
+    
+    <ul>
+        <li><strong>Use HTTPS:</strong> Secure your site with an SSL/TLS certificate to encrypt data and improve trust.</li>
+        <li><strong>Strong Passwords:</strong> Use complex passwords for admin accounts and encourage users to do the same.</li>
+        <li><strong>Keep Software Updated:</strong> Regularly update your CMS, plugins, and server software to patch vulnerabilities.</li>
+        <li><strong>Backup Regularly:</strong> Maintain automated backups to recover quickly in case of attack or failure.</li>
+        <li><strong>Limit Access:</strong> Only give necessary permissions to users and regularly review access logs.</li>
+        <li><strong>Monitor Activity:</strong> Use security plugins or monitoring tools to detect suspicious behavior early.</li>
+    </ul>
+    
+    <h2>Protecting Against Common Threats</h2>
+    
+    <p>Basic security measures help defend against common threats such as:</p>
+    <ul>
+        <li>Phishing and social engineering attacks targeting credentials.</li>
+        <li>Brute-force attacks trying to guess passwords.</li>
+        <li>Malware injections through outdated plugins or themes.</li>
+        <li>DDoS attacks that overwhelm servers.</li>
+    </ul>
+    
+    <h2>Conclusion: Security as a Habit</h2>
+    
+    <p>Basic website security doesn’t require advanced skills, but it does require consistency. By implementing fundamental practices like HTTPS, strong passwords, regular updates, and monitoring, you can significantly reduce risks and protect both your business and your users in 2025.</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap items-center mb-12">
+    <span class="text-gray-400 mr-4">Tags:</span>
+    <a href="#" class="tag">Security</a>
+    <a href="#" class="tag">Website Protection</a>
+    <a href="#" class="tag">Cybersecurity</a>
+    <a href="#" class="tag">Best Practices</a>
+    <a href="#" class="tag">2025 Trends</a>
+</div>
+</article>
+
+<!-- Article Header -->
+<header class="space-card p-8 cosmic-glow rounded-xl mb-12">
+    <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="category-badge">Productivity</span>
+        <span class="text-sm text-gray-400">23, 2025</span>
+        <span class="text-sm text-gray-400">•</span>
+        <span class="text-sm text-gray-400">7 min read</span>
+    </div>
+    
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+        Boosting Productivity in 2025: Strategies That Work
+    </h1>
+    
+    <p class="text-xl text-gray-300 mb-8">
+        Productivity isn’t about working harder—it’s about working smarter. Explore modern techniques and tools to maximise efficiency and focus in 2025.
+    </p>
+    
+    <div class="flex items-center justify-between flex-wrap gap-4">
+        <div class="flex items-center">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <p class="font-bold">Nick</p>
+                <p class="text-gray-400 text-sm">Founder & Lead Designer</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-400 text-sm">Share:</span>
+            <a href="#" class="share-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="share-btn">
+                <i class="fab fa-twitter"></i>
+            </a>
+           
+            <a href="#" class="share-btn">
+                <i class="fas fa-link"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Image -->
+<div class="rounded-2xl overflow-hidden cosmic-glow mb-12">
+    <img src="laptop-productivity.jpg" alt="Productivity Strategies 2025" class="w-full h-auto">
+</div>
+
+<!-- Article Content -->
+<div class="space-card p-8 cosmic-glow rounded-xl mb-12 article-content">
+    <h2>Rethinking Productivity</h2>
+    
+    <p>Productivity in 2025 is about efficiency, focus, and achieving meaningful results—not just checking tasks off a list. Modern productivity strategies combine time management, technology, and mental well-being to help individuals and teams work smarter.</p>
+    
+    <h2>Key Strategies for Productivity</h2>
+    
+    <ul>
+        <li><strong>Time Blocking:</strong> Allocate dedicated blocks of time for focused work, meetings, and breaks to maintain momentum.</li>
+        <li><strong>Task Prioritisation:</strong> Focus on high-impact tasks using frameworks like Eisenhower Matrix or OKRs.</li>
+        <li><strong>Minimise Distractions:</strong> Use tools to block notifications, manage email efficiently, and create a distraction-free workspace.</li>
+        <li><strong>Automation:</strong> Leverage software and AI tools to automate repetitive tasks, freeing time for creative work.</li>
+        <li><strong>Regular Breaks & Health:</strong> Incorporate movement, hydration, and mental rest to sustain long-term productivity.</li>
+    </ul>
+    
+    <h2>Digital Tools That Help</h2>
+    
+    <p>Modern productivity relies heavily on the right tools. Examples include:</p>
+    <ul>
+        <li>Project management platforms like Trello, Asana, or Notion for task tracking.</li>
+        <li>Focus and time-tracking apps such as Clockify or Forest.</li>
+        <li>Collaboration tools like Slack, Microsoft Teams, or Zoom.</li>
+        <li>AI assistants for summarising emails, generating content, or managing schedules.</li>
+    </ul>
+    
+    <h2>Mindset and Habits</h2>
+    
+    <p>Efficiency starts with the right mindset. Setting clear goals, embracing single-tasking over multitasking, and reflecting regularly on progress helps maintain high performance without burnout.</p>
+    
+    <h2>Conclusion: Productivity That Lasts</h2>
+    
+    <p>Productivity in 2025 is a blend of strategy, technology, and self-care. By focusing on what truly matters, using tools wisely, and adopting healthy work habits, anyone can boost output, reduce stress, and achieve meaningful results consistently.</p>
+</div>
+
+<!-- Tags -->
+<div class="flex flex-wrap items-center mb-12">
+    <span class="text-gray-400 mr-4">Tags:</span>
+    <a href="#" class="tag">Productivity</a>
+    <a href="#" class="tag">Time Management</a>
+    <a href="#" class="tag">Efficiency</a>
+    <a href="#" class="tag">Work Habits</a>
+    <a href="#" class="tag">2025 Trends</a>
+</div>
+</article>
+
+            <!-- Newsletter Subscription -->
+            <div class="space-card p-8 cosmic-glow rounded-xl text-center">
+                <h2 class="text-2xl font-bold mb-4">Subscribe to our newsletter</h2>
+                <p class="text-gray-300 mb-6">Get the latest articles, tips, and insights on web design and development delivered to your inbox.</p>
+                <form class="max-w-md mx-auto flex">
+                    <input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 bg-space-dark border border-primary/30 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    <button type="submit" class="px-6 py-3 bg-primary text-white font-bold rounded-r-lg hover:bg-blue-600 transition-colors btn-glow">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-1 py-12 px-6 md:px-12 bg-space-dark">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        
+                        <span class="text-xl font-bold text-white">Merchant web</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Launching businesses into digital orbit with stunning, high-converting websites.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/ns.mrchconsult.uk" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.x.com/Merch555" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
+                            </svg>
+                            <a href="https://www.instagram.com/ns.mrchconsult.uk" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+</a>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="index.html/packages" class="text-gray-400 hover:text-primary transition-colors">Packages</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Web Design</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">SEO Optimisation</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Web Hosting</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Maintenance</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400">support@merchant-web.co.uk</li>
+                        <li class="text-gray-400">+44 7394542901</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-space-mid mt-12 pt-8 text-center text-gray-500">
+                <p> 2024 Merchant Web / Merchant Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Create twinkling stars background
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsContainer = document.getElementById('stars-container');
+            const starsCount = 150;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const size = Math.random() * 3;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                const opacity = Math.random() * 0.7 + 0.3;
+                star.style.opacity = opacity;
+                
+                const animationDuration = Math.random() * 5 + 3;
+                star.style.animation = `twinkle ${animationDuration}s infinite`;
+                
+                starsContainer.appendChild(star);
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Tab functionality for switching between articles
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const articleTabs = document.querySelectorAll('.article-tab');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+                    
+                    // Update active button
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Show selected tab
+                    articleTabs.forEach(tab => tab.classList.remove('active'));
+                    document.getElementById(tabId).classList.add('active');
+                    
+                    // Scroll to top of article section
+                    document.querySelector('.article-tab.active').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

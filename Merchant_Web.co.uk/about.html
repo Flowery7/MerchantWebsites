@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="description" content="Learn about Merchant-Web - our mission, team, and approach to web design and development.">
+    <meta name="keywords" content="about us, web design company, our team, web development process, our mission, website design philosophy">
+    <meta name="trustpilot-one-time-domain-verification-id" content="3d56d3e7-687e-410b-b6ad-e87e8b2ab346"/>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About Us | Website Design & Development | Merchant Web" />
+    <meta property="og:description" content="Learn about Merchant-Web - our mission, team, and approach to web design and development." />
+    <meta property="og:image" content="Social_image_merchant_services_website.png" />
+    <meta property="og:url" content="https://www.merchant-web.co.uk/about" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Us | Website Design & Development | Merchant Web" />
+    <meta name="twitter:description" content="Learn about Merchant-Web - our mission, team, and approach to web design and development." />
+    <meta name="twitter:image" content="Social_image_merchant_services_website.png" />
+    
+    <!-- Robots and Indexing -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <link rel="canonical" href="https://www.merchant-web.co.uk/about">
+    <link rel="apple-touch-icon" sizes="180x180" href="merchant-services-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="merchant-services-favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="merchant-services-favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="merchant-services-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="merchant-services-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#89ABE5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Website Design & Development | Merchant Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#849bfb',
+                        cosmic: {
+                            100: '#d0d9ff',
+                            200: '#b1c0ff',
+                            300: '#93a7ff',
+                            400: '#849bfb',
+                            500: '#6b82e8',
+                            600: '#5469d1',
+                            700: '#3f52b5',
+                            800: '#2d3c99',
+                            900: '#1e287d',
+                        },
+                        space: {
+                            dark: '#0a0e2a',
+                            mid: '#131c3d',
+                            light: '#1d2a52'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0e2a 0%, #1d2a52 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+        
+        .space-card {
+            background: rgba(26, 35, 79, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid #0a0e2a;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .space-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(132, 155, 251, 0.1) 0%, transparent 70%);
+            opacity: 0.5;
+            z-index: -1;
+            transform: rotate(15deg);
+        }
+        
+        .space-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(132, 155, 251, 0.2);
+        }
+        
+        .space-card:hover::before {
+            opacity: 0.8;
+        }
+        
+        .alien-shape {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        
+        .ufo {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .package-card {
+            transition: all 0.3s ease;
+        }
+        
+        .package-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .feature-bullet {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .feature-bullet::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .nav-white {
+            background-color: white;
+            color: #849bfb;
+        }
+        
+        .nav-white a {
+            color: #849bfb;
+        }
+        
+        .nav-white a:hover {
+            color: #6b82e8;
+        }
+        
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 350px;
+        }
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        
+        .swiper-pagination-bullet {
+            background-color: #849bfb;
+        }
+        
+        .swiper-button-next, .swiper-button-prev {
+            color: #849bfb;
+        }
+        
+       .cosmic-glow {
+            position: relative;
+        }
+        
+        .cosmic-glow::before {
+  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(175, 51, 242, 0.25) 0%, transparent 50%),   /* aqua */
+    radial-gradient(circle at 70% 30%, rgba(242, 123, 244, 0.18) 0%, transparent 50%),   /* blue */
+    radial-gradient(circle at 40% 40%, rgba(151, 131, 169, 0.18) 0%, transparent 50%);   /* greeny tint */
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0.7; /* toned down */
+  transition: opacity 0.3s ease;
+}
+
+
+        
+        .cosmic-glow:hover::before {
+            opacity: 0.9;
+        }
+        
+        .hero-glow {
+            position: relative;
+        }
+        
+        .hero-glow::after {
+  content: '';
+  position: absolute;
+  top: -60px;     /* extend further above */
+  bottom: -0px;  /* extend further below */
+  left: 40%;
+  transform: translateX(-50%); /* center beam */
+  width: 180px;   /* wider beam */
+  
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 63, 223, 0.45) 0%,    /* brighter aqua */
+    rgba(0, 200, 255, 0.35) 25%,   /* strong blue tint */
+    rgba(0, 255, 180, 0.25) 50%,   /* vivid greeny fade */
+    rgba(0, 200, 220, 0.15) 75%,   /* softer fade */
+    transparent 100%               /* vanish */
+  );
+
+  filter: blur(20px);   /* stronger glow spread */
+  border-radius: 60%;   /* smoother round edges */
+  z-index: -1;
+  opacity: 1;           /* fully bright */
+}
+
+
+        
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(132, 155, 251, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(132, 155, 251, 0.8);
+        }
+        
+        .team-member {
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            padding-bottom: 3rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.7rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #849bfb, transparent);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: #849bfb;
+            box-shadow: 0 0 0 5px rgba(132, 155, 251, 0.2);
+        }
+        
+        .timeline-item:last-child::before {
+            background: linear-gradient(to bottom, #849bfb, #849bfb);
+            height: 1.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-poppins">
+    <!-- Background elements -->
+    <div id="stars-container" class="fixed inset-0 z-0 overflow-hidden"></div>
+    
+    <!-- Navigation -->
+    <nav class="relative z-50 py-4 px-6 md:px-12 flex justify-between items-center nav-white shadow-lg">
+        <div class="flex items-center">
+            <span class="text-2xl font-bold text-primary">Merchant-Web</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-10">
+            <a href="index.html" class="hover:text-cosmic-600 transition-colors">Home</a>
+            <a href="about.html" class="hover:text-cosmic-600 transition-colors">About</a>
+            <a href="index.html#services" class="hover:text-cosmic-600 transition-colors">Services</a>
+            <a href="blog.html" class="hover:text-cosmic-600 transition-colors">Blog</a>
+            <a href="index.html#contact" class="hover:text-cosmic-600 transition-colors">Contact</a>
+        </div>
+        
+        <button class="md:hidden text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </nav>
+
+    
+   <!-- Hero Section -->
+    <section id="home" class="relative z-1 min-h-screen flex items-center pt-20 pb-32 px-6 md:px-12">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                        Learn About
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-300">Merchant Web</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Our passion is building stunning, high-performing websites that attract visitors and help you convert them into customers. We help you get lightyears ahead of the competition.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#packages" class="px-8 py-4 bg-[#7bd5bf] text-white font-bold rounded-full hover:bg-[#65dec0] transition-colors btn-glow">
+                            Explore Packages
+                        </a>
+                        <a href="#contact" class="px-8 py-4 bg-[#849bfb] border-2 border-primary text-white font-bold rounded-full hover:bg-primary/20 transition-colors">
+                            Request Brochure
+                        </a>
+                    </div>                  
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-80 h-80 hero-glow">
+                        <div class="md:w-1/2 flex justify-center">
+  <div class="relative w-80 h-80 hero-glow">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-300/20 rounded-full filter blur-xl animate-pulse-slow"></div>
+    
+    <div class="relative w-80 h-80">
+      <!-- UFO image (shakes) -->
+      <img src="space_craft_website_add.png" alt="Futuristic UFO" class="ufo absolute inset-0 m-auto">
+      
+      <!-- Mascot image (static) -->
+      <img src="web_dev_mascot.png" alt="Web Design Service" class="mascot absolute inset-0 m-auto">
+    </div>
+  </div>
+</div>
+
+<style>
+.ufo {
+  width: 220px;
+  height: 132px;
+  animation: shake 0.5s infinite;
+  margin-top: -50px; /* adjust this value as needed */
+}
+
+
+.mascot {
+  max-width: 200px;
+  display: block;
+  animation: none !important;
+  transform: none !important;
+}
+
+@keyframes shake {
+  0%   { transform: translate(0px, 0px) rotate(0deg); }
+  25%  { transform: translate(2px, 2px) rotate(1deg); }
+  50%  { transform: translate(-2px, -2px) rotate(-1deg); }
+  75%  { transform: translate(2px, -2px) rotate(1deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
+</style>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Mission Section -->
+    <section id="mission" class="relative z-1 py-20 px-6 md:px-12">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+                    <p class="text-xl text-gray-300 mb-6">
+                        At Merchant-Web, we believe every business deserves a website that's not just functional, but truly stellar. Our mission is to build high-quality websites for small businesses and sole traders.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-8">
+                        We combine cutting-edge design with robust technical foundations to create websites that not only look incredible but perform exceptionally across all devices and platforms.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="text-center p-6 space-card cosmic-glow rounded-xl">
+                            <div class="text-3xl font-bold text-primary mb-2">50+</div>
+                            <div class="text-gray-300">Website Catalogue</div>
+                        </div>
+                        <div class="text-center p-6 space-card cosmic-glow rounded-xl">
+                            <div class="text-3xl font-bold text-primary mb-2">5+</div>
+                            <div class="text-gray-300">Years Experience</div>
+                        </div>
+                        <div class="text-center p-6 space-card cosmic-glow rounded-xl">
+                            <div class="text-3xl font-bold text-primary mb-2">98%</div>
+                            <div class="text-gray-300">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="space-card p-8 cosmic-glow rounded-xl">
+                        <img src="merchant_web_websites.png" alt="Our mission visual representation" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Team Section -->
+<section id="team" class="relative z-1 py-20 px-6 md:px-12 bg-space-mid bg-opacity-70">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Meet The Designer</h2>
+        <p class="text-center text-gray-300 mb-16 max-w-3xl mx-auto">The talented individual who makes our cosmic web creations possible.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Team Member Profile -->
+            <div class="team-member space-card p-8 cosmic-glow rounded-xl text-center">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/30">
+                    <img src="beautifulface.jpg" alt="Nick Founder" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Nick</h3>
+                <p class="text-primary mb-4 text-lg">Founder & Lead Developer</p>
+                <p class="text-gray-300 mb-6">With over 5 years of experience in web development, Nick leads our technical projects with precision and innovation.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-space-dark flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-space-dark flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Additional Information -->
+            <div class="space-card p-8 cosmic-glow rounded-xl">
+                <h3 class="text-2xl font-bold mb-6 text-primary">More About Nick</h3>
+                
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-3 text-cosmic-200">Design Philosophy</h4>
+                    <p class="text-gray-300 mb-4">Nick believes that great web design combines aesthetic beauty with functional excellence. His approach focuses on creating intuitive user experiences that align with business goals.</p>
+                    <p class="text-gray-300">"A website should not only look stunning but also serve its purpose effectively, whether that's generating leads, selling products, or sharing information."</p>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-3 text-cosmic-200">Areas of Expertise</h4>
+                    <ul class="text-gray-300 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Responsive Web Design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>UI/UX Design Principles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Front/Backend-End Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>SEO Optimisation</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-3 text-cosmic-200">Fun Facts</h4>
+                    <ul class="text-gray-300 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Travelled for 2 Years</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Absolutely loves cooking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-primary mr-2">•</span>
+                            <span>Trains in Martial Arts</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Process Section -->
+    <section id="process" class="relative z-1 py-20 px-6 md:px-12">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">The Process</h2>
+            <p class="text-center text-gray-300 mb-16 max-w-3xl mx-auto">We follow a carefully crafted process to ensure your website launch is smooth and successful.</p>
+            
+            <div class="space-card p-8 cosmic-glow rounded-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Left Column -->
+                    <div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Discovery</h3>
+                            <p class="text-gray-300">We begin by understanding your business, goals, and target audience to create a website that truly represents your brand.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Design</h3>
+                            <p class="text-gray-300">The designer creates mockups of your website, incorporating your brand identity and ensuring an intuitive user experience.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Development</h3>
+                            <p class="text-gray-300">We transform the designs into a fully functional website, optimised for performance and search engines.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column -->
+                    <div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Testing</h3>
+                            <p class="text-gray-300">We rigorously test your website across devices and browsers to ensure a flawless user experience.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Launch</h3>
+                            <p class="text-gray-300">We deploy your website to the live server and ensure everything is working perfectly before going live.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2 text-primary">Support</h3>
+                            <p class="text-gray-300">We provide ongoing maintenance and support to keep your website secure and up-to-date.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <img src="Website Design £99 SEO only £79 1 Year Hosting £71 (1).png" alt="Our process visualization" class="mx-auto w-full max-w-2xl rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="relative z-1 py-20 px-6 md:px-12 bg-space-mid bg-opacity-70">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Values</h2>
+            <p class="text-center text-gray-300 mb-16 max-w-3xl mx-auto">The principles that guide everything we do at Merchant-Web.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-card p-8 cosmic-glow rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-200 rounded-xl flex items-center justify-center mr-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Quality & Excellence</h3>
+                    </div>
+                    <p class="text-gray-300">We never compromise on quality. Every website we create is built to the highest standards with attention to detail in every pixel and line of code.</p>
+                </div>
+                
+                <div class="space-card p-8 cosmic-glow rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-200 rounded-xl flex items-center justify-center mr-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Client Collaboration</h3>
+                    </div>
+                    <p class="text-gray-300">We believe in working closely with our clients throughout the process, ensuring the final product exceeds expectations and delivers real results.</p>
+                </div>
+                
+                <div class="space-card p-8 cosmic-glow rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-purple-200 rounded-xl flex items-center justify-center mr-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Innovation</h3>
+                    </div>
+                    <p class="text-gray-300">We stay at the forefront of web technology and design trends, bringing innovative solutions to our clients that give them a competitive edge.</p>
+                </div>
+                
+                <div class="space-card p-8 cosmic-glow rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-yellow-200 rounded-xl flex items-center justify-center mr-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Timely Delivery</h3>
+                    </div>
+                    <p class="text-gray-300">We understand the importance of timelines in business. We deliver projects on schedule without compromising on quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative z-1 py-20 px-6 md:px-12">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="space-card p-12 cosmic-glow rounded-xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Website?</h2>
+                <p class="text-xl text-gray-300 mb-8">Let's work together to create a website that's truly out of this world.</p>
+                <a href="index.html#contact" class="px-8 py-4 bg-[#7bd5bf] text-white font-bold rounded-full hover:bg-[#65dec0] transition-colors btn-glow inline-block">
+                    Get Started Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="relative z-1 py-12 px-6 md:px-12 bg-space-dark">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        
+                        <span class="text-xl font-bold text-white">Merchant web</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Launching businesses into digital orbit with stunning, high-converting websites.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/ns.mrchconsult.uk" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.x.com/Merch555" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
+                            </svg>
+                            <a href="https://www.instagram.com/ns.mrchconsult.uk" class="w-10 h-10 rounded-full bg-space-mid flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+</a>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="index.html/packages" class="text-gray-400 hover:text-primary transition-colors">Packages</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Web Design</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">SEO Optimisation</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Web Hosting</a></li>
+                        <li><a href="index.html/services" class="text-gray-400 hover:text-primary transition-colors">Maintenance</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400">support@merchant-web.co.uk</li>
+                        <li class="text-gray-400">+44 7394542901</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-space-mid mt-12 pt-8 text-center text-gray-500">
+                <p> 2024 Merchant Web / Merchant Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Create twinkling stars background
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsContainer = document.getElementById('stars-container');
+            const starsCount = 150;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                const size = Math.random() * 3;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                const opacity = Math.random() * 0.7 + 0.3;
+                star.style.opacity = opacity;
+                
+                const animationDuration = Math.random() * 5 + 3;
+                star.style.animation = `twinkle ${animationDuration}s infinite`;
+                
+                starsContainer.appendChild(star);
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
