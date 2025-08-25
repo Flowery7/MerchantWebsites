@@ -342,7 +342,7 @@
             <a href="index.html" class="hover:text-cosmic-600 transition-colors">Home</a>
             <a href="about.html" class="hover:text-cosmic-600 transition-colors">About</a>
             <a href="index.html#services" class="hover:text-cosmic-600 transition-colors">Services</a>
-            <a href="blog.html" class="hover:text-cosmic-600 transition-colors">Blog</a>
+            <a href="#blog.html" class="hover:text-cosmic-600 transition-colors">Blog</a>
             <a href="#contactForm" class="hover:text-cosmic-600 transition-colors">Contact</a>
         </div>
         
@@ -1152,107 +1152,109 @@ function blockCookies() {
         });
     </script>
 
-<script>document.getElementById('contactForm').addEventListener('submit', async function(e) {
-e.preventDefault();
+<script>
+document.querySelector('#contactForm form').addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-// Get form elements
-const form = e.target;
-const submitBtn = form.querySelector('button[type="submit"]');
-const originalBtnText = submitBtn.textContent;
+    // Get form elements
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
 
-// Form data
-const formData = {
-name: form.name.value.trim(),
-email: form.email.value.trim().toLowerCase(),
-phone: form.phone.value.trim(),
-message: form.message.value.trim()
-};
+    // Form data - note: using 'info' instead of 'message'
+    const formData = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim().toLowerCase(),
+        phone: form.phone.value.trim(),
+        message: form.info.value.trim()  // Changed from 'message' to 'info'
+    };
 
-// Simple client-side validation
-if (!formData.name || !formData.email || !formData.message) {
-alert('Please fill in all required fields');
-return;
-}
+    // Simple client-side validation
+    if (!formData.name || !formData.email || !formData.message) {
+        alert('Please fill in all required fields');
+        return;
+    }
 
-// Email regex check
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailRegex.test(formData.email)) {
-alert('Please enter a valid email address');
-return;
-}
+    // Email regex check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+        alert('Please enter a valid email address');
+        return;
+    }
 
-try {
-// Disable button and show loading state
-submitBtn.disabled = true;
-submitBtn.textContent = 'Sending...';
+    try {
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
 
-// Call Lambda function
-const response = await fetch('https://s3tsujkqp27igrtc6mxwsgnxgu0gsydm.lambda-url.eu-west-2.on.aws/', {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json',
-},
-body: JSON.stringify(formData)
-});
+        // Call Lambda function
+        const response = await fetch('https://s3tsujkqp27igrtc6mxwsgnxgu0gsydm.lambda-url.eu-west-2.on.aws/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
 
-const result = await response.json();
+        const result = await response.json();
 
-if (response.ok) {
-// Success - clear form and show message
-form.reset();
-showSuccessMessage('Message sent successfully! We\'ll get back to you soon.');
-} else {
-// Handle API errors
-console.error('Error:', result);
-showErrorMessage(result.error || 'Failed to send message. Please try again.');
-}
-} catch (error) {
-console.error('Network error:', error);
-showErrorMessage('Network error. Please check your connection and try again.');
-} finally {
-// Reset button state
-submitBtn.disabled = false;
-submitBtn.textContent = originalBtnText;
-}
+        if (response.ok) {
+            // Success - clear form and show message
+            form.reset();
+            showSuccessMessage('Message sent successfully! We\'ll get back to you soon.');
+        } else {
+            // Handle API errors
+            console.error('Error:', result);
+            showErrorMessage(result.error || 'Failed to send message. Please try again.');
+        }
+    } catch (error) {
+        console.error('Network error:', error);
+        showErrorMessage('Network error. Please check your connection and try again.');
+    } finally {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+    }
 });
 
 // Helper functions for showing messages
 function showSuccessMessage(message) {
-// Remove any existing messages
-const existingMessages = document.querySelectorAll('.form-message');
-existingMessages.forEach(msg => msg.remove());
+    // Remove any existing messages
+    const existingMessages = document.querySelectorAll('.form-message');
+    existingMessages.forEach(msg => msg.remove());
 
-// Create success message element
-const messageDiv = document.createElement('div');
-messageDiv.className = 'form-message success-message';
-messageDiv.textContent = message;
+    // Create success message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'form-message success-message';
+    messageDiv.textContent = message;
+    messageDiv.style.cssText = 'background-color: #4CAF50; color: white; padding: 10px; margin-top: 15px; border-radius: 5px;';
 
-// Insert after the form
-const formContainer = document.querySelector('.form-container');
-formContainer.appendChild(messageDiv);
+    // Insert after the form
+    const formContainer = document.querySelector('.space-card');
+    formContainer.appendChild(messageDiv);
 
-// Auto-hide after 5 seconds
-setTimeout(() => {
-messageDiv.remove();
-}, 5000);
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
 }
 
 function showErrorMessage(message) {
-// Remove any existing messages
-const existingMessages = document.querySelectorAll('.form-message');
-existingMessages.forEach(msg => msg.remove());
+    // Remove any existing messages
+    const existingMessages = document.querySelectorAll('.form-message');
+    existingMessages.forEach(msg => msg.remove());
 
-// Create error message element
-const messageDiv = document.createElement('div');
-messageDiv.className = 'form-message error-message';
-messageDiv.textContent = message;
+    // Create error message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'form-message error-message';
+    messageDiv.textContent = message;
+    messageDiv.style.cssText = 'background-color: #f44336; color: white; padding: 10px; margin-top: 15px; border-radius: 5px;';
 
-// Insert after the form
-const formContainer = document.querySelector('.form-container');
-formContainer.appendChild(messageDiv);
-}</script>
-
+    // Insert after the form
+    const formContainer = document.querySelector('.space-card');
+    formContainer.appendChild(messageDiv);
+}
+</script>
 
 </body>
 </html>
-
