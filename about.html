@@ -85,319 +85,472 @@
         }
     </script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0a0e2a 0%, #1d2a52 100%);
-            color: #fff;
-            overflow-x: hidden;
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #0a0e2a 60%, #1d2a52 100%) fixed;
+        background-attachment: fixed;
+        color: #fff;
+        overflow-x: hidden;
+        min-height: 100vh;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+        transform: translateZ(0);
+    }
+    
+    .star {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        will-change: transform;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    @keyframes twinkle {
+        0% { opacity: 0.2; }
+        50% { opacity: 1; }
+        100% { opacity: 0.2; }
+    }
+    
+    .space-card {
+        background: rgba(26, 35, 79, 0.6);
+        /* backdrop-filter: blur(10px); */ /* Commented out for performance */
+        border: 0.5px solid #0a0e2a;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    .space-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, rgba(132, 155, 251, 0.1) 0%, transparent 70%);
+        opacity: 0.5;
+        z-index: -1;
+        transform: rotate(15deg);
+    }
+    
+    .space-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(132, 155, 251, 0.2);
+    }
+    
+    .space-card:hover::before {
+        opacity: 0.8;
+    }
+    
+    .alien-shape {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+    
+    .ufo {
+        animation: float 8s ease-in-out infinite;
+    }
+    
+    .package-card {
+        transition: all 0.3s ease;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    .package-card:hover {
+        transform: scale(1.05);
+    }
+    
+    .feature-bullet {
+        position: relative;
+        padding-left: 2rem;
+    }
+    
+    .feature-bullet::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .nav-white {
+        background-color: white;
+        color: #849bfb;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .nav-white a {
+        color: #849bfb;
+    }
+    
+    .nav-white a:hover {
+        color: #6b82e8;
+    }
+    
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 350px;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+    
+    .swiper-pagination-bullet {
+        background-color: #849bfb;
+    }
+    
+    .swiper-button-next, .swiper-button-prev {
+        color: #849bfb;
+    }
+    
+    .cosmic-glow {
+        position: relative;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    .cosmic-glow::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 30% 70%, rgba(175, 51, 242, 0.25) 0%, transparent 50%),
+            radial-gradient(circle at 70% 30%, rgba(242, 123, 244, 0.18) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(151, 131, 169, 0.18) 0%, transparent 50%);
+        border-radius: 16px;
+        z-index: -1;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+    
+    .cosmic-glow:hover::before {
+        opacity: 0.9;
+    }
+    
+    .hero-glow {
+        position: relative;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .hero-glow::after {
+        content: '';
+        position: absolute;
+        top: -60px;
+        bottom: -0px;
+        left: 40%;
+        transform: translateX(-50%);
+        width: 180px;
+        background: linear-gradient(
+            to bottom,
+            rgba(55, 63, 223, 0.45) 0%,
+            rgba(0, 200, 255, 0.35) 25%,
+            rgba(0, 255, 180, 0.25) 50%,
+            rgba(0, 200, 220, 0.15) 75%,
+            transparent 100%
+        );
+        filter: blur(20px);
+        border-radius: 60%;
+        z-index: -1;
+        opacity: 1;
+    }
+    
+    .btn-glow {
+        box-shadow: 0 0 15px rgba(132, 155, 251, 0.5);
+        transition: all 0.3s ease;
+    }
+    
+    .btn-glow:hover {
+        box-shadow: 0 0 25px rgba(132, 155, 251, 0.8);
+    }
+
+    /* Cookie Banner Styles */
+    .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #1a365d;
+        color: white;
+        padding: 20px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: none;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    .cookie-banner.active {
+        display: block;
+    }
+
+    .cookie-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .cookie-text {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .cookie-text p {
+        margin: 0 0 10px 0;
+        line-height: 1.5;
+    }
+
+    .cookie-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .cookie-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s;
+    }
+
+    .btn-accept {
+        background-color: #58857f;
+        color: white;
+    }
+
+    .btn-accept:hover {
+        background-color: #4a726c;
+    }
+
+    .btn-reject {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .btn-reject:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-preferences {
+        background-color: transparent;
+        color: white;
+        text-decoration: underline;
+    }
+
+    .cookie-preferences {
+        display: none;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .cookie-preferences.active {
+        display: block;
+    }
+
+    .preference-group {
+        margin-bottom: 15px;
+    }
+
+    .preference-group label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .preference-toggle {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+    }
+
+    .preference-toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .preference-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 24px;
+    }
+
+    .preference-slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .preference-slider {
+        background-color: #58857f;
+    }
+
+    input:checked + .preference-slider:before {
+        transform: translateX(26px);
+    }
+
+    .preference-necessary {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+        .cookie-content {
+            flex-direction: column;
+            align-items: flex-start;
         }
         
-        .star {
-            position: absolute;
-            background-color: white;
-            border-radius: 50%;
-        }
-        
-        @keyframes twinkle {
-            0% { opacity: 0.2; }
-            50% { opacity: 1; }
-            100% { opacity: 0.2; }
-        }
-        
-        .space-card {
-            background: rgba(26, 35, 79, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid #0a0e2a;
-            border-radius: 16px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .space-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at center, rgba(132, 155, 251, 0.1) 0%, transparent 70%);
-            opacity: 0.5;
-            z-index: -1;
-            transform: rotate(15deg);
-        }
-        
-        .space-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(132, 155, 251, 0.2);
-        }
-        
-        .space-card:hover::before {
-            opacity: 0.8;
-        }
-        
-        .alien-shape {
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        }
-        
-        .ufo {
-            animation: float 8s ease-in-out infinite;
-        }
-        
-        .package-card {
-            transition: all 0.3s ease;
-        }
-        
-        .package-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .feature-bullet {
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .feature-bullet::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        
-        .nav-white {
-            background-color: white;
-            color: #849bfb;
-        }
-        
-        .nav-white a {
-            color: #849bfb;
-        }
-        
-        .nav-white a:hover {
-            color: #6b82e8;
-        }
-        
-        .swiper {
+        .cookie-buttons {
             width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            justify-content: space-between;
         }
         
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 350px;
+        .cookie-btn {
+            flex: 1;
+            text-align: center;
         }
-        
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 16px;
-        }
-        
-        .swiper-pagination-bullet {
-            background-color: #849bfb;
-        }
-        
-        .swiper-button-next, .swiper-button-prev {
-            color: #849bfb;
-        }
-        
-       .cosmic-glow {
-            position: relative;
-        }
-        
-        .cosmic-glow::before {
-  
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 70%, rgba(175, 51, 242, 0.25) 0%, transparent 50%),   /* aqua */
-    radial-gradient(circle at 70% 30%, rgba(242, 123, 244, 0.18) 0%, transparent 50%),   /* blue */
-    radial-gradient(circle at 40% 40%, rgba(151, 131, 169, 0.18) 0%, transparent 50%);   /* greeny tint */
-  border-radius: 16px;
-  z-index: -1;
-  opacity: 0.7; /* toned down */
-  transition: opacity 0.3s ease;
-}
+    }
 
+    /* Anti-flicker fixes for sections */
+    section {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
 
-        
-        .cosmic-glow:hover::before {
-            opacity: 0.9;
-        }
-        
-        .hero-glow {
-            position: relative;
-        }
-        
-        .hero-glow::after {
-  content: '';
-  position: absolute;
-  top: -60px;     /* extend further above */
-  bottom: -0px;  /* extend further below */
-  left: 40%;
-  transform: translateX(-50%); /* center beam */
-  width: 180px;   /* wider beam */
-  
-  background: linear-gradient(
-    to bottom,
-    rgba(55, 63, 223, 0.45) 0%,    /* brighter aqua */
-    rgba(0, 200, 255, 0.35) 25%,   /* strong blue tint */
-    rgba(0, 255, 180, 0.25) 50%,   /* vivid greeny fade */
-    rgba(0, 200, 220, 0.15) 75%,   /* softer fade */
-    transparent 100%               /* vanish */
-  );
-
-  filter: blur(20px);   /* stronger glow spread */
-  border-radius: 60%;   /* smoother round edges */
-  z-index: -1;
-  opacity: 1;           /* fully bright */
-}
-
-
-        
-        .btn-glow {
-            box-shadow: 0 0 15px rgba(132, 155, 251, 0.5);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-glow:hover {
-            box-shadow: 0 0 25px rgba(132, 155, 251, 0.8);
-        }
-        
-        .team-member {
-            transition: all 0.3s ease;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-5px);
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 3rem;
-            padding-bottom: 3rem;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0.7rem;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #849bfb, transparent);
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 1.5rem;
-            height: 1.5rem;
-            border-radius: 50%;
-            background: #849bfb;
-            box-shadow: 0 0 0 5px rgba(132, 155, 251, 0.2);
-        }
-        
-        .timeline-item:last-child::before {
-            background: linear-gradient(to bottom, #849bfb, #849bfb);
-            height: 1.5rem;
-        }
-    </style>
+    #stars-container {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+</style>
 </head>
 <body class="min-h-screen font-poppins">
     <!-- Background elements -->
     <div id="stars-container" class="fixed inset-0 z-0 overflow-hidden"></div>
     
+       <!-- Navigation -->
     <!-- Navigation -->
-    <nav class="relative z-50 py-4 px-6 md:px-12 flex justify-between items-center nav-white shadow-lg">
-        <div class="flex items-center">
-            <span class="text-2xl font-bold text-primary">Merchant-Web</span>
-        </div>
-        
-        <div class="hidden md:flex space-x-10">
-            <a href="index.html" class="hover:text-cosmic-600 transition-colors">Home</a>
-            <a href="about.html" class="hover:text-cosmic-600 transition-colors">About</a>
-            <a href="index.html#services" class="hover:text-cosmic-600 transition-colors">Services</a>
-            <a href="blog.html" class="hover:text-cosmic-600 transition-colors">Blog</a>
-            <a href="#contactForm" class="hover:text-cosmic-600 transition-colors">Contact</a>
-        </div>
-        
-        <button id="openMenu" class="md:hidden text-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </button>
-    </nav>
-
-    <!-- Mobile Menu (hidden by default) -->
-    <div id="mobileMenu" class="md:hidden fixed inset-0 z-40 bg-space-dark bg-opacity-95 transform -translate-x-full transition-transform duration-300">
-        <div class="flex flex-col items-center justify-center h-full space-y-8">
-            <a href="index.html" class="text-2xl text-white hover:text-primary transition-colors">Home</a>
-            <a href="about.html" class="text-2xl text-white hover:text-primary transition-colors">About</a>
-            <a href="index.html#services" class="text-2xl text-white hover:text-primary transition-colors">Services</a>
-            <a href="blog.html" class="text-2xl text-white hover:text-primary transition-colors">Blog</a>
-            <a href="#contactForm" class="text-2xl text-white hover:text-primary transition-colors">Contact</a>
-            
-            <!-- Close button -->
-            <button id="closeMenu" class="absolute top-6 right-6 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
+<nav class="relative z-50 py-4 px-6 md:px-12 flex justify-between items-center nav-white shadow-lg">
+    <div class="flex items-center">
+        <span class="text-2xl font-bold text-primary">Merchant-Web</span>
     </div>
 
-    <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const openMenuBtn = document.getElementById('openMenu');
-            const closeMenuBtn = document.getElementById('closeMenu');
-            
-            if (openMenuBtn && mobileMenu && closeMenuBtn) {
-                // Open menu
-                openMenuBtn.addEventListener('click', function() {
-                    mobileMenu.classList.remove('-translate-x-full');
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-                });
-                
-                // Close menu
-                closeMenuBtn.addEventListener('click', function() {
-                    mobileMenu.classList.add('-translate-x-full');
-                    document.body.style.overflow = ''; // Re-enable scrolling
-                });
-                
-                // Close menu when clicking on links
-                const menuLinks = mobileMenu.querySelectorAll('a');
-                menuLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        mobileMenu.classList.add('-translate-x-full');
-                        document.body.style.overflow = '';
-                    });
-                });
-                
-                // Close menu when pressing Escape key
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && !mobileMenu.classList.contains('-translate-x-full')) {
-                        mobileMenu.classList.add('-translate-x-full');
-                        document.body.style.overflow = '';
-                    }
-                });
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-10">
+        <a href="index.html" class="hover:text-cosmic-600 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-cosmic-600 transition-colors">About</a>
+        <a href="index.html#services" class="hover:text-cosmic-600 transition-colors">Services</a>
+        <a href="article.html" class="hover:text-cosmic-600 transition-colors">Blog</a>
+        <a href="index.html#contactForm" class="hover:text-cosmic-600 transition-colors">Contact</a>
+    </div>
+
+    <!-- Hamburger button -->
+    <button id="toggleMenu" class="md:hidden text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+    </button>
+</nav>
+
+<!-- MOBILE DROP-DOWN MENU -->
+<div id="mobileMenu"
+    class="md:hidden fixed top-[72px] left-0 right-0 bg-space-dark text-white shadow-lg 
+           overflow-hidden max-h-0 transition-all duration-300 z-[9999]">
+
+    <div class="flex flex-col px-6 py-4 space-y-4">
+        <a href="index.html" class="hover:text-primary text-lg">Home</a>
+        <a href="about.html" class="hover:text-primary text-lg">About</a>
+        <a href="index.html#services" class="hover:text-primary text-lg">Services</a>
+        <a href="article.html" class="hover:text-primary text-lg">Blog</a>
+        <a href="index.html#contactForm" class="hover:text-primary text-lg">Contact</a>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.getElementById("mobileMenu");
+        const toggle = document.getElementById("toggleMenu");
+
+        toggle.addEventListener("click", () => {
+            // Toggle dropdown height
+            const isOpen = menu.classList.contains("max-h-0");
+            if (isOpen) {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-96");
+            } else {
+                menu.classList.add("max-h-0");
+                menu.classList.remove("max-h-96");
             }
         });
-    </script>
 
+        // Close menu when clicking inside a link
+        menu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.add("max-h-0");
+                menu.classList.remove("max-h-96");
+            });
+        });
+    });
+</script>
     
    <!-- Hero Section -->
     <section id="home" class="relative z-1 min-h-screen flex items-center pt-20 pb-32 px-6 md:px-12">
@@ -830,7 +983,26 @@
             });
         });
     </script>
+
+<script>
+    // Add hardware acceleration styles
+    document.addEventListener('DOMContentLoaded', function() {
+        const style = document.createElement('style');
+        style.textContent = `
+            * {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+        `;
+        document.head.appendChild(style);
+    });
+</script>
+
 </body>
 </html>
+
 
 
