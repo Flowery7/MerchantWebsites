@@ -931,7 +931,8 @@
                                     <h3
                                         class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                                         Restaurants</h3>
-                                    <p class="text-gray-400 text-sm leading-relaxed">Websites for hospitality. Providing ordering, reservations, and menu management.</p>
+                                    <p class="text-gray-400 text-sm leading-relaxed">Websites for hospitality. Providing
+                                        ordering, reservations, and menu management.</p>
                                 </div>
                             </div>
                         </div>
@@ -2002,7 +2003,7 @@
         // Helper functions for showing messages
         function showSuccessMessage(message) {
             // Remove any existing messages
-            const existingMessages = document.querySelectorAll('.form-message');
+            const existingMessages = document.querySelectorAll('#contactForm .form-message');
             existingMessages.forEach(msg => msg.remove());
 
             // Create success message element
@@ -2012,8 +2013,10 @@
             messageDiv.style.cssText = 'background-color: #4CAF50; color: white; padding: 10px; margin-top: 15px; border-radius: 5px;';
 
             // Insert after the form
-            const formContainer = document.querySelector('.space-card');
-            formContainer.appendChild(messageDiv);
+            const formContainer = document.querySelector('#contactForm .space-card');
+            if (formContainer) {
+                formContainer.appendChild(messageDiv);
+            }
 
             // Auto-hide after 5 seconds
             setTimeout(() => {
@@ -2023,7 +2026,7 @@
 
         function showErrorMessage(message) {
             // Remove any existing messages
-            const existingMessages = document.querySelectorAll('.form-message');
+            const existingMessages = document.querySelectorAll('#contactForm .form-message');
             existingMessages.forEach(msg => msg.remove());
 
             // Create error message element
@@ -2033,8 +2036,10 @@
             messageDiv.style.cssText = 'background-color: #f44336; color: white; padding: 10px; margin-top: 15px; border-radius: 5px;';
 
             // Insert after the form
-            const formContainer = document.querySelector('.space-card');
-            formContainer.appendChild(messageDiv);
+            const formContainer = document.querySelector('#contactForm .space-card');
+            if (formContainer) {
+                formContainer.appendChild(messageDiv);
+            }
         }
     </script>
 
