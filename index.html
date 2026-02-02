@@ -1407,94 +1407,72 @@
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-    <div class="relative group h-full">
-        <div class="absolute inset-0 bg-gradient-to-b from-blue-500/20 to-purple-500/5 rounded-3xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative h-full bg-[#0a0e2a]/90 backdrop-blur-xl border border-white/5 rounded-3xl p-8 flex flex-col transition-transform duration-300 group-hover:-translate-y-2 group-hover:border-primary/30 shadow-xl">
-            <div class="mb-6">
-                <div class="flex justify-between items-start mb-4">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-300">STANDARD</span>
-                    <span class="bg-blue-500/20 text-blue-400 text-[10px] font-bold px-2 py-1 rounded border border-blue-500/30 tracking-wider uppercase tracking-widest">25% OFF</span>
+
+
+<div class="mt-20">
+    <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12">
+        <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-white">Flexible Payment Options</h3>
+            <p class="text-gray-400 mt-2">Based on the <span class="text-pink-400 font-bold">Pro Sale Price (£149)</span></p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="group text-center p-8 bg-[#0a0e2a] rounded-2xl border border-white/5 hover:border-pink-500/30 transition-all duration-300">
+                <div class="flex justify-center mb-6">
+                    <div class="w-16 h-16 rounded-full bg-pink-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-calendar-alt text-3xl text-pink-500"></i>
+                    </div>
                 </div>
-                <h3 class="text-3xl font-bold text-white mb-2">Starter</h3>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-xl text-gray-500 line-through decoration-red-500/50">£99</span>
-                    <span class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">£74</span>
-                    <span class="text-gray-400 text-sm font-medium">/ one-time</span>
+                <h4 class="text-lg font-bold mb-2 text-gray-200">Monthly Payments</h4>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                    <span class="text-sm text-gray-500 line-through decoration-white/20">£16.50</span>
+                    <div class="text-3xl font-bold text-pink-400">£12.40</div>
                 </div>
-                <p class="text-gray-400 mt-4 text-sm leading-relaxed">Perfect for small businesses starting their digital journey.</p>
+                <p class="text-gray-400 text-sm">Spread the cost over 12 months</p>
             </div>
-            <div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8"></div>
-            <ul class="space-y-4 mb-8 flex-grow">
-                <li class="flex items-start gap-3 text-gray-300"><i class="fas fa-check text-blue-400 mt-1"></i> <span>Custom Website Design</span></li>
-                <li class="flex items-start gap-3 text-gray-300"><i class="fas fa-check text-blue-400 mt-1"></i> <span>3 Page Website</span></li>
-                <li class="flex items-start gap-3 text-gray-300"><i class="fas fa-check text-blue-400 mt-1"></i> <span>Basic SEO Setup</span></li>
-                <li class="flex items-start gap-3 text-gray-300"><i class="fas fa-check text-blue-400 mt-1"></i> <span>Mobile Responsive</span></li>
-            </ul>
-            <div class="mt-auto pt-6 border-t border-white/5">
-                <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                <stripe-buy-button buy-button-id="buy_btn_1S2wcVDi6lXJLURRjVm8gU4F" publishable-key="pk_live_51RxmoDDi6lXJLURR8lZIeYXS8SwItYtrmkYSKtKz0kI5Ezb9NBQhVa60Jbx2NBs4K1eloal5v5BmnAsYP8gf4BN900oNZOCFct"></stripe-buy-button>
+
+            <div class="group text-center p-8 bg-[#0a0e2a] rounded-2xl border border-white/5 hover:border-purple-500/30 transition-all duration-300">
+                <div class="flex justify-center mb-6">
+                    <div class="w-16 h-16 rounded-full bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-credit-card text-3xl text-purple-400"></i>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold mb-2 text-gray-200">Pay in Three</h4>
+                <div class="flex items-center justify-center gap-2 mb-2">
+                    <span class="text-sm text-gray-500 line-through decoration-white/20">3 x £66</span>
+                    <div class="text-3xl font-bold text-purple-400">3 x £49</div>
+                </div>
+                <p class="text-gray-400 text-sm">Interest-free installment plan</p>
+            </div>
+
+            <div class="group text-center p-8 bg-[#0a0e2a] rounded-2xl border border-white/5 hover:border-blue-400/30 transition-all duration-300">
+                <div class="flex justify-center mb-6">
+                    <div class="w-16 h-16 rounded-full bg-blue-400/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-wallet text-3xl text-blue-400"></i>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold mb-2 text-gray-200">Split Payment</h4>
+                <div class="text-3xl font-bold text-blue-400 mb-2">£39 Deposit</div>
+                <p class="text-gray-400 text-sm">Followed by <span class="text-white font-medium">£110</span> final payment upon launch</p>
             </div>
         </div>
-    </div>
-
-    <div class="relative group h-full scale-105 z-10">
-        <div class="absolute inset-0 bg-gradient-to-b from-pink-500/20 to-purple-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-1.5 rounded-full text-xs font-bold text-white shadow-lg tracking-wider border border-white/20 z-20 uppercase">MOST POPULAR</div>
-        <div class="relative h-full bg-[#0a0e2a] border border-pink-500/30 rounded-3xl p-8 flex flex-col shadow-[0_0_30px_rgba(229,32,153,0.1)] transition-transform duration-300 group-hover:-translate-y-2">
-            <div class="mb-6">
-                <div class="flex justify-between items-start mb-4">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-sm font-medium text-pink-300">STATIC SITES</span>
-                    <span class="bg-pink-600 text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg animate-pulse uppercase">SALE ACTIVE</span>
-                </div>
-                <h3 class="text-3xl font-bold text-white mb-2">Pro</h3>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-xl text-gray-500 line-through decoration-white/40">£199</span>
-                    <span class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">£149</span>
-                    <span class="text-gray-400 text-sm font-medium">/ one-time</span>
-                </div>
-                <p class="text-gray-400 mt-4 text-sm leading-relaxed">Complete solution for established businesses needing a strong presence.</p>
+        
+        <div class="mt-10 flex flex-wrap justify-center items-center gap-6 opacity-60">
+            <div class="flex items-center gap-2 text-white text-xs uppercase tracking-widest">
+                <i class="fab fa-stripe text-xl"></i>
+                <span>Secure Payments via Stripe</span>
             </div>
-            <div class="w-full h-px bg-gradient-to-r from-transparent via-pink-500/20 to-transparent mb-8"></div>
-            <ul class="space-y-4 mb-8 flex-grow">
-                <li class="flex items-start gap-3 text-white font-medium"><i class="fas fa-check text-pink-400 mt-1"></i><span>3 Page Website</span></li>
-                <li class="flex items-start gap-3 text-white font-medium"><i class="fas fa-star text-purple-400 mt-1"></i><span>12 Months Basic Hosting</span></li>
-                <li class="flex items-start gap-3 text-gray-300"><i class="fas fa-check text-pink-400/70 mt-1"></i><span>SEO Setup & Mobile Responsive</span></li>
-            </ul>
-            <div class="mt-auto pt-6 border-t border-pink-500/10">
-                <stripe-buy-button buy-button-id="buy_btn_1S2wZ7Di6lXJLURRbXDRIY0b" publishable-key="pk_live_51RxmoDDi6lXJLURR8lZIeYXS8SwItYtrmkYSKtKz0kI5Ezb9NBQhVa60Jbx2NBs4K1eloal5v5BmnAsYP8gf4BN900oNZOCFct"></stripe-buy-button>
-            </div>
-        </div>
-    </div>
-
-    <div class="relative group h-full">
-        <div class="absolute inset-0 bg-gradient-to-b from-teal-500/20 to-blue-500/5 rounded-3xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div class="relative h-full bg-[#0a0e2a]/90 backdrop-blur-xl border border-white/5 rounded-3xl p-8 flex flex-col transition-transform duration-300 group-hover:-translate-y-2 group-hover:border-[#7bd5bf]/30 shadow-xl">
-            <div class="mb-6">
-                <div class="flex justify-between items-start mb-4">
-                    <span class="inline-block px-4 py-1.5 rounded-full bg-[#7bd5bf]/10 border border-[#7bd5bf]/20 text-sm font-medium text-[#7bd5bf]">ELITE</span>
-                    <span class="bg-[#7bd5bf]/20 text-[#7bd5bf] text-[10px] font-bold px-2 py-1 rounded border border-[#7bd5bf]/30 tracking-wider">OFFER</span>
-                </div>
-                <h3 class="text-3xl font-bold text-white mb-2">Elite</h3>
-                <div class="flex items-baseline gap-2">
-                    <span class="text-xl text-gray-500 line-through decoration-red-500/50">£249</span>
-                    <span class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">£186</span>
-                    <span class="text-gray-400 text-sm font-medium">/ one-time</span>
-                </div>
-                <p class="text-gray-400 mt-4 text-sm leading-relaxed">The ultimate package for businesses ready to dominate.</p>
-            </div>
-            <div class="w-full h-px bg-gradient-to-r from-transparent via-[#7bd5bf]/20 to-transparent mb-8"></div>
-            <ul class="space-y-4 mb-8 flex-grow">
-                <li class="flex items-start gap-3 text-white font-medium"><i class="fas fa-rocket text-[#7bd5bf] mt-1"></i><span>Complete SEO Optimization</span></li>
-                <li class="flex items-start gap-3 text-white font-medium"><i class="fas fa-infinity text-[#7bd5bf] mt-1"></i><span>Unlimited Revisions</span></li>
-                <li class="flex items-start gap-3 text-gray-300"><i class="fas fa-check text-[#7bd5bf] mt-1"></i><span>12 Months Fast Hosting</span></li>
-            </ul>
-            <div class="mt-auto pt-6 border-t border-[#7bd5bf]/10">
-                <stripe-buy-button buy-button-id="buy_btn_1S2wWODi6lXJLURRYvQGQHxH" publishable-key="pk_live_51RxmoDDi6lXJLURR8lZIeYXS8SwItYtrmkYSKtKz0kI5Ezb9NBQhVa60Jbx2NBs4K1eloal5v5BmnAsYP8gf4BN900oNZOCFct"></stripe-buy-button>
+            <div class="hidden md:block w-px h-4 bg-white/20"></div>
+            <div class="flex items-center gap-2 text-white text-xs uppercase tracking-widest">
+                <i class="fas fa-shield-alt text-lg"></i>
+                <span>100% Satisfaction Guarantee</span>
             </div>
         </div>
     </div>
 </div>
+
+
+            
 
 <div class="mt-20">
     <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12">
@@ -2034,6 +2012,7 @@
 </body>
 
 </html>
+
 
 
 
