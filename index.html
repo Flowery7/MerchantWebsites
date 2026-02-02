@@ -570,23 +570,31 @@
     100% {
         transform: translate(0px, 0px) rotate(0deg);
     }
-/* Make footer full width */
+/* Make footer full width AND stick to bottom */
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
 footer {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    margin-top: auto !important;
+    background: #050714;
 }
 
 footer .container {
     max-width: 100% !important;
     width: 100% !important;
-}
-
-/* Ensure no parent constraints */
-body, html {
-    width: 100%;
-    overflow-x: hidden;
 }
 
        
@@ -2025,6 +2033,7 @@ body, html {
 </body>
 
 </html>
+
 
 
 
