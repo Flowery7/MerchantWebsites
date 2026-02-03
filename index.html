@@ -816,9 +816,9 @@
                 <div class="absolute bottom-2 right-2 w-5 h-5 bg-green-500 border-4 border-[#0a0e2a] rounded-full shadow-[0_0_12px_#22c55e]"></div>
             </div>
             <div class="text-center md:text-left">
-               <h3 class="text-2xl font-bold text-white mb-2 italic">
+               <h3 class="text-2xl font-bold text-white mb-2">
     Packages starting from only 
-    <span class="text-transparent bg-clip-text bg-gradient-to-b from-blue-600 to-blue-800 drop-shadow-[0_0_8px_rgba(30,64,175,0.5)]">
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500 drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]">
         £149
     </span>
 </h3>
@@ -1065,8 +1065,13 @@
     <!-- Services Section -->
     <section id="services" class="relative z-1 py-20 px-6 md:px-12 bg-space-mid bg-opacity-70">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">A Stellar Service</h2>
-            <p class="text-center text-[#ffffff]-300 mb-16 max-w-3xl mx-auto">We provide comprehensive web
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+    We Design Until 
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-500 drop-shadow-[0_0_10px_rgba(16,185,129,0.6)]">
+        You're Happy
+    </span>
+</h2>
+            <p class="text-center text-[#ffffff]-300 mb-16 max-w-3xl mx-auto">After making a deposit payment to secure your website. We will make as many iterations needed until you are completely happy. We provide comprehensive web
                 solutions that cover every aspect of your online presence.</p>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
@@ -1330,16 +1335,23 @@
             </div>
 
             <!-- Call to Action Banner -->
-            <div class="flex justify-center mb-20">
-                <a href="tel:+447394542901"
-                    class="group relative px-8 py-4 bg-[#849bfb]/10 border border-[#849bfb]/50 text-[#849bfb] font-bold rounded-full transition-all duration-300 hover:bg-[#849bfb] hover:text-white hover:shadow-[0_0_20px_rgba(132,155,251,0.4)]">
-                    <span class="relative z-10 flex items-center gap-2">
-                        <i class="fas fa-gift"></i>
-                        For 25% OFF - Call Today
-                        <i class="fas fa-phone ml-1 group-hover:rotate-12 transition-transform"></i>
-                    </span>
-                </a>
-            </div>
+           <div class="flex justify-center mb-20">
+    <a href="tel:+447394542901" 
+       class="group relative inline-flex items-center justify-center p-[2px] rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(132,155,251,0.2)]">
+        
+        <div class="absolute inset-0 bg-gradient-to-r from-pink-500 via-blue-500 to-emerald-500 rounded-full opacity-80 group-hover:opacity-100 transition-opacity"></div>
+        
+        <div class="relative z-10 bg-[#0a0e2a] px-8 py-4 rounded-full flex items-center gap-3">
+            <i class="fas fa-gift text-pink-400 animate-bounce"></i>
+            
+            <span class="tracking-widest uppercase text-xs md:text-sm font-black text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]">
+                Chat with a Designer
+            </span>
+
+            <i class="fas fa-phone text-emerald-400 ml-1 group-hover:rotate-12 transition-transform drop-shadow-[0_0_10px_#10b981]"></i>
+        </div>
+    </a>
+</div>
 
 
 
@@ -1530,6 +1542,30 @@
             </div>
         </div>
         
+
+
+
+
+
+<div class="mt-auto pt-6 border-t border-white/5 flex flex-col items-center">
+    <p class="text-gray-400 mt-2 text-xs leading-snug opacity-80 text-center max-w-[280px] mx-auto mb-6">
+        Upon purchase you will receive a Welcome Email where you can submit a basic Design Brief to the team. You will also receive a Roadmap of the Design Process, Contract and Terms. 
+        <span class="block mt-2 font-bold text-pink-400/80">Please note * Deposits are Non-Refundable *</span>
+    </p>
+
+    <div class="w-full flex justify-center">
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+        <stripe-buy-button
+            buy-button-id="buy_btn_1SZZKrDi6lXJLURR2mH7SpVv"
+            publishable-key="pk_live_51RxmoDDi6lXJLURR8lZIeYXS8SwItYtrmkYSKtKz0kI5Ezb9NBQhVa60Jbx2NBs4K1eloal5v5BmnAsYP8gf4BN900oNZOCFct">
+        </stripe-buy-button>
+    </div>
+</div>
+
+
+
+
+
         <div class="mt-10 flex flex-wrap justify-center items-center gap-6 opacity-60">
             <div class="flex items-center gap-2 text-white text-xs uppercase tracking-widest">
                 <i class="fab fa-stripe text-xl"></i>
